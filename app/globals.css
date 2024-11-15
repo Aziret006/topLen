@@ -1,0 +1,32 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --maxWidth: 1380px;
+  --padding: 25px;
+}
+
+
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-gilroy);
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  font-family: var(--font-gilroy);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
