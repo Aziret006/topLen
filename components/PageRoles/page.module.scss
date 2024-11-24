@@ -1,0 +1,138 @@
+.carouselContainer {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    .carouselImage {
+        position: relative;
+        z-index: 1;
+        .topImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    .roles__content_back {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        row-gap: 67px;
+        padding-top: 60px;
+        h1 {
+            padding-right: 40px;
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 58.85px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        p {
+            max-width: 572px;
+            opacity: 80%;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 23.2px;
+            text-align: right;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+    .carousel_all {
+        position: relative;
+        z-index: 50;
+    }
+    .container {
+        display: flex;
+        align-items: end;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 206px;
+        height: 178px;
+        background: #0c0c0c4d;
+        border-radius: 10px;
+        clip-path: polygon(0% 0%, 1% 100%, 100% 100%, 100% 40%, 49% 0%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Тень для объёма
+        color: #ffffff; // Белый текст
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+        border: 1px solid #ffffff4d;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 206px;
+        height: 178px;
+        background: #0c0c0c4d;
+        border-radius: 10px; // Скруглённые углы
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Тень для объёма
+        color: #ffffff; // Белый текст
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+        border: 1px solid #ffffff4d; // Анимация для эффекта наведения;
+    }
+    .cards {
+        display: grid;
+        row-gap: 14px;
+    }
+    .card_Organizer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 206px;
+        height: 290px;
+        background: #0c0c0c4d;
+        border-radius: 10px; // Скруглённые углы
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Тень для объёма
+        color: #ffffff; // Белый текст
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+        border: 1px solid #ffffff4d;
+    }
+
+    .card:hover {
+        transform: translateY(-10px); // Подъём карточки
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); // Увеличение тени
+    }
+
+    .title {
+        max-width: 182px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.54px;
+        text-align: justified;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+    }
+
+    .description {
+        max-width: 182px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.24px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        opacity: 0.7;
+        color: #ffffff;
+        // Серый текст для описания
+    }
+}

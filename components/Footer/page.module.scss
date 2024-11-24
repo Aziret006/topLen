@@ -1,0 +1,169 @@
+.footer {
+    background: #252121;
+    color: #fff;
+    padding: 40px 40px 67px 40px;
+    margin: 83px 0 25px 0;
+    border-radius: 25px;
+    height: 379px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .logoSection {
+        max-width: 279px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.3;
+            text-align: left;
+        }
+    }
+
+    .linksSection {
+        max-width: 451px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+        margin-top: 43px;
+
+        h3 {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .links {
+            display: flex;
+            gap: 2rem;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                row-gap: 25px;
+
+                li {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 20.88px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #ff8c00; /* Оранжевый цвет при наведении */
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .newsletterSection {
+        max-width: 441px;
+        margin-top: 43px;
+
+        h3 {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 32.96px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 37px;
+        }
+
+        .subscriptionForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+
+            .inputContainer {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+
+                input {
+                    flex: 1;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 0 10px;
+
+                    &::placeholder {
+                        color: #aaa;
+                        font-size: 16px;
+                    }
+                }
+
+                .icon {
+                    color: #aaa;
+                    font-size: 20px;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: #ff8c00;
+                    }
+                }
+            }
+
+            .underline {
+                width: 100%;
+                border: none;
+                border-top: 1px solid #555;
+                margin-top: 8px;
+            }
+        }
+
+        .social_aLL {
+            margin-top: 40px;
+            h5 {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 23.2px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+        }
+        .socials {
+            display: flex;
+            gap: 33px;
+            margin-top: 29px;
+
+            a {
+                color: #fff;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color: #ff8c00;
+                }
+            }
+        }
+    }
+}

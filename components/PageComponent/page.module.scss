@@ -1,0 +1,79 @@
+.page_all {
+    position: relative;
+    padding-left: 74px;
+    height: 1400px;
+    .page_Text1 {
+        text-transform: uppercase;
+        max-width: 795px;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 58.85px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #191a1b;
+        position: relative;
+        top: -50px;
+    }
+    .page_Text_Page {
+        .page_Text2 {
+            position: relative;
+            top: 20px;
+            max-width: 360px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.54px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            opacity: 80%;
+            color: #191a1b;
+        }
+        .page_Text3 {
+            position: relative;
+            top: 30px;
+            right: 35px;
+            opacity: 80%;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18.83px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #191a1b;
+            max-width: 400px;
+        }
+    }
+    .topImageAll {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .topImage2 {
+            min-width: 517px;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 120px;
+            z-index: 200;
+        }
+        .top_back_image {
+            position: absolute;
+            right: 0;
+            left: 180px;
+            bottom: 50px;
+            z-index: 100;
+        }
+        .top_Football_image {
+            position: absolute;
+            right: 0;
+            left: 150px;
+            bottom: 110px;
+            z-index: 100;
+        }
+    }
+    .page_Text_Page {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+    }
+}

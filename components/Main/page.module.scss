@@ -1,0 +1,99 @@
+.topBackground {
+  width: 100%;
+  background: #252121;
+  border-radius: 35px;
+  padding: 92px 138px 71px 47px;
+  position: relative;
+  bottom: 135px;
+  .topFlex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .topText {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 800px;
+      height: 220px;
+      width: 100%;
+
+      .topLine {
+        width: 1px;
+        height: 219px;
+        background: #ffffff;
+        margin-right: 42px;
+        margin-left: 17px;
+      }
+      span {
+        display: grid;
+        align-content: space-between;
+        height: 220px;
+        max-width: 374px;
+        width: 100%;
+        &:nth-child(2) {
+          border-left: 1px solid #ffffff;
+        }
+        h2 {
+          font-size: 35px;
+          font-weight: 500;
+          line-height: 41.2px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+        p {
+          width: 100%;
+          opacity: 70%;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 23.2px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #ffffff;
+        }
+      }
+    }
+    .topImage {
+      display: flex;
+      align-items: start;
+      gap: 24px;
+      margin-top: 97px;
+      button {
+        border: 1.5px solid #ffffffcc;
+        border-radius: 25px;
+        padding: 10px 24px 10px 24px;
+        background: #252121;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23.54px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+      p {
+        max-width: 603px;
+        opacity: 89%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20.88px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #ffffff;
+      }
+    }
+    .topAbsolute {
+      position: relative;
+      top: 120px;
+      .topLogo2 {
+        position: absolute;
+        bottom: -80px;
+        right: -96px;
+      }
+    }
+  }
+}

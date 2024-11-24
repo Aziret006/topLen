@@ -1,0 +1,89 @@
+.Mode {
+    margin-top: 160px;
+    .Mode__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-bottom: 67px;
+        h1 {
+            text-transform: uppercase;
+            font-size: 80px;
+            font-weight: 300;
+            line-height: 92.24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+        p {
+            max-width: 530px;
+            opacity: 70%;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20.88px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+    .card {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 336px;
+    }
+
+    .number {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        color: #000;
+
+        span {
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 66.72px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            left: -15px;
+            width: 2px;
+            height: 100%;
+            background-color: #27ae60; /* Зелёная линия */
+        }
+    }
+    .text {
+        opacity: 70%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 20.88px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    .Mode__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1036px;
+    }
+    .Mode__flex {
+        display: flex;
+        align-items: start;
+        position: relative;
+
+        .Mode__image {
+            .bornplay {
+                position: absolute;
+                right: -30px;
+                bottom: 0;
+                top: -290px;
+            }
+        }
+    }
+}
