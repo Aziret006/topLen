@@ -9,7 +9,7 @@ const Organizer = () => {
         <h1>Режим Организатора турнира</h1>
         <p>Возможности организатора:</p>
       </div>
-      <div>
+      <div className={styles.Organizer_grid_fex}>
         <div className={styles.container}>
           <div className={styles.feature} style={{ backgroundColor: "white" }}>
             <div className={styles.icon}>🌐</div>
@@ -55,6 +55,15 @@ const Organizer = () => {
               предупреждения, нарушения в матче;
             </p>
           </div>
+        </div>
+        <div className={styles.Organizer_image}>
+          <Image
+            src="/create.svg"
+            alt="Football"
+            width={450}
+            height={865}
+            className={styles.image}
+          />
         </div>
       </div>
     </div>

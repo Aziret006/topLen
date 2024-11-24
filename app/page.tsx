@@ -12,6 +12,7 @@ import Technical from "@/components/Technical/Technical";
 import Grade from "@/components/Grade/Grade";
 import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
 import Organizer from "@/components/Organizer/Organizer";
+
 // import RoleCarousel from "@/components/PageRoles/Roles";
 
 export default function Home() {
