@@ -13,8 +13,9 @@ import Grade from "@/components/Grade/Grade";
 import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
 import Organizer from "@/components/Organizer/Organizer";
 import RoleCarousel from "@/components/PageRoles/Roles";
-
-// import RoleCarousel from "@/components/PageRoles/Roles";
+import Ecosystem from "@/components/Ecosystem/Ecosystem";
+import Field from "@/components/FooballFiled/Field";
+import Tryout from "@/components/Tryout/Tryout";
 
 export default function Home() {
   return (
@@ -23,17 +24,20 @@ export default function Home() {
       <main>
         <Section />
         <Main />
-        <PageComponent />
+        {/* <PageComponent /> */}
         <PagePrimus />
-        <TopSlider />
+        {/* <TopSlider />
         <RoleCarousel />
         <Mode />
         <Technical />
         <Grade />
         <Trainermode />
         <Organizer />
+        <Ecosystem />
+        <Field />
+        <Tryout /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

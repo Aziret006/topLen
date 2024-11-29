@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 const Ecosystem = () => {
   return (
     <div className={styles.ecosystem_All}>
@@ -11,6 +12,15 @@ const Ecosystem = () => {
           <br /> В центре этой экосистемы – сам футболист, окруженный поддержкой
           и ресурсами, необходимыми для достижения успеха:
         </p>
+      </div>
+      <div className={styles.ecosystem_container_image}>
+        <Image
+          className={styles.ecosystem_image}
+          src="/ecosystem.svg"
+          alt="Football"
+          width={1240}
+          height={950}
+        />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Section = () => {
   return (
-    <div>
+    <>
       <div className={styles.container}>
         <div className={styles.leftContent}>
           <div>
@@ -15,7 +15,7 @@ const Section = () => {
                 alt="Football"
                 width={160}
                 height={67}
-                className={styles.topLogo}
+                className={styles.topPhone}
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -27,7 +27,7 @@ const Section = () => {
             <h4>Доступно на </h4>
             <div className={styles.wrapper}>
               <a
-                href="https://apps.apple.com" // Замените на фактическую ссылку на App Store
+                href="https://apps.apple.com"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Section = () => {
                 </div>
               </a>
               <a
-                href="https://play.google.com" // Замените на фактическую ссылку на Google Play
+                href="https://play.google.com"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -87,7 +87,7 @@ const Section = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

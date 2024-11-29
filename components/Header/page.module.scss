@@ -7,11 +7,40 @@
   padding: 13px 70px 13px 70px;
   gap: 10px;
   border-radius: 26px;
+  margin-left: 25px;
+  margin-right: 25px;
+  @media screen and (max-width: 1003px) {
+    padding: 13px 20px 13px 19px;
+    @media screen and (max-width: 600px) {
+      margin: 0;
+      border-radius: 0px;
+    }
+  }
+  .logo {
+    @media screen and (max-width: 1003px) {
+      width: 115px;
+      height: 41px;
+
+      @media screen and (max-width: 891px) {
+        width: 116px;
+        height: 46px;
+      }
+    }
+  }
   ul {
     display: flex;
     gap: 27px;
     list-style: none;
     align-items: center;
+    @media screen and (max-width: 1311px) {
+      gap: 20px;
+      @media screen and (max-width: 891px) {
+        gap: 10px;
+        @media screen and (max-width: 809px) {
+          display: none;
+        }
+      }
+    }
     li {
       list-style: none;
       a {
@@ -22,8 +51,14 @@
         line-height: 19.41px;
         text-align: left;
         color: #fff;
+        @media screen and (max-width: 1259px) {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 15.77px;
+        }
       }
     }
+
     button {
       background: none;
       border: none;
@@ -33,7 +68,6 @@
       border: 1px;
       background: #ffffff;
       display: flex;
-
       align-items: center;
       cursor: pointer;
       color: #161616;
@@ -41,6 +75,9 @@
       font-weight: 400;
       line-height: 18.2px;
       text-align: left;
+      @media screen and (max-width: 1143px) {
+        display: none;
+      }
       span {
         padding: 5px;
         background: #1c1c1c;
@@ -53,6 +90,75 @@
           height: 16px;
           color: #fff;
         }
+      }
+    }
+  }
+  .bars {
+    display: none;
+    @media screen and (max-width: 809px) {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.mobileNav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top:70px;
+  right: 0;
+  width: 100%;
+  height: 720px;
+  z-index: 9999999;
+  background-color: #1c1c1c; // Темный фон
+  color: white; // Белый текст
+  padding: 20px;
+
+  ul {
+    list-style: none; // Убираем маркеры списка
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 15px; // Расстояние между пунктами меню
+    font-size: 18px; // Размер текста
+
+    &:last-child {
+      margin-bottom: 0; // Убираем отступ у последнего пункта
+    }
+
+    a {
+      text-decoration: none; // Убираем подчеркивание
+      color: white; // Белый цвет текста
+      transition: color 0.3s ease; // Плавное изменение цвета
+
+      &:hover {
+        color: #aaaaaa; // Серый цвет при наведении
+      }
+    }
+  }
+
+  .active {
+    font-weight: bold; // Выделяем активный пункт
+    color: #d6d6d6; // Светло-серый цвет
+  }
+
+  // Стиль для блока с иконками
+  .socialIcons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px; // Расстояние между иконками
+
+    a {
+      color: white;
+      font-size: 24px; // Размер иконок
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #aaaaaa; // Серый цвет при наведении
       }
     }
   }

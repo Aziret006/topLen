@@ -1,6 +1,12 @@
 .ecosystem_All {
+    margin-top: 43px;
+
     .ecosystem_text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 47px;
         h1 {
+            max-width: 739px;
             font-size: 52px;
             font-weight: 500;
             line-height: 61.2px;
@@ -8,15 +14,28 @@
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
             color: #161616;
-            p {
-                opacity: 70%;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 20.88px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-            }
         }
+        p {
+            max-width: 422px;
+            opacity: 70%;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 20.88px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+    .ecosystem_container_image{
+        position: relative;
+        height: 840px;
+      .ecosystem_image{
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 1240px;
+          height: 950px;
+      }
     }
 }
