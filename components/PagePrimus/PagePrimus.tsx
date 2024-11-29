@@ -1,25 +1,16 @@
 import React from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 const PagePrimus = () => {
   return (
     <div className={styles.Page_Primus}>
       <div className={styles.Page_Primus_Grid}>
         <div className={styles.Page_Primus_Image_Container}>
-          <Image
-            src="/image4.svg"
-            alt="Football"
-            width={606}
-            height={823}
-            className={styles.topImage4}
-          />
+          <img src="/image4.svg" alt="Football" className={styles.topImage4} />
           <div className={styles.Page_Primus_Cards}>
             <div className={styles.Page_Primus_Card}>
-              <Image
+              <img
                 src="/image6.svg"
                 alt="Football"
-                width={295}
-                height={224}
                 className={styles.topImage5}
               />
               <div className={styles.Page_Primus_Card_Text}>
@@ -31,11 +22,9 @@ const PagePrimus = () => {
               </div>
             </div>
             <div className={styles.Page_Primus_Card}>
-              <Image
+              <img
                 src="/image8.svg"
                 alt="Football"
-                width={295}
-                height={224}
                 className={styles.topImage5}
               />
               <div className={styles.Page_Primus_Card_Text3}>
@@ -57,11 +46,9 @@ const PagePrimus = () => {
           </h3>
           <div className={styles.Page_Primus_Cards}>
             <div className={styles.Page_Primus_Card2}>
-              <Image
+              <img
                 src="/image6.svg"
                 alt="Football"
-                width={295}
-                height={224}
                 className={styles.topImage5}
               />
               <div className={styles.Page_Primus_Card_Text}>
@@ -76,11 +63,9 @@ const PagePrimus = () => {
               </div>
             </div>
             <div className={styles.Page_Primus_Card2}>
-              <Image
+              <img
                 src="/image6.svg"
                 alt="Football"
-                width={295}
-                height={224}
                 className={styles.topImage5}
               />
               <div className={styles.Page_Primus_Card_Text}>
@@ -92,13 +77,7 @@ const PagePrimus = () => {
               </div>
             </div>
           </div>
-          <Image
-            src="/image7.svg"
-            alt="Football"
-            width={606}
-            height={250}
-            className={styles.topImage6}
-          />
+          <img src="/image7.svg" alt="Football" className={styles.topImage6} />
         </div>
       </div>
     </div>

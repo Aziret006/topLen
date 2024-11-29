@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 const TopSlider = () => {
@@ -61,9 +60,11 @@ const TopSlider = () => {
         </h1>
         <div className={styles.topSliderFlex}>
           <div className={styles.topSliderInner}>
-            <h4>{slides[currentIndex].title}</h4>
-            <p>{slides[currentIndex].text}</p>
-            <p>{slides[currentIndex].text2}</p>
+            <div>
+              <h4>{slides[currentIndex].title}</h4>
+              <p>{slides[currentIndex].text}</p>
+              <p>{slides[currentIndex].text2}</p>
+            </div>
             <div className={styles.sliderButtons}>
               <div className={styles.sliderDots}>
                 {slides.map((_, index) => (
@@ -87,11 +88,9 @@ const TopSlider = () => {
             </div>
           </div>
           <div className={styles.topSliderImage}>
-            <Image
+            <img
               src={slides[currentIndex].image}
               alt={"Football"}
-              width={866}
-              height={598}
               className={styles.topLogo}
               priority
             />
@@ -99,12 +98,10 @@ const TopSlider = () => {
         </div>
       </div>
       {/* <div className={styles.rectangleContainer}> */}
-      <Image
+      <img
         // style={{ objectFit: "cover" }}
         src="/imageBack.svg"
         alt={"Football"}
-        width={1446}
-        height={416}
         className={styles.rectangle}
       />
       {/* </div> */}

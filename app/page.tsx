@@ -26,8 +26,8 @@ export default function Home() {
         <Main />
         {/* <PageComponent /> */}
         <PagePrimus />
-        {/* <TopSlider />
-        <RoleCarousel />
+        <TopSlider />
+        {/* <RoleCarousel />
         <Mode />
         <Technical />
         <Grade />
