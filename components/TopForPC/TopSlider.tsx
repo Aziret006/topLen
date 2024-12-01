@@ -63,7 +63,7 @@ const TopSlider = () => {
             <div>
               <h4>{slides[currentIndex].title}</h4>
               <p>{slides[currentIndex].text}</p>
-              <p>{slides[currentIndex].text2}</p>
+              <li>{slides[currentIndex].text2}</li>
             </div>
             <div className={styles.sliderButtons}>
               <div className={styles.sliderDots}>
@@ -92,7 +92,6 @@ const TopSlider = () => {
               src={slides[currentIndex].image}
               alt={"Football"}
               className={styles.topLogo}
-              priority
             />
           </div>
         </div>

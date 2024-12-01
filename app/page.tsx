@@ -24,10 +24,10 @@ export default function Home() {
       <main>
         <Section />
         <Main />
-        {/* <PageComponent /> */}
+        <PageComponent />
         <PagePrimus />
         <TopSlider />
-        {/* <RoleCarousel />
+        <RoleCarousel />
         <Mode />
         <Technical />
         <Grade />
@@ -35,9 +35,9 @@ export default function Home() {
         <Organizer />
         <Ecosystem />
         <Field />
-        <Tryout /> */}
+        <Tryout />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

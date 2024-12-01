@@ -5,14 +5,11 @@
   --padding: 25px;
 }
 
-
-
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: #F7F7F7;
-
+  background: #f7f7f7;
 }
 body {
   color: var(--foreground);
@@ -30,5 +27,3 @@ button {
   padding: 0;
   margin: 0;
 }
-
-
