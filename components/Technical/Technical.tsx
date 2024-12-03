@@ -13,7 +13,7 @@ const Technical = () => {
           <h4>Награды и достижения</h4>
         </div>
         <div className={styles.technical_image_and_text}>
-          <Image
+          <img
             src="/mobileappstore.svg"
             alt="Football"
             width={639}

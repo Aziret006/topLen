@@ -37,13 +37,7 @@ const PageComponent: React.FC = () => {
             height={416}
             className={styles.top_back_image}
           />
-          <Image
-            src="/image3.svg"
-            alt="Football"
-            width={331}
-            height={92}
-            className={styles.top_Football_image}
-          />
+         
           <p className={styles.page_Text_none}>
             Игра становится лучше, когда футболисты объединяются, создавая
             собственные игры и наслаждаясь процессом!

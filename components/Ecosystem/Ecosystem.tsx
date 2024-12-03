@@ -14,12 +14,10 @@ const Ecosystem = () => {
         </p>
       </div>
       <div className={styles.ecosystem_container_image}>
-        <Image
+        <img
           className={styles.ecosystem_image}
           src="/ecosystem.svg"
           alt="Football"
-          width={1240}
-          height={950}
         />
       </div>
     </div>

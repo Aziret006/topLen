@@ -57,20 +57,16 @@ const Mode = () => {
               <div className={styles.number}>
                 <span>{item.id}</span>
                 <p className={styles.text}>{item.text}</p>
-                <div className={styles.line}></div>
+                <hr className={styles.line}></hr>
               </div>
             </div>
           ))}
         </div>
-        <div className={styles.Mode__image}>
-          <Image
-            src="/bornplay.svg"
+          <img
+            src="/imagefootball.svg"
             alt="Football"
-            width={453}
-            height={880}
             className={styles.bornplay}
           />
-        </div>
       </div>
     </div>
   );

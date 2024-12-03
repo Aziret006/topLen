@@ -1,10 +1,24 @@
 .Mode {
     margin-top: 160px;
+    margin-left: 23px;
+    @media screen and (max-width: 1329px) {
+        margin-top: 85px;
+        margin-left: 15px;
+        @media screen and (max-width: 690px) {
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+    }
     .Mode__content {
         display: flex;
         flex-direction: column;
         row-gap: 30px;
         margin-bottom: 67px;
+        max-width: 888px;
+        @media screen and (max-width: 924px) {
+            margin-bottom: 45px;
+            row-gap: 20px;
+        }
         h1 {
             text-transform: uppercase;
             font-size: 80px;
@@ -13,6 +27,25 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+            @media screen and (max-width: 1329px) {
+                font-size: 55px;
+                font-weight: 500;
+                line-height: 62.2px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                @media screen and (max-width: 924px) {
+font-size: 35px;
+font-weight: 500;
+line-height: 41.2px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+                }
+                
+
+            }
         }
         p {
             max-width: 530px;
@@ -23,14 +56,30 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+            @media screen and (max-width: 600px) {
+font-size: 14px;
+font-weight: 400;
+line-height: 16.24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+            }
         }
     }
     .card {
         display: flex;
-        align-items: center;
+        // align-items: center;
         padding: 20px;
         border-radius: 8px;
         max-width: 336px;
+        max-height: 139px;
+        @media screen and (max-width: 1180px) {
+            padding: 15px;
+            &:nth-child(9) {
+                display: none;
+            }
+        }
     }
 
     .number {
@@ -47,6 +96,15 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+            @media screen and (max-width: 1180px) {
+font-size: 35px;
+font-weight: 400;
+line-height: 42.46px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+            }
         }
 
         .line {
@@ -54,7 +112,7 @@
             top: 0;
             left: -15px;
             width: 2px;
-            height: 100%;
+            height: 139px;
             background-color: #27ae60; /* Зелёная линия */
         }
     }
@@ -66,24 +124,59 @@
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
+        @media screen and (max-width: 924px) {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.24px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            @media screen and (max-width: 600px) {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 17.29px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            
+            }
+        }
     }
     .Mode__cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width: 1036px;
+        max-width: 100%;
+        height: auto;
+        column-gap: 14px;
+        row-gap: 28px;
+        @media screen and (max-width: 1012px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
+    
     .Mode__flex {
-        display: flex;
-        align-items: start;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
         position: relative;
-
-        .Mode__image {
+        @media screen and (max-width: 924px) {
+           display: flex;
+           flex-direction: column-reverse;
+            justify-content: center;
+        }
             .bornplay {
                 position: absolute;
-                right: -30px;
                 bottom: 0;
-                top: -290px;
+                right: -50px;
+                top: -310px;
+                max-width: 453px;
+                height: 830px;
+                @media screen and (max-width: 1180px) {
+                    max-width: 383px;
+                    @media screen and (max-width: 924px) {
+                        position: unset;
+                        height: auto;
+                    }
+                }
             }
-        }
     }
 }

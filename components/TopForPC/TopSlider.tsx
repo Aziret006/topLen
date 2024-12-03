@@ -53,7 +53,8 @@ const TopSlider = () => {
   };
 
   return (
-    <div className={styles.topSlider}>
+  <>
+  <div className={styles.topSlider}>
       <div>
         <h1>
           у нас так же есть платформа <br /> <span>TOP для пк</span>
@@ -96,15 +97,13 @@ const TopSlider = () => {
           </div>
         </div>
       </div>
-      {/* <div className={styles.rectangleContainer}> */}
-      <img
-        // style={{ objectFit: "cover" }}
+      
+    </div>
+    <img
         src="/imageBack.svg"
         alt={"Football"}
         className={styles.rectangle}
-      />
-      {/* </div> */}
-    </div>
+      /></>
   );
 };
 

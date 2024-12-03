@@ -1,200 +1,200 @@
 .carouselContainer {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    height: 910px;
-    .carouselImage {
-        position: relative;
-        z-index: 1;
-        .topImage {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+  margin-top: 35px;
+  margin-bottom: 35px;
+  height: 910px;
+  .carouselImage {
+    position: relative;
+    z-index: 1;
+    .topImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .roles__content_back {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    row-gap: 67px;
+    padding-top: 60px;
+    h1 {
+      padding-right: 40px;
+      text-transform: uppercase;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 58.85px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+    p {
+      max-width: 572px;
+      opacity: 80%;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23.2px;
+      text-align: right;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+  .carousel__all {
+    position: relative;
+    z-index: 5000;
+  }
+  .sliderGrid {
+    display: grid;
+    position: relative;
+    z-index: 100000;
+  }
+  .carousel {
+    display: flex;
+    text-align: center;
+
+    .imageContainer {
+      position: relative;
+      width: 450px;
+
+      img {
+        position: absolute;
+        top: 160px;
+        left: 50px;
+        max-width: 450px;
+        border-radius: 10px;
+      }
     }
 
-    .roles__content_back {
+    .textContainer {
+      background-color: #1d1d1d; // Тёмный фон
+      color: #ffffff; // Белый текст
+      border-radius: 15px; // Скруглённые углы
+      padding: 20px; // Внутренние отступы
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); // Тень для объёмности
+      backdrop-filter: blur(10px) h2 {
+        font-size: 20px; // Размер заголовка
+        margin-bottom: 10px; // Отступ снизу
+        font-weight: bold; // Жирный текст
+      }
+
+      p {
+        font-size: 16px; // Размер текста описания
+        line-height: 1.5; // Высота строки
+        color: #c2c2c2; // Светло-серый цвет текста
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: colum;
+      gap: 10px;
+
+      .arrow {
+        background-color: #28a745;
         color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: end;
-        row-gap: 67px;
-        padding-top: 60px;
-        h1 {
-            padding-right: 40px;
-            text-transform: uppercase;
-            font-size: 50px;
-            font-weight: 500;
-            line-height: 58.85px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-        p {
-            max-width: 572px;
-            opacity: 80%;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 23.2px;
-            text-align: right;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-        }
-    }
-    .carousel__all {
-        position: relative;
-        z-index: 5000;
-    }
-    .sliderGrid {
-        display: grid;
-        position: relative;
-        z-index: 100000;
-    }
-    .carousel {
-        display: flex;
-        text-align: center;
-
-        .imageContainer {
-            position: relative;
-            width: 450px;
-
-            img {
-                position: absolute;
-                top: 160px;
-                left: 50px;
-                max-width: 450px;
-                border-radius: 10px;
-            }
-        }
-
-        .textContainer {
-            background-color: #1d1d1d; // Тёмный фон
-            color: #ffffff; // Белый текст
-            border-radius: 15px; // Скруглённые углы
-            padding: 20px; // Внутренние отступы
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); // Тень для объёмности
-            backdrop-filter: blur(10px) h2 {
-                font-size: 20px; // Размер заголовка
-                margin-bottom: 10px; // Отступ снизу
-                font-weight: bold; // Жирный текст
-            }
-
-            p {
-                font-size: 16px; // Размер текста описания
-                line-height: 1.5; // Высота строки
-                color: #c2c2c2; // Светло-серый цвет текста
-            }
-        }
-        .buttons {
-            display: flex;
-            flex-direction: colum;
-            gap: 10px;
-
-            .arrow {
-                background-color: #28a745;
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-
-                &:hover {
-                    background-color: #218838;
-                }
-            }
-        }
-    }
-    .imageContainer2 {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: end;
-        gap: 20px;
-        position: relative;
-        z-index: 500;
-    }
-
-    /* Растянуть элементы по сетке */
-    .coverImage:nth-child(3) {
-        grid-row: span 2;
-        height: 290px;
-    }
-
-    // .item:nth-child(5) {
-    //     grid-column: span 2; /* Центральный элемент занимает 2 колонки */
-    // }
-    .coverImage {
-        width: 206px;
-        height: 178px;
-    }
-
-    .text {
-        margin-top: 10px;
-        color: #fff;
-        font-size: 14px;
-    }
-
-    .activeItem {
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        border: 2px solid #ffffff80;
-        box-shadow: 0px 0px 10px 5px #ffffff40 inset;
-    }
-    .activeImage {
-        opacity: 1;
-        backdrop-filter: blur(10px);
-        box-shadow: 0px 0px 10px 5px #ffffff40 inset;
-        border: 2px solid #ffffff80;
-        background: #0c0c0c4d;
-    }
-    .sliderButtons {
-        max-width: 300px;
-        position: relative;
-        top: -31px;
-        .sliderArrows {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            width: 100%;
-        }
-    }
-    .prevButton,
-    .nextButton {
-        background-color: #000000;
-        border: 1px solid #ffffff;
-        opacity: 0.3;
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border: none;
+        padding: 10px 20px;
         cursor: pointer;
-        font-size: 18px;
-    }
-    .prevButton:hover,
-    .nextButton:hover {
-        background-color: #4a4a4a;
-    }
+        border-radius: 5px;
+        transition: background-color 0.3s;
 
-    .sliderDots {
-        display: flex;
-        gap: 8px;
-        margin-top: 20px;
+        &:hover {
+          background-color: #218838;
+        }
+      }
     }
+  }
+  .imageContainer2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+    gap: 20px;
+    position: relative;
+    z-index: 500;
+  }
 
-    .dot {
-        background: #ffffff;
-        opacity: 0.2;
-        width: 44px;
-        height: 7px;
-        cursor: pointer;
-        border-radius: 25px;
-    }
+  /* Растянуть элементы по сетке */
+  .coverImage:nth-child(3) {
+    grid-row: span 2;
+    height: 290px;
+  }
 
-    .activeDot {
-        background: #fff; /* Чёрный цвет для активной точки */
-        opacity: 1;
+  // .item:nth-child(5) {
+  //     grid-column: span 2; /* Центральный элемент занимает 2 колонки */
+  // }
+  .coverImage {
+    width: 206px;
+    height: 178px;
+  }
+
+  .text {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .activeItem {
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ffffff80;
+    box-shadow: 0px 0px 10px 5px #ffffff40 inset;
+  }
+  .activeImage {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px 5px #ffffff40 inset;
+    border: 2px solid #ffffff80;
+    background: #0c0c0c4d;
+  }
+  .sliderButtons {
+    max-width: 300px;
+    position: relative;
+    top: -31px;
+    .sliderArrows {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      width: 100%;
     }
+  }
+  .prevButton,
+  .nextButton {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    opacity: 0.3;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .prevButton:hover,
+  .nextButton:hover {
+    background-color: #4a4a4a;
+  }
+
+  .sliderDots {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .dot {
+    background: #ffffff;
+    opacity: 0.2;
+    width: 44px;
+    height: 7px;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  .activeDot {
+    background: #fff; /* Чёрный цвет для активной точки */
+    opacity: 1;
+  }
 }

@@ -16,6 +16,10 @@
             color: #191a1b;
         }
     }
+    .technical_image_mobile{
+        max-width: 639px;
+        height: auto;
+    }
     .technical_image_text_flex {
         display: flex;
         justify-content: space-between;
@@ -23,6 +27,8 @@
         height: 808px;
         position: relative;
         .technical_image_text {
+            position: relative;
+            top: 100px;
             max-height: 55px;
             max-width: 357px;
             display: flex;

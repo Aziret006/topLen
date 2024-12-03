@@ -12,31 +12,48 @@
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
             color: #161616;
+           
+            @media screen and (max-width: 1279px) {
+font-size: 40px;
+font-weight: 300;
+line-height: 46.12px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+                
+            }
             span {
                 display: inline-block;
                 margin-left: -25px;
                 color: #ffffff;
                 padding: 0 25px;
-                background-color: green; /* Зелёный фон */
-                clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%); /* Обрезка для треугольной формы */
+                background-color: green;
+                /* Зелёный фон */
+                clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
             }
         }
+
     }
+
     .grade_image_container {
         position: relative;
         bottom: 0;
         left: 10px;
         height: 764px;
         width: 564px;
+
         .grade_image {
             position: absolute;
             bottom: 0;
             top: 120px;
         }
     }
+
     .Page_Primus_Cards {
         display: flex;
         gap: 14px;
+
         .Page_Primus_Card {
             display: flex;
             flex-direction: column;
@@ -53,6 +70,7 @@
                 max-width: 296px;
                 height: 100%;
                 padding: 16px 26px 25px 26px;
+
                 h3 {
                     text-transform: uppercase;
                     font-size: 23px;
@@ -62,6 +80,7 @@
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
                 }
+
                 p {
                     opacity: 70%;
                     font-size: 16px;
@@ -75,10 +94,12 @@
             }
         }
     }
+
     .Page_Primus_Cards2 {
         display: flex;
         align-items: end;
         gap: 14px;
+
         .Page_Primus_Card {
             display: flex;
             flex-direction: column;
@@ -95,6 +116,7 @@
                 max-width: 296px;
                 height: 100%;
                 padding: 16px 26px 25px 26px;
+
                 h3 {
                     text-transform: uppercase;
                     font-size: 23px;
@@ -104,6 +126,7 @@
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
                 }
+
                 p {
                     opacity: 70%;
                     font-size: 16px;
@@ -117,11 +140,20 @@
             }
         }
     }
+
     .Page_Primus_flex {
         display: flex;
         justify-content: center;
         gap: 28px;
         height: 578px;
         margin-top: -150px;
+
+        @media screen and (max-width: 1266px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row: span 1;
+
+
+        }
     }
 }

@@ -7,7 +7,6 @@
         margin-top: 90px;
     }
     h1 {
-        // padding-left: 50px;
         text-transform: uppercase;
         font-size: 70px;
         font-weight: 300;
@@ -200,11 +199,11 @@
     //     z-index: 1;
     //     max-width: 1414px;
     //     height: 744px;
-    .rectangle {
-        position: relative;
-        max-width: 100%;
-        height: auto;
-        // object-fit: cover;
-    }
+  
     // }
+}
+.rectangle {
+    max-width: 100%;
+    height: auto;
+    margin-top: 33px;
 }

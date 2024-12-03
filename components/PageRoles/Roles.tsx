@@ -60,71 +60,75 @@ const RoleCarousel = () => {
   };
 
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.carouselImage}>
-        <Image
-          src="/imageback2.svg"
-          alt="Football"
-          width={1380}
-          height={778}
-          className={styles.topImage}
-        />
-      </div>
-      <div className={styles.carousel__all}>
-        <div className={styles.carousel}>
-          <div className={styles.imageContainer}>
-            <img src={content[currentIndex].img} alt="Role" />
-          </div>
-          <div className={styles.arrows_image}>
-            <div className={styles.roles__content_back}>
-              <h1>Роли в нашем приложении</h1>
-              <p>
-                ТОП — это ваш путь к захватывающему футбольному опыту, будь вы
-                любитель или профессионал. <br />
-                <br /> Присоединяйтесь к нашему сообществу и наслаждайтесь
-                футболом на новом уровне!
-              </p>
+    <>
+      <div className={styles.carouselContainer}>
+        <div className={styles.carouselImage}>
+          <Image
+            src="/imageback2.svg"
+            alt="Football"
+            width={1380}
+            height={778}
+            className={styles.topImage}
+          />
+        </div>
+        <div className={styles.carousel__all}>
+          <div className={styles.carousel}>
+            <div className={styles.imageContainer}>
+              <img src={content[currentIndex].img} alt="Role" />
             </div>
-            <div className={styles.sliderGrid}>
-              <div className={styles.sliderButtons}>
-                <div className={styles.sliderArrows}>
-                  <button onClick={handlePrev} className={styles.prevButton}>
-                    <IoIosArrowBack color="#fff" size={22} />
-                  </button>
-                  <button onClick={handleNext} className={styles.nextButton}>
-                    <IoIosArrowForward color="#fff" size={22} />
-                  </button>
+            <div className={styles.arrows_image}>
+              <div className={styles.roles__content_back}>
+                <h1>Роли в нашем приложении</h1>
+                <p>
+                  ТОП — это ваш путь к захватывающему футбольному опыту, будь вы
+                  любитель или профессионал. <br />
+                  <br /> Присоединяйтесь к нашему сообществу и наслаждайтесь
+                  футболом на новом уровне!
+                </p>
+              </div>
+              <div className={styles.sliderGrid}>
+                <div className={styles.sliderButtons}>
+                  <div className={styles.sliderArrows}>
+                    <button onClick={handlePrev} className={styles.prevButton}>
+                      <IoIosArrowBack color="#fff" size={22} />
+                    </button>
+                    <button onClick={handleNext} className={styles.nextButton}>
+                      <IoIosArrowForward color="#fff" size={22} />
+                    </button>
+                  </div>
+                  <div className={styles.sliderDots}>
+                    {content.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`${styles.dot} ${
+                          index === currentIndex ? styles.activeDot : ""
+                        }`}
+                        onClick={() => handleDotClick(index)}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div className={styles.sliderDots}>
-                  {content.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`${styles.dot} ${
-                        index === currentIndex ? styles.activeDot : ""
-                      }`}
+                <div className={styles.imageContainer2}>
+                  {content.map((item, index) => (
+                    <img
                       onClick={() => handleDotClick(index)}
+                      key={index}
+                      src={item.cover}
+                      alt={`Cover ${index}`}
+                      className={`${styles.coverImage} ${
+                        currentIndex === index ? styles.activeItem : ""
+                      }`}
                     />
                   ))}
                 </div>
               </div>
-              <div className={styles.imageContainer2}>
-                {content.map((item, index) => (
-                  <img
-                    onClick={() => handleDotClick(index)}
-                    key={index}
-                    src={item.cover}
-                    alt={`Cover ${index}`}
-                    className={`${styles.coverImage} ${
-                      currentIndex === index ? styles.activeItem : ""
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>
+        <div >
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

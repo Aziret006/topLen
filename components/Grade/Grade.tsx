@@ -10,6 +10,7 @@ const Grade = () => {
           <br /> игроков и<br /> <span>создание</span>
           <br /> профессиональных <br /> матчей
         </h1>
+        
         <div className={styles.grade_image_container}>
           <Image
             src="/Black.svg"

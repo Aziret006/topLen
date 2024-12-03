@@ -1,6 +1,12 @@
 .ecosystem_All {
     margin-top: 43px;
-
+    @media screen and (max-width: 1426px) {
+       margin: 43px 40px 0 40px;
+       @media screen and (max-width: 742px) {
+        margin: 43px 20px 0 20px;
+        
+       }
+    }
     .ecosystem_text {
         display: flex;
         flex-direction: column;
@@ -14,6 +20,24 @@
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
             color: #161616;
+            @media screen and (max-width: 836px) {
+font-size: 35px;
+font-weight: 500;
+line-height: 41.2px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+@media screen and (max-width: 600px) {
+font-size: 31px;
+font-weight: 500;
+line-height: 36.49px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+            }
         }
         p {
             max-width: 422px;
@@ -24,18 +48,41 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+            @media screen and (max-width: 836px) {
+                br {
+                    display: none;
+                }
+            }
+              @media screen and (max-width: 600px) {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.56px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            }
         }
     }
     .ecosystem_container_image{
         position: relative;
-        height: 840px;
+        top: -100px;
+        @media screen and (max-width: 600px) {
+            top: 10px;
+        }
       .ecosystem_image{
-          position: absolute;
+        position: absolute;
           left: 0;
           bottom: 0;
           right: 0;
-          width: 1240px;
-          height: 950px;
+          top: 0;
+          width: 100%;
+          height: auto;
+          @media screen and (max-width: 600px) {
+              position: unset;
+          }
+            
+          }
       }
-    }
+    
 }
