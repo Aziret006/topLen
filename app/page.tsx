@@ -24,20 +24,13 @@ export default function Home() {
       <main>
         <Section />
         <Main />
-         {/* <PageComponent />  */}
         <PagePrimus />
         <TopSlider />
-        {/* <RoleCarousel /> */}
       <Mode />
-          {/* <Technical /> */}
-         {/* <Grade /> */}
         <Trainermode />
         <Organizer />
        <Ecosystem />
-      {/* <Field /> */}
-        {/*   <Tryout /> */}
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }
