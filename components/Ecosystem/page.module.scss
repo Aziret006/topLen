@@ -1,88 +1,99 @@
 .ecosystem_All {
-    margin-top: 43px;
-     height: auto;
-    @media screen and (max-width: 1426px) {
-       margin: 43px 40px 0 40px;
-       @media screen and (max-width: 742px) {
-        margin: 43px 20px 0 20px;
-        
-       }
+  margin-top: 143px;
+  height: auto;
+
+  @media screen and (max-width: 1426px) {
+    margin: 43px 40px 0 40px;
+
+    @media screen and (max-width: 742px) {
+      margin: 43px 20px 0 20px;
+
     }
-    .ecosystem_text {
-        display: flex;
-        flex-direction: column;
-        row-gap: 47px;
-        h1 {
-            max-width: 739px;
-            font-size: 52px;
-            font-weight: 500;
-            line-height: 61.2px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            color: #161616;
-            @media screen and (max-width: 836px) {
-                font-size: 35px;
-                font-weight: 500;
-                line-height: 41.2px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                    @media screen and (max-width: 600px) {
-                    font-size: 31px;
-                    font-weight: 500;
-                    line-height: 36.49px;
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
+  }
 
-                    }
+  .ecosystem_text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 47px;
 
-            }
-        }
-        p {
-            max-width: 422px;
-            opacity: 70%;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 20.88px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
-            @media screen and (max-width: 836px) {
-                br {
-                    display: none;
-                }
-            }
-              @media screen and (max-width: 600px) {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 18.56px;
-            text-align: left;
-            text-underline-position: from-font;
-            text-decoration-skip-ink: none;
+    h1 {
+      max-width: 739px;
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 61.2px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #161616;
 
-            }
-        }
-    }
-    .ecosystem_container_image {
-        position: relative;
-        top: -100px;
-      
+      @media screen and (max-width: 836px) {
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 41.2px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
         @media screen and (max-width: 600px) {
-          top: 10px;
-        }
-      
-        .ecosystem_image {
-          width: 100%;
-          height: auto;
-          @media screen and (max-width: 1400px) {
-            position: unset;
-          height: 100%;
+          font-size: 31px;
+          font-weight: 500;
+          line-height: 36.49px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
 
-          }
+        }
+
+      }
+    }
+
+    p {
+      max-width: 422px;
+      opacity: 70%;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20.88px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+      @media screen and (max-width: 836px) {
+        br {
+          display: none;
         }
       }
-      
-    
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.56px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+      }
+    }
+  }
+
+  .ecosystem_container_image {
+    position: relative;
+    top: -200px;
+
+    @media screen and (max-width: 600px) {
+      top: 10px;
+    }
+
+    .ecosystem_image {
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: 1400px) {
+        position: unset;
+        height: 100%;
+
+      }
+    }
+  }
+
+
 }

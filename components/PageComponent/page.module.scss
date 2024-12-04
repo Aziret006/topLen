@@ -1,10 +1,12 @@
 .page_all {
     position: relative;
     padding-left: 74px;
-    height: 1400px;
+    height: 1500px;
+
     @media screen and (max-width: 1258px) {
         height: 1000px;
     }
+
     .page_Text1 {
         text-transform: uppercase;
         max-width: 795px;
@@ -16,13 +18,16 @@
         color: #191a1b;
         position: relative;
         top: -50px;
+
         @media screen and (max-width: 1393px) {
             padding-top: 60px;
             top: 0;
         }
     }
+
     .top_Football_image2 {
         display: none;
+
         @media screen and (max-width: 1393px) {
             display: block;
             position: absolute;
@@ -31,14 +36,18 @@
             // top: 100px;
         }
     }
+
     .page_Text_none {
         display: none;
+
         @media screen and (max-width: 1393px) {
             // display: block;
         }
     }
+
     .page_Text_Page {
         position: relative;
+
         .page_Text2 {
             position: relative;
             top: 20px;
@@ -51,14 +60,17 @@
             text-decoration-skip-ink: none;
             opacity: 80%;
             color: #191a1b;
+
             @media screen and (max-width: 1393px) {
                 display: none;
             }
         }
+
         .page_Text3 {
             position: relative;
             top: 30px;
-            right: 35px;
+            // right: 35px;
+            right: 0;
             opacity: 80%;
             font-size: 16px;
             font-weight: 500;
@@ -67,15 +79,18 @@
             text-decoration-skip-ink: none;
             color: #191a1b;
             max-width: 400px;
+
             @media screen and (max-width: 1393px) {
                 display: none;
             }
         }
     }
+
     .topImageAll {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .topImage2 {
             min-width: 517px;
             width: 100%;
@@ -85,33 +100,39 @@
             left: 0;
             top: 120px;
             z-index: 200;
+
             @media screen and (max-width: 1393px) {
                 width: 790px;
                 margin-left: auto;
                 margin-right: auto;
             }
         }
+
         .top_back_image {
             position: absolute;
             right: 0;
             left: 180px;
             bottom: 50px;
             z-index: 100;
+
             @media screen and (max-width: 1393px) {
                 display: none;
             }
         }
+
         .top_Football_image {
             position: absolute;
             right: 0;
             left: 150px;
-            bottom: 110px;
+            bottom: -950px;
             z-index: 100;
+
             @media screen and (max-width: 1393px) {
                 display: none;
             }
         }
     }
+
     .page_Text_Page {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

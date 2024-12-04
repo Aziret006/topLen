@@ -7,6 +7,13 @@
     margin-left: 25px;
     margin-right: 25px;
 
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        padding: 40px 20px 40px 20px;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -59,12 +66,14 @@
                     text-align: left;
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
+
                     a {
                         color: #fff;
                         text-decoration: none;
 
                         &:hover {
-                            color: #ff8c00; /* Оранжевый цвет при наведении */
+                            color: #ff8c00;
+                            /* Оранжевый цвет при наведении */
                         }
                     }
                 }
@@ -144,6 +153,7 @@
 
         .social_aLL {
             margin-top: 40px;
+
             h5 {
                 font-size: 20px;
                 font-weight: 400;
@@ -153,6 +163,7 @@
                 text-decoration-skip-ink: none;
             }
         }
+
         .socials {
             display: flex;
             gap: 33px;

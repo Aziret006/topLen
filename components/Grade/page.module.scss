@@ -1,167 +1,225 @@
-.gradeContainer {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 2rem;
-    overflow: hidden;
-    margin-top: 150px;
+.grade_container {
+  padding: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 4rem 2rem;
   }
-  
-  .heroSection {
+
+  .grade_content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    // margin-bottom: 4rem;
-    gap: 2rem;
-  
-    @media (max-width: 1024px) {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      column-gap: 30px;
     }
   }
-  
-  .textContent {
-    flex: 1;
-    
+
+  .grade_text {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+
+    @media screen and (max-width: 1024px) {
+      br {
+        display: none;
+      }
+    }
+
+    @media (min-width: 480px) {
+      padding: 0 2rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 3rem;
+      width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+      width: 50%;
+      padding: 0;
+    }
+
     h1 {
-      font-size: 60px;
-      font-weight: 400;
-      line-height: 1.16;
       text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 39px;
+      text-align: left;
       color: #161616;
-      margin: 0;
-  
-      @media (max-width: 1279px) {
-        font-size: 40px;
-        line-height: 1.15;
+      width: 100%;
+
+      @media (min-width: 480px) {
+        font-size: 30px;
       }
-  
-      @media (max-width: 768px) {
-        font-size: 32px;
-        text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 48px;
+        line-height: 1.2;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 60px;
+        line-height: 69.6px;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: -10px;
+        color: #ffffff;
+        padding: 0 10px;
+        background-color: green;
+        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+
+        @media (min-width: 480px) {
+          margin-left: -15px;
+          padding: 0 15px;
+        }
+
+        @media (min-width: 768px) {
+          margin-left: -20px;
+          padding: 0 20px;
+        }
+
+        @media (min-width: 1024px) {
+          margin-left: -25px;
+          padding: 0 25px;
+        }
       }
     }
   }
-  
-  .highlight {
-    display: inline-block;
-    background-color: #00A551;
-    color: white;
-    padding: 0 25px;
-    margin-left: -25px;
+
+
+
+  .grade_image_container {
     position: relative;
-    
-    &::before {
-      content: '';
+    width: 100%;
+    max-width: 564px;
+    height: 0;
+    padding-bottom: 80.46%; // (766 / 564) * 100
+
+    @media (min-width: 1024px) {
+      max-width: 100%;
+    }
+
+    .grade_image {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: inherit;
-      transform: skew(-12deg);
-      z-index: -1;
-    }
-  }
-  
-  .mobilePreview {
-    flex: 1;
-    position: relative;
-    height: 500px;
-  
-    @media (max-width: 1024px) {
       width: 100%;
-      height: auto;
-      max-width: 600px;
+      height: 110%;
+      object-fit: contain;
+
+      @media screen and (max-width: 1024px) {
+        height: 100%;
+        top: -20px;
+      }
     }
   }
-  
-  .mobileImage {
+
+  .Page_Primus_flex {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+    margin-top: 2rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 28px;
+      margin-top: -150px;
+    }
+
+    @media screen and (max-width: 1337px) {
+      margin-top: -90px;
+
+      @media screen and (max-width: 1208px) {
+        margin-top: -50px;
+
+        @media screen and (max-width: 1108px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .Page_Primus_Cards,
+  .Page_Primus_Cards2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &:nth-child(1) {
+      position: relative;
+      top: -160px;
+
+      @media (max-width:1024px) {
+        position: unset;
+        top: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 14px;
+    }
+  }
+
+  .Page_Primus_Card {
+    display: flex;
+    flex-direction: column;
+    max-width: 296px;
     width: 100%;
     height: auto;
-    object-fit: contain;
-  }
-  
-  .cardsGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-    margin-top: -100px;
-  
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: 0;
-    }
-  
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .card {
-    background: white;
+    background: #ffff;
     border-radius: 20px;
-    border: 1px solid rgba(22, 22, 22, 0.5);
+    border: 1px solid #16161680;
     overflow: hidden;
-    height: 410px;
-    display: flex;
-    flex-direction: column;
-  
-    @media (max-width: 768px) {
+
+    @media (max-width:1024px) {
+      max-width: 100%;
+      border: none;
+    }
+
+    .topImage5 {
+      width: 100%;
       height: auto;
-    }
-  }
-  
-  .imageWrapper {
-    width: 100%;
-    height: 224px;
-    overflow: hidden;
-  }
-  
-  .cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .cardContent {
-    padding: 16px 26px 25px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  
-    h2 {
-      font-size: 23px;
-      font-weight: 500;
-      line-height: 1.18;
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-    }
-  
-    p {
-      font-size: 16px;
-      line-height: 1.16;
-      opacity: 0.7;
-      margin: 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .gradeContainer {
-      padding: 1rem;
-    }
-  
-    .cardContent {
-      padding: 1rem;
-  
-      h2 {
-        font-size: 20px;
+
+      @media screen and (max-width: 1024px) {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
       }
-  
+    }
+
+    .Page_Primus_Card_Text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 16px 26px 25px 26px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 16px 0 25px 2px;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 23px;
+        font-weight: 500;
+        line-height: 27.07px;
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
+
       p {
-        font-size: 14px;
+        opacity: 70%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.56px;
+        text-align: left;
       }
     }
   }
-  
-  
+}

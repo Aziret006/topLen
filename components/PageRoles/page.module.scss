@@ -2,9 +2,11 @@
   margin-top: 35px;
   margin-bottom: 35px;
   height: 910px;
+
   .carouselImage {
     position: relative;
     z-index: 1;
+
     .topImage {
       position: absolute;
       top: 0;
@@ -21,6 +23,7 @@
     align-items: end;
     row-gap: 67px;
     padding-top: 60px;
+
     h1 {
       padding-right: 40px;
       text-transform: uppercase;
@@ -31,6 +34,7 @@
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
     }
+
     p {
       max-width: 572px;
       opacity: 80%;
@@ -42,15 +46,18 @@
       text-decoration-skip-ink: none;
     }
   }
+
   .carousel__all {
     position: relative;
     z-index: 5000;
   }
+
   .sliderGrid {
     display: grid;
     position: relative;
     z-index: 100000;
   }
+
   .carousel {
     display: flex;
     text-align: center;
@@ -74,6 +81,7 @@
       border-radius: 15px; // Скруглённые углы
       padding: 20px; // Внутренние отступы
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); // Тень для объёмности
+
       backdrop-filter: blur(10px) h2 {
         font-size: 20px; // Размер заголовка
         margin-bottom: 10px; // Отступ снизу
@@ -86,6 +94,7 @@
         color: #c2c2c2; // Светло-серый цвет текста
       }
     }
+
     .buttons {
       display: flex;
       flex-direction: colum;
@@ -106,6 +115,7 @@
       }
     }
   }
+
   .imageContainer2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -141,6 +151,7 @@
     border: 2px solid #ffffff80;
     box-shadow: 0px 0px 10px 5px #ffffff40 inset;
   }
+
   .activeImage {
     opacity: 1;
     backdrop-filter: blur(10px);
@@ -148,10 +159,12 @@
     border: 2px solid #ffffff80;
     background: #0c0c0c4d;
   }
+
   .sliderButtons {
     max-width: 300px;
     position: relative;
     top: -31px;
+
     .sliderArrows {
       display: flex;
       align-items: center;
@@ -159,6 +172,7 @@
       width: 100%;
     }
   }
+
   .prevButton,
   .nextButton {
     background-color: #000000;
@@ -173,6 +187,7 @@
     cursor: pointer;
     font-size: 18px;
   }
+
   .prevButton:hover,
   .nextButton:hover {
     background-color: #4a4a4a;
@@ -194,7 +209,8 @@
   }
 
   .activeDot {
-    background: #fff; /* Чёрный цвет для активной точки */
+    background: #fff;
+    /* Чёрный цвет для активной точки */
     opacity: 1;
   }
 }
@@ -390,13 +406,15 @@
   &.activeItem {
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.25) inset;
-   
-  }
-  &:nth-child(2) {
-    border-top-right-radius: 85%;
-  }
-   &:nth-child(4) {
-    border-top-left-radius: 85%;
 
-   }
+  }
+
+  // &:nth-child(2) {
+  //   border-top-right-radius: 85%;
+  // }
+
+  // &:nth-child(4) {
+  //   border-top-left-radius: 85%;
+
+  // }
 }

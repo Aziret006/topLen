@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 const Ecosystem = () => {
   return (
     <div className={styles.ecosystem_All}>
