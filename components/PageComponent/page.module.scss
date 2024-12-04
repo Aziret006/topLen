@@ -111,8 +111,9 @@
         .top_back_image {
             position: absolute;
             right: 0;
+            top: 930px;
             left: 180px;
-            bottom: 50px;
+            bottom: 0;
             z-index: 100;
 
             @media screen and (max-width: 1393px) {
@@ -123,7 +124,7 @@
         .top_Football_image {
             position: absolute;
             right: 0;
-            left: 150px;
+            left: 100px;
             bottom: -950px;
             z-index: 100;
 
