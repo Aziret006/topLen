@@ -4,7 +4,8 @@
     padding: 40px 40px 67px 40px;
     margin: 83px 0 25px 0;
     border-radius: 25px;
-    height: 379px;
+    margin-left: 25px;
+    margin-right: 25px;
 
     .container {
         display: flex;
@@ -42,6 +43,7 @@
 
         .links {
             display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
 
             ul {

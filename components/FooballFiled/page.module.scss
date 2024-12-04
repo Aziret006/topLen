@@ -1,53 +1,88 @@
 .fieldBackground {
     position: relative;
-}
-
-.fieldOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-}
-.devicesWrapper {
+    height: 50vh;
+    z-index: 500;
+  
+    @media (min-width: 640px) {
+      height: 60vh;
+    }
+  
+    @media (min-width: 768px) {
+      height: 70vh;
+    }
+  
+    @media (min-width: 1024px) {
+      height: 80vh;
+    }
+  
+    @media (min-width: 1280px) {
+      height: 90vh;
+    }
+  }
+  
+  .fieldImage {
+    object-fit: cover;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    height: 100%; // Убедитесь, что изображение растягивается по всей области
+  }
+  
+  .hiddenMobile {
+    // display: none;
+  
+    @media (min-width: 1440px) {
+      display: block;
+    }
+  }
+  
+  
+  
 
-    .device1 {
-        max-width: 473px;
-        height: auto;
-        position: relative;
-        right: 0;
-        bottom: 0;
-        top: 332px;
-        left: 0;
-    }
-    .device2 {
-        max-width: 473px;
-        position: relative;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        height: auto;
-    }
-    .device3 {
-        max-width: 473px;
-        position: relative;
-        right: 0;
-        bottom: 0;
-        top: -322px;
-        height: auto;
-    }
-}
+// .fieldOverlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     overflow: hidden;
+// }
+// .devicesWrapper {
+//     position: absolute;
+//     bottom: 0;
+//     top: 0;
+//     display: flex;
+//     justify-content: end;
+//     align-items: center;
+
+//     .device1 {
+//         max-width: 473px;
+//         height: auto;
+//         position: relative;
+//         right: 0;
+//         bottom: 0;
+//         top: 332px;
+//         left: 0;
+//     }
+//     .device2 {
+//         max-width: 473px;
+//         position: relative;
+//         right: 0;
+//         bottom: 0;
+//         top: 0;
+//         left: 0;
+//         height: auto;
+//     }
+//     .device3 {
+//         max-width: 473px;
+//         position: relative;
+//         right: 0;
+//         bottom: 0;
+//         top: -322px;
+//         height: auto;
+//     }
+// }

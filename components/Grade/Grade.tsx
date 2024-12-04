@@ -1,98 +1,74 @@
 import React from "react";
-import styles from "./page.module.scss";
 import Image from "next/image";
+import styles from "./page.module.scss";
+
 const Grade = () => {
+  const cards = [
+    {
+      title: "АРБИТР",
+      description: "Обеспечьте честную игру с помощью опытных арбитров из нашей базы.",
+      image: "/arbitr.svg",
+    },
+    {
+      title: "ТРЕНЕР",
+      description: "Достигайте новых вершин с помощью индивидуальных тренировок от опытных тренеров.",
+      image: "/trener.svg",
+    },
+    {
+      title: "СКАУТ/АГЕНТ",
+      description: "Поиск будущих звезд: скаутинговая платформа для поиска талантливых игроков.",
+      image: "/skaut.svg",
+    },
+    {
+      title: "ТЕСТИНГОВЫЙ ЦЕНТР",
+      description: "Экспертная оценка игроков и создание профессиональных матчей.",
+      image: "/center.svg",
+    },
+  ];
+
   return (
-    <div className={styles.grade_container}>
-      <div className={styles.grade_text}>
-        <h1>
-          <span>Экспертная оценка</span>
-          <br /> игроков и<br /> <span>создание</span>
-          <br /> профессиональных <br /> матчей
-        </h1>
-        
-        <div className={styles.grade_image_container}>
+    <div className={styles.gradeContainer}>
+      <div className={styles.heroSection}>
+        <div className={styles.textContent}>
+          <h1>
+            <span className={styles.highlight}>Экспертная оценка</span>
+            <br /> игроков и <br />
+            <span className={styles.highlight}>создание</span>
+            <br /> профессиональных <br /> матчей
+          </h1>
+        </div>
+        <div className={styles.mobilePreview}>
           <Image
-            src="/Black.svg"
-            alt="Football"
-            width={564}
-            height={766}
-            className={styles.grade_image}
+            src="/mobile-screens.png"
+            alt="Mobile application preview"
+            width={600}
+            height={800}
+            className={styles.mobileImage}
           />
         </div>
       </div>
-      <div className={styles.Page_Primus_flex}>
-        <div className={styles.Page_Primus_Cards}>
-          <div className={styles.Page_Primus_Card}>
-            <Image
-              src="/arbitr.svg"
-              alt="Football"
-              width={295}
-              height={224}
-              className={styles.topImage5}
-            />
-            <div className={styles.Page_Primus_Card_Text}>
-              <h3>Арбитр</h3>
-              <p>
-                Обеспечьте честную игру с помощью опытных арбитров из нашей
-                базы.
-              </p>
+      <div className={styles.cardsGrid}>
+        {cards.map((card, index) => (
+          <div key={index} className={styles.card}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={295}
+                height={224}
+                className={styles.cardImage}
+              />
+            </div>
+            <div className={styles.cardContent}>
+              <h2>{card.title}</h2>
+              <p>{card.description}</p>
             </div>
           </div>
-          <div className={styles.Page_Primus_Card}>
-            <Image
-              src="/trener.svg"
-              alt="Football"
-              width={295}
-              height={224}
-              className={styles.topImage5}
-            />
-            <div className={styles.Page_Primus_Card_Text}>
-              <h3>Тренер</h3>
-              <p>
-                Достигайте новых вершин с помощью индивидуальных тренировок от
-                опытных тренеров.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.Page_Primus_Cards2}>
-          <div className={styles.Page_Primus_Card}>
-            <Image
-              src="/skaut.svg"
-              alt="Football"
-              width={295}
-              height={224}
-              className={styles.topImage5}
-            />
-            <div className={styles.Page_Primus_Card_Text}>
-              <h3>Арбитр</h3>
-              <p>
-                Обеспечьте честную игру с помощью опытных арбитров из нашей
-                базы.
-              </p>
-            </div>
-          </div>
-          <div className={styles.Page_Primus_Card}>
-            <Image
-              src="/center.svg"
-              alt="Football"
-              width={295}
-              height={224}
-              className={styles.topImage5}
-            />
-            <div className={styles.Page_Primus_Card_Text}>
-              <h3>Тренер</h3>
-              <p>
-                Достигайте новых вершин с помощью индивидуальных тренировок от
-                опытных тренеров.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default Grade;
+
