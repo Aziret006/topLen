@@ -76,7 +76,13 @@ const PagePrimus = () => {
               </div>
             </div>
           </div>
-          <img src="/image7.svg" alt="Football" className={styles.topImage6} />
+          <a target="_blank" href="https://www.youtube.com/watch?v=iJDtziSiaWM">
+            <img
+              src="/image7.svg"
+              alt="Football"
+              className={styles.topImage6}
+            />
+          </a>
         </div>
       </div>
     </div>

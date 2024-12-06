@@ -27,7 +27,7 @@ const Section = () => {
             <h4>Доступно на </h4>
             <div className={styles.wrapper}>
               <a
-                href="https://apps.apple.com"
+                href="https://apps.apple.com/kg/app/top/id6477701651"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Section = () => {
                 </div>
               </a>
               <a
-                href="https://play.google.com"
+                href="https://play.google.com/store/apps/details?id=dev.odigital.topkg"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"

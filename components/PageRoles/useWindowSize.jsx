@@ -16,7 +16,6 @@ export const useWindowSize = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Установка начального значения
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);

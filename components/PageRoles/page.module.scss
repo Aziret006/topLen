@@ -7,12 +7,10 @@
 .carouselContainer {
   margin-top: 35px;
   margin-bottom: 35px;
-  // min-height: 910px;
   position: relative;
 
   .carouselImage {
     position: relative;
-    // width: 97%;
     min-height: 100%;
     background-image: url("/imageback2.svg");
     background-size: cover;
@@ -178,6 +176,74 @@
     }
   }
 
+  .carouselImage3 {
+    position: relative;
+    height: 626px;
+    background-image: url("/imageback2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 20px 0 0;
+
+    .imageContaine {
+      position: relative;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 300px !important;
+        height: 510px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .carousel2 {
+      position: relative;
+      .sliderButton1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .sliderGrid {
+      display: grid;
+      z-index: 100000;
+
+      @media (min-width: 768px) {
+        margin-top: 0;
+      }
+    }
+
+    .sliderButtons {
+      max-width: 100%;
+      position: relative;
+      margin: 0 auto;
+      height: auto;
+
+      .sliderArrows2 {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    .content {
+      h4 {
+        color: #fff;
+      }
+
+      p {
+        color: #fff;
+      }
+    }
+
+  }
+
 
   .carousel__all {
     position: relative;
@@ -189,6 +255,11 @@
   .carousel {
     display: flex;
     text-align: center;
+
+    @media screen and (max-width: 1083px) {
+      justify-content: space-between;
+      width: 100%;
+    }
 
 
     @media (min-width: 268px) {
@@ -213,6 +284,10 @@
           position: absolute;
           top: 160px;
           left: 50px;
+        }
+
+        @media screen and (max-width: 1320px) {
+          top: 0;
         }
       }
     }
@@ -319,15 +394,7 @@
     }
   }
 
-  .sliderGrid {
-    display: grid;
-    z-index: 100000;
-    margin-top: 30px;
 
-    @media (min-width: 768px) {
-      margin-top: 0;
-    }
-  }
 
   .imageContainer2 {
     display: grid;
@@ -421,7 +488,7 @@
   .dot {
     background: #ffffff;
     opacity: 0.2;
-    width: 44px;
+    width: 30px;
     height: 7px;
     cursor: pointer;
     border-radius: 25px;

@@ -3,9 +3,11 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
+
     @media screen and (max-width: 1279px) {
         margin-top: 90px;
     }
+
     h1 {
         text-transform: uppercase;
         font-size: 70px;
@@ -14,6 +16,7 @@
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
+
         @media screen and (max-width: 1279px) {
             font-size: 50px;
             font-weight: 300;
@@ -21,6 +24,7 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+
             @media screen and (max-width: 870px) {
                 font-size: 38px;
                 font-weight: 300;
@@ -30,6 +34,7 @@
                 text-decoration-skip-ink: none;
             }
         }
+
         span {
             font-size: 70px;
             font-weight: 400;
@@ -41,8 +46,10 @@
             margin-left: -35px;
             color: #ffffff;
             padding: 0 35px;
-            background-color: green; /* Зелёный фон */
+            background-color: green;
+            /* Зелёный фон */
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+
             @media screen and (max-width: 1279px) {
                 font-size: 50px;
                 font-weight: 300;
@@ -50,6 +57,7 @@
                 text-align: left;
                 text-underline-position: from-font;
                 text-decoration-skip-ink: none;
+
                 @media screen and (max-width: 870px) {
                     font-size: 38px;
                     font-weight: 300;
@@ -61,27 +69,33 @@
             }
         }
     }
+
     .topSliderFlex {
         display: flex;
         align-items: center;
         gap: 45px;
         max-width: 1380px;
         height: 598px;
+
         @media screen and (max-width: 1279px) {
             flex-direction: column-reverse;
             height: 100%;
         }
+
         .topSliderImage {
             position: relative;
             width: 100%;
             height: 100%;
+
             @media screen and (max-width: 1279px) {
                 margin-top: 30px;
             }
+
             .topLogo {
                 position: absolute;
                 bottom: 30px;
                 width: 100%;
+
                 @media screen and (max-width: 1343px) {
                     bottom: 50px;
                     position: unset;
@@ -96,11 +110,13 @@
         display: flex;
         flex-direction: column;
         row-gap: 30px;
+
         @media screen and (max-width: 1279px) {
             flex-direction: column-reverse;
             max-width: 100%;
             justify-content: center;
         }
+
         h4 {
             text-transform: uppercase;
             font-size: 35px;
@@ -111,6 +127,7 @@
             text-decoration-skip-ink: none;
             color: #191a1b;
         }
+
         p {
             opacity: 89%;
             font-size: 16px;
@@ -122,6 +139,7 @@
             color: #161616;
             padding-top: 25px;
         }
+
         li {
             opacity: 89%;
             font-size: 16px;
@@ -133,26 +151,31 @@
             color: #161616;
         }
     }
+
     .sliderButtons {
         display: flex;
         align-items: center;
         gap: 44px;
         width: 100%;
         margin-top: 13px;
+
         @media screen and (max-width: 1279px) {
             flex-direction: column-reverse;
             gap: 10px;
         }
+
         .sliderArrows {
             display: flex;
             align-items: center;
             gap: 17px;
             width: 100%;
+
             @media screen and (max-width: 1279px) {
                 justify-content: space-between;
             }
         }
     }
+
     .prevButton,
     .nextButton {
         background-color: #f1f1f1;
@@ -166,6 +189,7 @@
         cursor: pointer;
         font-size: 18px;
     }
+
     .prevButton:hover,
     .nextButton:hover {
         background-color: #e0e0e0;
@@ -175,6 +199,7 @@
         display: flex;
         gap: 8px;
         margin-top: 20px;
+
         @media screen and (max-width: 1279px) {
             position: relative;
             top: -55px;
@@ -191,19 +216,37 @@
     }
 
     .activeDot {
-        background: #000; /* Чёрный цвет для активной точки */
+        background: #000;
+        /* Чёрный цвет для активной точки */
         opacity: 1;
     }
+
     // .rectangleContainer {
     //     position: relative;
     //     z-index: 1;
-    //     max-width: 1414px;
-    //     height: 744px;
-  
+    //     max-width: 100%;
+    //     height: auto;
     // }
 }
+
 .rectangle {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
-    margin-top: 33px;
+    margin: 33px 20px 0 20px;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 768px) {
+    .rectangle {
+        margin: 20px 15px 0 15px;
+        max-width: 95%;
+    }
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 480px) {
+    .rectangle {
+        margin: 15px 10px 0 10px;
+        max-width: 95%;
+    }
 }

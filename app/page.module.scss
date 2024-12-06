@@ -5,7 +5,9 @@
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    @media screen and (max-width: 600px) {
+
+    @media screen and (max-width: 809px) {
         padding-top: 0;
+        padding-bottom: 0;
     }
 }

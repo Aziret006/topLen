@@ -37,7 +37,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className={pathname === "/top" ? s.active : ""}>
+            <Link href="#id" className={pathname === "/top" ? s.active : ""}>
               TOP для ПК
             </Link>
           </li>

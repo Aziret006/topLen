@@ -38,11 +38,16 @@ const Main = () => {
             </div>
             <div className={styles.topAbsolute}>
               <img src="/image.svg" alt="Football" className={styles.topLogo} />
-              <img
-                src="/video.svg"
-                alt="Football"
-                className={styles.topLogo2}
-              />
+              <a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=iJDtziSiaWM"
+              >
+                <img
+                  src="/video.svg"
+                  alt="Football"
+                  className={styles.topLogo2}
+                />
+              </a>
             </div>
           </div>
         </div>
