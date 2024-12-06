@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 const Trainermode = () => {
   return (
     <div className={styles.trainermode_container}>
