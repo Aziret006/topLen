@@ -55,7 +55,7 @@ const PagePrimus = () => {
                 <h3 className={styles.Page_Primus_Card_Text_h3}>
                   Бронирование полей
                 </h3>
-                <p>
+                <p className={styles.p}>
                   Система бронирования футбольных полей в &quot;Top&quot;
                   обеспечивает надежную защиту данных, предотвращая возможные
                   конфликты
@@ -69,10 +69,9 @@ const PagePrimus = () => {
                 className={styles.topImage5}
               />
               <div className={styles.Page_Primus_Card_Text}>
-                <h3>Cоздание игры</h3>
+                <h3>Профессиональные тренировки</h3>
                 <p>
-                  Удобный  и понятный интерфейс для создания игр и приглашения
-                  игроков.
+                  Эксперная оценка игроков и создание профессиональных матчей.
                 </p>
               </div>
             </div>

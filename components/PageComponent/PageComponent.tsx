@@ -15,13 +15,6 @@ const PageComponent: React.FC = () => {
           Игра становится лучше, когда футболисты объединяются, создавая
           собственные игры и наслаждаясь процессом!
         </p>
-        <Image
-          src="/image3.svg"
-          alt="Football"
-          width={331}
-          height={92}
-          className={styles.top_Football_image2}
-        />
         <figure className={styles.topImageAll}>
           <Image
             src="/image2.svg"
@@ -44,10 +37,6 @@ const PageComponent: React.FC = () => {
             height={92}
             className={styles.top_Football_image}
           />
-          <p className={styles.page_Text_none}>
-            Игра становится лучше, когда футболисты объединяются, создавая
-            собственные игры и наслаждаясь процессом!
-          </p>
         </figure>
         <p className={styles.page_Text3}>
           На нашей платформе мы стремимся предоставить вам всё, что нужно для

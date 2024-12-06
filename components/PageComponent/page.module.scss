@@ -1,10 +1,44 @@
 .page_all {
     position: relative;
     padding-left: 74px;
-    height: 1500px;
+    height: 1400px;
 
-    @media screen and (max-width: 1258px) {
-        height: 1000px;
+    @media screen and (max-width: 1413px) {
+        margin-top: 150px;
+        padding-left: 60px;
+        height: 1600px;
+
+        @media screen and (max-width: 1281px) {
+            height: 1400px;
+            padding-left: 40px;
+
+            @media screen and (max-width: 1024px) {
+                height: 1250px;
+
+                @media screen and (max-width: 895px) {
+                    height: 1100px;
+
+                    @media screen and (max-width: 790px) {
+                        height: 1000px;
+                        padding-left: 20px;
+
+                        @media screen and (max-width: 666px) {
+                            height: 850px;
+
+                            @media screen and (max-width: 563px) {
+                                height: 780px;
+                                padding-left: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 796px) {
+            margin-top: 40px;
+            padding-left: 10px;
+        }
     }
 
     .page_Text1 {
@@ -19,35 +53,35 @@
         position: relative;
         top: -50px;
 
-        @media screen and (max-width: 1393px) {
-            padding-top: 60px;
+        @media screen and (max-width: 1413px) {
             top: 0;
-        }
-    }
+            max-width: 100%;
+            padding-bottom: 30px;
 
-    .top_Football_image2 {
-        display: none;
+            @media screen and (max-width: 898px) {
+                font-size: 35px;
+                font-weight: 500;
+                line-height: 41.2px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
 
-        @media screen and (max-width: 1393px) {
-            display: block;
-            position: absolute;
-            z-index: 100;
-            // right: -800px;
-            // top: 100px;
-        }
-    }
+                @media screen and (max-width: 600px) {
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: 37.66px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    padding-bottom: 12px;
 
-    .page_Text_none {
-        display: none;
+                }
+            }
 
-        @media screen and (max-width: 1393px) {
-            // display: block;
         }
     }
 
     .page_Text_Page {
-        position: relative;
-
         .page_Text2 {
             position: relative;
             top: 20px;
@@ -61,16 +95,37 @@
             opacity: 80%;
             color: #191a1b;
 
-            @media screen and (max-width: 1393px) {
-                display: none;
+            @media screen and (max-width: 1413px) {
+                top: 0;
+                max-width: 100%;
+
+                @media screen and (max-width: 898px) {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 21.19px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+
+                    @media screen and (max-width: 600px) {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 18.83px;
+                        text-align: left;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+
+                    }
+
+                }
             }
+
         }
 
         .page_Text3 {
             position: relative;
             top: 30px;
-            // right: 35px;
-            right: 0;
+            right: 35px;
             opacity: 80%;
             font-size: 16px;
             font-weight: 500;
@@ -80,7 +135,7 @@
             color: #191a1b;
             max-width: 400px;
 
-            @media screen and (max-width: 1393px) {
+            @media screen and (max-width: 1413px) {
                 display: none;
             }
         }
@@ -89,7 +144,7 @@
     .topImageAll {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: end;
 
         .topImage2 {
             min-width: 517px;
@@ -101,35 +156,67 @@
             top: 120px;
             z-index: 200;
 
-            @media screen and (max-width: 1393px) {
-                width: 790px;
-                margin-left: auto;
-                margin-right: auto;
+            @media screen and (max-width: 1413px) {
+                top: 220px;
+                height: auto;
+
+                @media screen and (max-width: 482px) {
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 240px;
+                    left: -20px;
+
+                    @media screen and (max-width: 431px) {
+                        left: -40px;
+                        overflow: scroll;
+                    }
+                }
             }
         }
 
         .top_back_image {
             position: absolute;
             right: 0;
-            top: 930px;
             left: 180px;
-            bottom: 0;
+            bottom: 50px;
             z-index: 100;
 
-            @media screen and (max-width: 1393px) {
+            @media screen and (max-width: 1413px) {
                 display: none;
             }
+
         }
 
         .top_Football_image {
             position: absolute;
             right: 0;
-            left: 100px;
-            bottom: -950px;
+            left: 150px;
+            bottom: 110px;
             z-index: 100;
 
-            @media screen and (max-width: 1393px) {
-                display: none;
+            @media screen and (max-width: 1413px) {
+                left: 200px;
+                bottom: 100px;
+
+                @media screen and (max-width: 1024px) {
+                    bottom: 50px;
+
+                    @media screen and (max-width: 895px) {
+                        bottom: 20px;
+
+                        @media screen and (max-width: 790px) {
+                            left: 150px;
+                            width: 227px;
+                            height: auto;
+                            bottom: 0;
+
+                            @media screen and (max-width: 563px) {
+                                left: 50px;
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -138,5 +225,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: start;
+
+        @media screen and (max-width: 1413px) {
+            grid-template-columns: 1fr;
+        }
     }
 }

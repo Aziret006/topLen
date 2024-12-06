@@ -4,7 +4,7 @@ import Image from "next/image";
 const Organizer = () => {
   return (
     <div className={styles.Organizer_container}>
-      <img src="/myclub.svg" alt="Football" className={styles.Organizer_img}/>
+      <img src="/myclub.svg" alt="Football" className={styles.Organizer_img} />
       <div className={styles.Organizer_text}>
         <h1>Режим Организатора турнира</h1>
         <p>Возможности организатора:</p>
@@ -58,10 +58,11 @@ const Organizer = () => {
         </div>
         <div className={styles.Organizer_image}>
           <Image
-            src="/create.svg"
+            src="/place.svg"
             alt="Football"
             width={450}
             height={865}
+            priority
             className={styles.image}
           />
         </div>

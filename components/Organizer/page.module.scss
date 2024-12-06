@@ -3,20 +3,25 @@
         width: 100%;
         margin: 0 auto;
     }
+
     .Organizer_text {
         display: grid;
         row-gap: 31px;
         margin: 102px 0 32px 0;
         max-width: 610px;
+
         @media screen and (max-width: 1432px) {
             margin-left: 40px;
             margin-right: 40px;
+
             @media screen and (max-width: 742px) {
                 margin-left: 20px;
                 margin-right: 20px;
+                margin-top: 40px;
+                row-gap: 25px;
             }
         }
-       
+
         h1 {
             max-width: 610px;
             text-transform: uppercase;
@@ -27,6 +32,7 @@
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
             color: #161616;
+
             @media screen and (max-width: 836px) {
                 font-size: 35px;
                 font-weight: 500;
@@ -34,6 +40,7 @@
                 text-align: left;
                 text-underline-position: from-font;
                 text-decoration-skip-ink: none;
+
                 @media screen and (max-width: 600px) {
                     font-size: 31px;
                     font-weight: 500;
@@ -41,11 +48,13 @@
                     text-align: left;
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
-                     
+                    max-width: 349px;
+
                 }
-                 
+
             }
         }
+
         p {
             opacity: 70%;
             font-size: 30px;
@@ -55,25 +64,28 @@
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
             color: #191a1b;
-            @media screen and (max-width: 836px) {
-font-size: 20px;
-font-weight: 400;
-line-height: 23.2px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-          @media screen and (max-width: 600px) {
-font-size: 16px;
-font-weight: 400;
-line-height: 18.56px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
 
-          }
+            @media screen and (max-width: 836px) {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 23.2px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.56px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+
+                }
             }
         }
     }
+
     // components/TournamentFeatures/TournamentFeatures.module.scss
     .container {
         display: grid;
@@ -81,6 +93,7 @@ text-decoration-skip-ink: none;
         max-width: 870px;
         gap: 15px;
         margin-top: 31px;
+
         @media screen and (max-width: 605px) {
             grid-template-columns: 1fr 1fr;
         }
@@ -97,6 +110,7 @@ text-decoration-skip-ink: none;
         color: #000;
         text-align: left;
         border: 1px solid #16161680;
+
         @media screen and (max-width: 1265px) {
             border: none;
             border-radius: 20px;
@@ -119,23 +133,27 @@ text-decoration-skip-ink: none;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         color: #161616;
+
         @media screen and (max-width: 1265px) {
-font-size: 13px;
-font-weight: 500;
-line-height: 15.3px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 15.3px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
 
         }
     }
+
     .Organizer_grid_fex {
         display: grid;
         grid-template-columns: 3fr 1fr;
         align-items: start;
+
         @media screen and (max-width: 1432px) {
             margin-left: 40px;
             margin-right: 40px;
+
             @media screen and (max-width: 742px) {
                 display: flex;
                 flex-direction: column-reverse;
@@ -143,27 +161,31 @@ text-decoration-skip-ink: none;
                 margin-right: 20px;
             }
         }
+
         .Organizer_image {
             position: relative;
+
             @media screen and (max-width: 742px) {
                 margin: 0 auto;
                 width: 90%;
                 max-width: 500px;
             }
-         .image {
+
+            .image {
                 position: absolute;
                 bottom: 0;
                 top: -260px;
                 right: 0;
                 left: -33px;
+
                 @media screen and (max-width: 1080px) {
                     max-width: 317px;
                     height: auto;
                     top: -160px;
+
                     @media screen and (max-width: 742px) {
                         position: unset;
-                        
-                        
+                        max-width: 100%;
                     }
                 }
             }

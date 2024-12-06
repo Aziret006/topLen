@@ -69,12 +69,7 @@ const Trainermode = () => {
           </div>
         </div>
         <div className={styles.mobile_image}>
-          <img
-            src="/profile2.svg"
-            alt="Football"
-            className={styles.image}
-          />
-          
+          <img src="/profiles.svg" alt="Football" className={styles.image} />
         </div>
       </div>
     </div>

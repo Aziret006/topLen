@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 const Mode = () => {
   const data = [
     {
@@ -62,11 +61,11 @@ const Mode = () => {
             </div>
           ))}
         </div>
-          <img
-            src="/imagefootball.svg"
-            alt="Football"
-            className={styles.bornplay}
-          />
+        <img
+          src="/imagefootball.svg"
+          alt="Football"
+          className={styles.bornplay}
+        />
       </div>
     </div>
   );

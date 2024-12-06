@@ -42,7 +42,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className={pathname === "/roadmap" ? s.active : ""}>
+            <Link href="#" className={pathname === "/Roadmap" ? s.active : ""}>
               ROADMAP
             </Link>
           </li>

@@ -13,12 +13,13 @@ const Technical = () => {
           <h4>Награды и достижения</h4>
         </div>
         <div className={styles.technical_image_and_text}>
-          <img
+          <Image
             src="/mobileappstore.svg"
             alt="Football"
             width={639}
             height={900}
             className={styles.technical_image_mobile}
+            priority
           />
         </div>
         <Image
@@ -47,6 +48,29 @@ const Technical = () => {
             <p>
               В техническом паспорте отражаются персональные данные и
               характеристики футболиста по категориям; техника, физика, тактика,
+              психология.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className={styles.container}>
+          <div className={styles.section}>
+            <h2 className={styles.title}>Награды и достижения</h2>
+          </div>
+          <div className={styles.section}>
+            <h2 className={styles.title}>Игровые показатели</h2>
+          </div>
+          <div className={styles.section}>
+            <p className={styles.description}>
+              Показатели тестов по физике: Бег 10,30,50 м, челночный бег,
+              взрывная сила и т.д.
+            </p>
+          </div>
+          <div className={styles.section}>
+            <p className={styles.description}>
+              В техническом паспорте отражаются персональные данные и
+              характеристики футболиста по категориям: техника, физика, тактика,
               психология.
             </p>
           </div>
