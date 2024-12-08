@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 const Main = () => {
   return (
-    <div className={styles.topBackground}>
+    <div id="about" className={styles.topBackground}>
       <div className={styles.topFlex}>
         <div>
           <div className={styles.topText}>

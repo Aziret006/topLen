@@ -24,40 +24,47 @@ const Header = () => {
         </Link>
         <ul className={s.nav}>
           <li>
-            <Link href="/" className={pathname === "/" ? s.active : ""}>
+            <Link href="#about" className={pathname === "/" ? s.active : ""}>
               О проекте
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="#primus"
               className={pathname === "/advantages" ? s.active : ""}
             >
               Преимущества
             </Link>
           </li>
           <li>
-            <Link href="#id" className={pathname === "/top" ? s.active : ""}>
+            <Link
+              href="#TOPFORPK"
+              className={pathname === "/top" ? s.active : ""}
+            >
               TOP для ПК
             </Link>
           </li>
           <li>
-            <Link href="#" className={pathname === "/Roadmap" ? s.active : ""}>
+            <Link
+              href="#RODMAP"
+              className={pathname === "/Roadmap" ? s.active : ""}
+            >
               ROADMAP
             </Link>
           </li>
           <li>
-            <Link href="#" className={pathname === "/contacts" ? s.active : ""}>
-              Контакты
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className={pathname === "/contacts" ? s.active : ""}>
+            <Link
+              href="#MODE"
+              className={pathname === "/contacts" ? s.active : ""}
+            >
               Режимы
             </Link>
           </li>
           <li>
-            <Link href="#" className={pathname === "/contacts" ? s.active : ""}>
+            <Link
+              href="#ecosystem"
+              className={pathname === "/contacts" ? s.active : ""}
+            >
               Экосистема
             </Link>
           </li>
@@ -69,12 +76,18 @@ const Header = () => {
               Контакты
             </Link>
           </li>
-          <button>
-            Загрузить
-            <span>
-              <RiArrowRightUpLine />
-            </span>
-          </button>
+          <a
+            className={s.button}
+            target="_blank"
+            href="https://apps.apple.com/kg/app/top/id6477701651"
+          >
+            <button>
+              Загрузить
+              <span>
+                <RiArrowRightUpLine />
+              </span>
+            </button>
+          </a>
         </ul>
         <div className={s.bars}>
           {isOpen ? (

@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 
 const Ecosystem = () => {
   return (
-    <div className={styles.ecosystem_All}>
+    <div id="ecosystem" className={styles.ecosystem_All}>
       <div className={styles.ecosystem_text}>
         <h1>ФУТБОЛЬНАЯ ЭКОСИСТЕМА</h1>
         <p>

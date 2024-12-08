@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 const PagePrimus = () => {
   return (
-    <div className={styles.Page_Primus}>
+    <div id="primus" className={styles.Page_Primus}>
       <div className={styles.Page_Primus_Grid}>
         <div className={styles.Page_Primus_Image_Container}>
           <img src="/image4.svg" alt="Football" className={styles.topImage4} />

@@ -41,7 +41,7 @@ const Mode = () => {
   ];
 
   return (
-    <div className={styles.Mode}>
+    <div id="MODE" className={styles.Mode}>
       <div className={styles.Mode__content}>
         <h1>Режим «ФУТБОЛИСТ»</h1>
         <p>

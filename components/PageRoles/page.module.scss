@@ -198,12 +198,16 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 560px) {
+          
+        }
       }
     }
 
     .carousel2 {
       position: relative;
-      .sliderButton1{
+
+      .sliderButton1 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -308,6 +312,12 @@
         align-items: flex-end;
         text-align: right;
         padding-top: 60px;
+
+      }
+
+      @media screen and (max-width: 560px) {
+        padding-top: 0;
+        margin-bottom: 70px;
       }
 
       h1 {

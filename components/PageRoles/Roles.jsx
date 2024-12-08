@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useWindowSize } from "./useWindowSize";
+import Image from "next/image";
 
 const content = [
   {
@@ -298,7 +299,7 @@ const RoleCarousel = () => {
             <div className={styles.carouselImage3}>
               <div className={styles.carousel__all}>
                 <div className={styles.imageContaine}>
-                  <img src={content[currentIndex].img} alt="Role" />
+                  <Image src={content[currentIndex].img} alt="Role" />
                 </div>
                 <div className={styles.carousel2}>
                   <div className={styles.sliderButton1}>

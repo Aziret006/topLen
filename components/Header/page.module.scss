@@ -141,6 +141,11 @@
     list-style: none; // Убираем маркеры списка
     padding: 0;
     margin: 0;
+
+    .button {
+      text-decoration: none;
+
+    }
   }
 
   li {
