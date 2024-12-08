@@ -12,6 +12,7 @@ const PagePrimus = () => {
             width={606}
             height={823}
             className={styles.topImage4}
+            priority
           />
           <div className={styles.Page_Primus_Cards}>
             <div className={styles.Page_Primus_Card}>

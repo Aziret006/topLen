@@ -123,10 +123,13 @@ const TopSlider = () => {
               </div>
             </div>
             <div className={styles.topSliderImage}>
-              <img
+              <Image
+                width={860}
+                height={598}
                 src={slides[currentIndex].image}
                 alt={slides[currentIndex].title}
                 className={styles.topLogo}
+                priority
               />
             </div>
           </div>

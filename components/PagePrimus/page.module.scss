@@ -3,13 +3,17 @@
     width: 100%;
     justify-content: center;
     margin-left: auto;
-    margin-right: auto;
 
     @media screen and (max-width: 1315px) {
         justify-content: center;
 
         @media screen and (max-width: 886px) {
             margin-top: 40px;
+
+            @media screen and (max-width: 500px) {
+                width: 95%;
+                 margin-left: 0;
+            }
         }
     }
 
