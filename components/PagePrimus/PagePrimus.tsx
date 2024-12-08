@@ -1,17 +1,27 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 const PagePrimus = () => {
   return (
     <div id="primus" className={styles.Page_Primus}>
       <div className={styles.Page_Primus_Grid}>
         <div className={styles.Page_Primus_Image_Container}>
-          <img src="/image4.svg" alt="Football" className={styles.topImage4} />
+          <Image
+            src="/image4.svg"
+            alt="Football"
+            width={606}
+            height={823}
+            className={styles.topImage4}
+          />
           <div className={styles.Page_Primus_Cards}>
             <div className={styles.Page_Primus_Card}>
-              <img
+              <Image
                 src="/image6.svg"
                 alt="Football"
                 className={styles.topImage5}
+                width={295}
+                height={224}
+                priority
               />
               <div className={styles.Page_Primus_Card_Text}>
                 <h3>Cоздание игры</h3>
@@ -22,10 +32,13 @@ const PagePrimus = () => {
               </div>
             </div>
             <div className={styles.Page_Primus_Card}>
-              <img
+              <Image
                 src="/image8.svg"
                 alt="Football"
+                width={295}
+                height={224}
                 className={styles.topImage5}
+                priority
               />
               <div className={styles.Page_Primus_Card_Text3}>
                 <h3>
@@ -46,10 +59,13 @@ const PagePrimus = () => {
           </h3>
           <div className={styles.Page_Primus_Cards}>
             <div className={styles.Page_Primus_Card2}>
-              <img
+              <Image
                 src="/image6.svg"
                 alt="Football"
                 className={styles.topImage5}
+                width={295}
+                height={224}
+                priority
               />
               <div className={styles.Page_Primus_Card_Text}>
                 <h3 className={styles.Page_Primus_Card_Text_h3}>
@@ -63,10 +79,13 @@ const PagePrimus = () => {
               </div>
             </div>
             <div className={styles.Page_Primus_Card2}>
-              <img
+              <Image
                 src="/image6.svg"
                 alt="Football"
                 className={styles.topImage5}
+                width={295}
+                height={224}
+                priority
               />
               <div className={styles.Page_Primus_Card_Text}>
                 <h3>Профессиональные тренировки</h3>
@@ -77,10 +96,13 @@ const PagePrimus = () => {
             </div>
           </div>
           <a target="_blank" href="https://www.youtube.com/watch?v=iJDtziSiaWM">
-            <img
+            <Image
               src="/image7.svg"
               alt="Football"
               className={styles.topImage6}
+              width={606}
+              height={250}
+              priority
             />
           </a>
         </div>

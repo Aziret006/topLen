@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 const Main = () => {
   return (
     <div id="about" className={styles.topBackground}>
@@ -37,15 +38,25 @@ const Main = () => {
               </p>
             </div>
             <div className={styles.topAbsolute}>
-              <img src="/image.svg" alt="Football" className={styles.topLogo} />
+              <Image
+                src="/image.svg"
+                alt="Football"
+                width={354}
+                height={392}
+                className={styles.topLogo}
+                priority
+              />
               <a
                 target="_blank"
                 href="https://www.youtube.com/watch?v=iJDtziSiaWM"
               >
-                <img
+                <Image
                   src="/video.svg"
                   alt="Football"
+                  width={263}
+                  height={256}
                   className={styles.topLogo2}
+                  priority
                 />
               </a>
             </div>

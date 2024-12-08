@@ -15,12 +15,14 @@
     .topImage4 {
         @media screen and (max-width: 1315px) {
             width: 100%;
+            height: auto;
         }
     }
 
     .topImage6 {
         @media screen and (max-width: 1315px) {
             width: 100%;
+            height: auto;
         }
     }
 
@@ -49,6 +51,9 @@
             max-width: 606px;
 
             .topImage5 {
+                width: 100%;
+                height: auto;
+
                 @media screen and (max-width: 1315px) {
                     max-width: 100%;
                     height: 200px;
@@ -208,7 +213,7 @@
 
         .topImage5 {
             @media screen and (max-width: 1315px) {
-                max-width: 100%;
+                width: 100%;
                 height: 200px;
                 object-fit: cover;
                 border-radius: 20px;

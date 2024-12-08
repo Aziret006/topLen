@@ -22,6 +22,7 @@ const PageComponent: React.FC = () => {
             width={1150}
             height={1262}
             className={styles.topImage2}
+            priority
           />
           <Image
             src="/topFootball.svg"
@@ -29,6 +30,7 @@ const PageComponent: React.FC = () => {
             width={1446}
             height={416}
             className={styles.top_back_image}
+            priority
           />
           <Image
             src="/image3.svg"
@@ -36,6 +38,7 @@ const PageComponent: React.FC = () => {
             width={331}
             height={92}
             className={styles.top_Football_image}
+            priority
           />
         </figure>
         <p className={styles.page_Text3}>
