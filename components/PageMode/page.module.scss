@@ -6,8 +6,13 @@
         margin-top: 85px;
         margin-left: 15px;
 
+        @media screen and (max-width: 767px) {
+            margin-top: 160px;
+            margin-left: 10px;
+        }
+
         @media screen and (max-width: 690px) {
-            margin-top: 40px;
+            // margin-top: 40px;
             margin-left: 10px;
         }
     }
