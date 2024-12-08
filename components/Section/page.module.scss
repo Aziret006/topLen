@@ -1,13 +1,245 @@
 .container {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
 
     @media (max-width: 898px) {
         text-align: center;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         margin-left: 0;
         margin-right: 0;
+        display: none;
+    }
+
+    .leftContent {
+        margin-top: 81px;
+        padding-left: 4rem;
+
+        @media screen and (max-width: 1100px) {
+            margin-top: 42px;
+            padding-left: 3rem;
+
+            @media screen and (max-width: 600px) {
+                padding-left: 1rem;
+                margin-top: 30px;
+            }
+
+            @media screen and (max-width: 400px) {
+                padding-left: 20px;
+                margin-top: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        .topLogoflex {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 17px 0;
+
+            @media screen and (max-width: 1033px) {
+                padding: 2px 0;
+            }
+
+            .topPhone {
+                @media screen and (max-width: 500px) {
+                    width: 90px;
+                    height: 39px;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 53px;
+            font-weight: 500;
+            line-height: 68px;
+            text-align: left;
+            color: #333232;
+
+            @media screen and (max-width: 1033px) {
+                font-size: 38px;
+                font-weight: 500;
+                line-height: 68px;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 35.31px;
+
+                    @media screen and (max-width: 400px) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+
+            @media screen and (max-width: 898px) {
+                margin: 0;
+            }
+        }
+
+        .storeButtons {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 66px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                opacity: 50%;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21.28px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                opacity: 70%;
+                max-width: 494px;
+                padding-top: 50px;
+
+                @media screen and (max-width: 1033px) {
+                    padding-top: 36px;  
+                }
+            }
+
+            .wrapper {
+                display: flex;
+                max-width: 353px;
+                width: 100%;
+                column-gap: 23px;
+            }
+
+            a {
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.15);
+                }
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 12px;
+                width: 100%;
+                height: 52px;
+                border: 1px solid #030404;
+                border-radius: 8px;
+                text-decoration: none;
+                color: inherit;
+                background-color: #000;
+                transition: all 0.3s ease;
+
+
+
+                @media screen and (max-width: 600px) {
+                    gap: 3px;
+                }
+
+                &:nth-child(2) {
+                    background-color: #fff;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .smallText {
+                font-size: 12px;
+                color: #fff;
+            }
+
+            .smallText2 {
+                color: #000;
+            }
+
+            .largeText {
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffff;
+            }
+
+            .largeText2 {
+                font-size: 16px;
+                font-weight: bold;
+                color: #000;
+            }
+        }
+    }
+
+    .phoneImage {
+        position: relative;
+
+        .phoneImage2 {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 500;
+
+            @media screen and (max-width: 1191px) {
+                max-width: 359px;
+                height: 584px;
+
+                @media screen and (max-width: 898px) {
+                    left: 50px;
+                    max-width: 309px;
+                    height: 515px;
+                }
+            }
+        }
+
+        .topFootball {
+            position: absolute;
+            left: -580px;
+            bottom: 130px;
+
+            @media screen and (max-width: 1191px) {
+                width: 430px;
+                height: 212px;
+                left: -150px;
+                bottom: 100px;
+
+                @media screen and (max-width: 898px) {
+                    left: 0;
+                    top: 70px;
+
+                    @media screen and (max-width: 600px) {}
+                }
+            }
+        }
+    }
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    display: none;
+
+    @media (max-width: 898px) {
+        text-align: center;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        display: grid;
+        margin-bottom: 30px;
     }
 }
 
@@ -86,6 +318,7 @@
     .storeButtons {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         h4 {
             font-size: 22px;
@@ -118,6 +351,10 @@
             max-width: 353px;
             width: 100%;
             column-gap: 23px;
+
+            @media screen and (max-width: 896px) {
+                justify-content: center;
+            }
         }
 
         a {
@@ -199,7 +436,7 @@
             height: 584px;
 
             @media screen and (max-width: 898px) {
-                left: 50px;
+                // left: 50px;
                 max-width: 309px;
                 height: 515px;
             }

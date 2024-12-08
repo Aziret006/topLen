@@ -235,7 +235,7 @@ const RoleCarousel = () => {
             <div className={styles.carouselImage2}>
               <div className={styles.carousel__all}>
                 <div className={styles.carousel}>
-                  <div>
+                  <div className={styles.sliderGrid}>
                     <div className={styles.imageContainer}>
                       <img src={content[currentIndex].img} alt="Role" />
                     </div>
