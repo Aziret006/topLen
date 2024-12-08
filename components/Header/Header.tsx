@@ -20,6 +20,7 @@ const Header = () => {
             width={130}
             height={48}
             className={s.logo}
+            priority
           />
         </Link>
         <ul className={s.nav}>

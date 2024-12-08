@@ -16,6 +16,7 @@ const Section = () => {
                 width={160}
                 height={67}
                 className={styles.topPhone}
+                priority
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -112,6 +113,7 @@ const Section = () => {
               width={539}
               height={830}
               className={styles.phoneImage2}
+              priority
             />
             <Image
               className={styles.topFootball}
@@ -119,6 +121,7 @@ const Section = () => {
               alt="Background"
               width={1462}
               height={417}
+              priority
             />
           </div>
           <div className={styles.storeButtons}>
@@ -136,6 +139,7 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
+                  priority
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -154,6 +158,7 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
+                  priority
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
