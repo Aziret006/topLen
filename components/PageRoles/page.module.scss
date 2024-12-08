@@ -511,6 +511,10 @@
       gap: 17px;
       width: 100%;
 
+      @media screen and (max-width: 758px) {
+        justify-content: space-between;
+      }
+
       @media (min-width: 768px) {
         justify-content: flex-start;
       }
@@ -563,6 +567,11 @@
     @media screen and (max-width: 1096px) {
       width: 15px;
       height: 3px;
+
+      @media screen and (max-width: 758px) {
+        width: 30px;
+        height: 7px;
+      }
     }
 
     &.activeDot {
