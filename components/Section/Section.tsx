@@ -82,6 +82,7 @@ const Section = () => {
             height={830}
             className={styles.phoneImage2}
             loading="lazy"
+            priority
           />
           <Image
             className={styles.topFootball}
@@ -90,6 +91,7 @@ const Section = () => {
             width={1462}
             height={417}
             loading="lazy"
+            priority
           />
         </div>
       </div>
@@ -105,6 +107,7 @@ const Section = () => {
                 height={67}
                 className={styles.topPhone}
                 loading="lazy"
+                priority
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -120,6 +123,7 @@ const Section = () => {
               height={830}
               className={styles.phoneImage2}
               loading="lazy"
+              priority
             />
             <Image
               className={styles.topFootball}
@@ -128,6 +132,7 @@ const Section = () => {
               width={1462}
               height={417}
               loading="lazy"
+              priority
             />
           </div>
           <div className={styles.storeButtons}>
@@ -146,6 +151,7 @@ const Section = () => {
                   width={40}
                   height={40}
                   loading="lazy"
+                  priority
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -165,6 +171,7 @@ const Section = () => {
                   width={40}
                   height={40}
                   loading="lazy"
+                  priority
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
