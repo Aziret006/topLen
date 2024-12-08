@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 
 const Ecosystem = () => {
   return (
@@ -14,10 +15,13 @@ const Ecosystem = () => {
         </p>
       </div>
       <div className={styles.ecosystem_container_image}>
-        <img
+        <Image
           className={styles.ecosystem_image}
           src="/ecosystem.svg"
           alt="Football"
+          width={1240}
+          height={950}
+          priority
         />
       </div>
     </div>
