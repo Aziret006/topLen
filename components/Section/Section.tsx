@@ -12,7 +12,8 @@ const Section = () => {
             <div className={styles.topLogoflex}>
               <Image
                 src="/Rectangle.svg"
-                alt="Football"
+                alt="Логотип футбольного приложения ТОП"
+                quality={75}
                 width={160}
                 height={67}
                 className={styles.topPhone}
@@ -35,10 +36,11 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="App Store Icon"
+                  alt="Иконка App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -53,10 +55,11 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Google Play Icon"
+                  alt="Иконка Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
@@ -74,17 +77,19 @@ const Section = () => {
         <div className={styles.phoneImage}>
           <Image
             src="/iphone14.svg"
-            alt="Phone Preview"
+            alt="Превью приложения ТОП на iPhone 14"
             width={539}
             height={830}
             className={styles.phoneImage2}
+            loading="lazy"
           />
           <Image
             className={styles.topFootball}
             src="/topFootball.svg"
-            alt="Background"
+            alt="Футбольный фон"
             width={1462}
             height={417}
+            loading="lazy"
           />
         </div>
       </div>
@@ -95,10 +100,11 @@ const Section = () => {
             <div className={styles.topLogoflex}>
               <Image
                 src="/Rectangle.svg"
-                alt="Football"
+                alt="Логотип футбольного приложения ТОП"
                 width={160}
                 height={67}
                 className={styles.topPhone}
+                loading="lazy"
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -109,19 +115,19 @@ const Section = () => {
           <div className={styles.phoneImage}>
             <Image
               src="/iphone14.svg"
-              alt="Phone Preview"
+              alt="Превью приложения ТОП на iPhone 14"
               width={539}
               height={830}
               className={styles.phoneImage2}
-              priority
+              loading="lazy"
             />
             <Image
               className={styles.topFootball}
               src="/topFootball.svg"
-              alt="Background"
+              alt="Футбольный фон"
               width={1462}
               height={417}
-              priority
+              loading="lazy"
             />
           </div>
           <div className={styles.storeButtons}>
@@ -135,11 +141,11 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="App Store Icon"
+                  alt="Иконка App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -154,11 +160,11 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Google Play Icon"
+                  alt="Иконка Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
