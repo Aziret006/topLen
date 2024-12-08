@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 const Trainermode = () => {
   return (
     <div className={styles.trainermode_container}>
@@ -58,7 +59,7 @@ const Trainermode = () => {
                 тренировок/тестов/игр (геймификация).
               </span>
             </div>
-            <div className={styles.card2}>
+            <div className={styles.card}>
               <div className={styles.line}></div>
               <span className={styles.text}>
                 Подведение итоговых баллов в конце сезона и награждение в
@@ -68,7 +69,14 @@ const Trainermode = () => {
           </div>
         </div>
         <div className={styles.mobile_image}>
-          <img src="/profiles.svg" alt="Football" className={styles.image} />
+          <Image
+            width={332}
+            height={900}
+            src="/profiles.svg"
+            alt="Football"
+            className={styles.image}
+            priority
+          />
         </div>
       </div>
     </div>

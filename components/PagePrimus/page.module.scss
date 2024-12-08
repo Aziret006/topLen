@@ -12,7 +12,7 @@
 
             @media screen and (max-width: 500px) {
                 width: 95%;
-                 margin-left: 0;
+                margin-left: 0;
             }
         }
     }
@@ -47,6 +47,375 @@
             @media screen and (max-width: 822px) {
                 grid-template-columns: 1fr;
                 width: 90%;
+                display: none;
+            }
+        }
+
+        .Page_Primus_Image_Container {
+            display: grid;
+            row-gap: 51px;
+            max-width: 606px;
+
+            .topImage5 {
+                width: 100%;
+                height: auto;
+
+                @media screen and (max-width: 1315px) {
+                    max-width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+
+            .Page_Primus_Cards {
+                display: flex;
+                gap: 14px;
+                max-width: 606px;
+
+                @media screen and (max-width: 1315px) {
+                    flex-direction: column;
+                    max-width: 100%;
+                }
+
+                .Page_Primus_Card {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 296px;
+                    background: #161616;
+                    border-radius: 20px;
+
+                    @media screen and (max-width: 1315px) {
+                        max-width: 100%;
+                    }
+
+                    .Page_Primus_Card_Text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        max-width: 296px;
+                        padding: 16px 21px 25px 21px;
+                        height: 100%;
+
+                        @media screen and (max-width: 1315px) {
+                            max-width: 100%;
+                        }
+
+                        h3 {
+                            text-transform: uppercase;
+                            font-size: 23px;
+                            font-weight: 500;
+                            line-height: 27.07px;
+                            text-align: left;
+                            text-underline-position: from-font;
+                            text-decoration-skip-ink: none;
+                            color: #ffffff;
+                        }
+
+                        p {
+                            opacity: 70%;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 18.56px;
+                            text-align: left;
+                            text-underline-position: from-font;
+                            text-decoration-skip-ink: none;
+                            color: #fff;
+                            height: 76px;
+                        }
+
+                    }
+
+                    .p {
+                        opacity: 70%;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 18.56px;
+                        text-align: left;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+                        color: #fff;
+                    }
+
+                    .Page_Primus_Card_Text3 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        max-width: 296px;
+                        padding: 16px 16px 25px 16px;
+                        height: 100%;
+
+                        @media screen and (max-width: 1315px) {
+                            max-width: 100%;
+                        }
+
+                        h3 {
+                            text-transform: uppercase;
+                            font-size: 23px;
+                            font-weight: 500;
+                            line-height: 27.07px;
+                            text-align: left;
+                            text-underline-position: from-font;
+                            text-decoration-skip-ink: none;
+                            color: #ffffff;
+                        }
+
+                        p {
+                            opacity: 70%;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 18.56px;
+                            text-align: left;
+                            text-underline-position: from-font;
+                            text-decoration-skip-ink: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Page_Primus_Big_Text {
+            display: grid;
+            row-gap: 32px;
+            max-width: 626px;
+
+            @media screen and (max-width: 1315px) {
+                max-width: 100%;
+            }
+
+            .Page_Primus_Big_Text_h3 {
+                text-transform: uppercase;
+                font-size: 70px;
+                font-weight: 300;
+                line-height: 80.71px;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                padding-bottom: 67px;
+
+                @media screen and (max-width: 1315px) {
+                    font-size: 40px;
+                    font-weight: 300;
+                    line-height: 46.12px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    max-width: 100%;
+                    padding-bottom: 17px;
+                }
+
+                .advantages {
+                    display: inline-block;
+                    margin-left: -25px;
+                    color: #ffffff;
+                    padding: 0 25px;
+                    background-color: green;
+                    /* Зелёный фон */
+                    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+                    /* Обрезка для треугольной формы */
+                }
+            }
+        }
+
+        .topImage5 {
+            @media screen and (max-width: 1315px) {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+
+        .Page_Primus_Card {
+            display: flex;
+            flex-direction: column;
+            max-width: 296px;
+            background: #161616;
+            border-radius: 20px;
+
+            @media screen and (max-width: 1315px) {
+                width: 100%;
+            }
+
+            .Page_Primus_Card_Text {
+                display: flex;
+                justify-content: space-between;
+                max-width: 296px;
+                padding: 16px 16px 11px 21px !important;
+
+                @media screen and (max-width: 1315px) {
+                    max-width: 100%;
+                }
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 27.07px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #ffffff;
+                }
+
+                p {
+                    opacity: 70%;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.56px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #000000;
+                    height: 76px;
+                }
+            }
+        }
+
+        .Page_Primus_Card2 {
+            display: flex;
+            flex-direction: column;
+            max-width: 296px;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #16161680;
+
+            @media screen and (max-width: 1315px) {
+                max-width: 100%;
+            }
+
+            .Page_Primus_Card_Text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 296px;
+                padding: 16px 21px 25px 21px;
+                height: 100%;
+
+                @media screen and (max-width: 1315px) {
+                    max-width: 100%;
+                }
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 23px;
+                    font-weight: 500;
+                    line-height: 27.07px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #000;
+                }
+
+                p {
+                    opacity: 70%;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 18.56px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: #161616;
+                    max-height: 76px;
+                }
+            }
+        }
+
+        .Page_Primus_Cards {
+            display: flex;
+            gap: 14px;
+
+            @media screen and (max-width: 1315px) {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.Page_Primus2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: auto;
+    // display: none;
+
+    @media screen and (max-width: 1315px) {
+        justify-content: center;
+
+        @media screen and (max-width: 886px) {
+            margin-top: 40px;
+
+            @media screen and (max-width: 500px) {
+                width: 95%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .topImage4 {
+        @media screen and (max-width: 1315px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .topImage6 {
+        @media screen and (max-width: 1315px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .Page_Primus_Big_Text_h3 {
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: 300;
+        line-height: 80.71px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-bottom: 67px;
+
+        @media screen and (max-width: 1315px) {
+            font-size: 40px;
+            font-weight: 300;
+            line-height: 46.12px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            max-width: 100%;
+            padding-bottom: 17px;
+        }
+
+        .advantages {
+            display: inline-block;
+            margin-left: -25px;
+            color: #ffffff;
+            padding: 0 25px;
+            background-color: green;
+            /* Зелёный фон */
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+            /* Обрезка для треугольной формы */
+        }
+    }
+
+    .Page_Primus_Grid {
+        display: grid;
+        grid-template-columns: 606px 1fr;
+        gap: 52px;
+        align-items: end;
+        width: 1270px;
+
+        @media screen and (max-width: 1315px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            width: 90%;
+            margin: 0 auto;
+
+            @media screen and (max-width: 822px) {
+                grid-template-columns: 1fr;
+                width: 90%;
+                display: grid;
             }
         }
 

@@ -16,7 +16,14 @@ const Tryout = () => {
         </div>
       </div>
       <div className={styles.tryout_flex_all}>
-        <img src="/1.svg" alt="" className={styles.tryout_image} />
+        <Image
+          width={630}
+          height={785}
+          src="/1.svg"
+          alt=""
+          className={styles.tryout_image}
+          priority
+        />
         <div className={styles.tryout_flex_content}>
           <h4>
             Получите полный доступ ко всем функциям — скачайте наше приложение и
@@ -35,6 +42,7 @@ const Tryout = () => {
                 className={styles.icon}
                 width={40}
                 height={40}
+                priority
               />
               <div>
                 <span className={styles.smallText2}>Get it on</span>
@@ -53,6 +61,7 @@ const Tryout = () => {
                 className={styles.icon}
                 width={40}
                 height={40}
+                priority
               />
               <div>
                 <span className={styles.smallText}>Download on the</span>
@@ -67,7 +76,13 @@ const Tryout = () => {
                 Quis fringilla convallis et <br /> vitae volutpat at porttitor.{" "}
               </p>
             </span>
-            <Image src="/finish.svg" alt="image" width={268} height={84} />
+            <Image
+              src="/finish.svg"
+              alt="image"
+              width={268}
+              height={84}
+              priority
+            />
           </div>
           <div className={styles.wrapper2}>
             <a
@@ -82,6 +97,7 @@ const Tryout = () => {
                 className={styles.icon}
                 width={40}
                 height={40}
+                priority
               />
               <div>
                 <span className={styles.smallText2}>Get it on</span>
@@ -100,6 +116,7 @@ const Tryout = () => {
                 className={styles.icon}
                 width={40}
                 height={40}
+                priority
               />
               <div>
                 <span className={styles.smallText}>Download on the</span>

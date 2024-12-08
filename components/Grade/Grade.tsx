@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
+import Image from "next/image";
 
 const Grade = () => {
   return (
@@ -55,7 +56,14 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ imageSrc, title, description }) => {
   return (
     <div className={styles.Page_Primus_Card}>
-      <img src={imageSrc} alt={title} className={styles.topImage5} />
+      <Image
+        width={294}
+        height={224}
+        src={imageSrc}
+        alt={title}
+        className={styles.topImage5}
+        priority
+      />
       <div className={styles.Page_Primus_Card_Text}>
         <h3>{title}</h3>
         <p>{description}</p>

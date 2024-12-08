@@ -109,7 +109,36 @@ const Header = () => {
         </div>
       </header>
       {isOpen && (
-        <div className={s.mobileNav}>
+        <nav className={s.mobileNav}>
+          <div className={s.header}>
+            <Link href="/">
+              <Image
+                src="/toplogo.svg"
+                alt="logo"
+                width={130}
+                height={48}
+                className={s.logo}
+                priority
+              />
+            </Link>
+            <div className={s.bars}>
+              {isOpen ? (
+                <FaTimes
+                  onClick={() => setIsOpen(false)}
+                  size={24}
+                  className={s.icon}
+                  color="#fff"
+                />
+              ) : (
+                <FaBars
+                  onClick={() => setIsOpen(true)}
+                  size={24}
+                  className={s.icon}
+                  color="#fff"
+                />
+              )}
+            </div>
+          </div>
           <ul>
             <li>
               <Link href="/" className={pathname === "/" ? s.active : ""}>
@@ -139,24 +168,16 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/contacts"
-                className={pathname === "/contacts" ? s.active : ""}
-              >
-                Контакты
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contacts"
-                className={pathname === "/contacts" ? s.active : ""}
+                href="/modes"
+                className={pathname === "/modes" ? s.active : ""}
               >
                 Режимы
               </Link>
             </li>
             <li>
               <Link
-                href="/contacts"
-                className={pathname === "/contacts" ? s.active : ""}
+                href="/ecosystem"
+                className={pathname === "/ecosystem" ? s.active : ""}
               >
                 Экосистема
               </Link>
@@ -169,6 +190,9 @@ const Header = () => {
                 Контакты
               </Link>
             </li>
+          </ul>
+          <div className={s.socialWrapper}>
+            <p className={s.socialLabel}>Следите за нами</p>
             <div className={s.socialIcons}>
               <a
                 href="https://tiktok.com"
@@ -192,8 +216,8 @@ const Header = () => {
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
-          </ul>
-        </div>
+          </div>
+        </nav>
       )}
     </>
   );

@@ -125,66 +125,79 @@
 }
 
 .mobileNav {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
-  top: 70px;
+  top: 0;
   right: 0;
   width: 100%;
-  height: 720px;
+  height: 100%;
   z-index: 9999999;
-  background-color: #252121; // Темный фон
-  color: white; // Белый текст
-  padding: 20px;
+  background-color: #252121;
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Добавлено для прокрутки */
+  box-sizing: border-box;
 
-  ul {
-    list-style: none; // Убираем маркеры списка
-    padding: 0;
-    margin: 0;
-
-    .button {
-      text-decoration: none;
-
-    }
+  .header {
+    padding: 20px 0;
   }
 
-  li {
-    margin-bottom: 15px; // Расстояние между пунктами меню
-    font-size: 18px; // Размер текста
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
 
-    &:last-child {
-      margin-bottom: 0; // Убираем отступ у последнего пункта
-    }
+    li {
+      margin-bottom: 24px;
+      font-size: 18px;
 
-    a {
-      text-decoration: none; // Убираем подчеркивание
-      color: white; // Белый цвет текста
-      transition: color 0.3s ease; // Плавное изменение цвета
+      &:last-child {
+        margin-bottom: 0;
+      }
 
-      &:hover {
-        color: #aaaaaa; // Серый цвет при наведении
+      a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #aaaaaa;
+        }
       }
     }
   }
 
   .active {
-    font-weight: bold; // Выделяем активный пункт
-    color: #d6d6d6; // Светло-серый цвет
+    font-weight: bold;
+    color: #d6d6d6;
   }
 
-  // Стиль для блока с иконками
+  .socialWrapper {
+    margin-top: auto;
+  }
+
+  .socialLabel {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 16px;
+  }
+
   .socialIcons {
-    margin-top: 20px;
     display: flex;
-    gap: 15px; // Расстояние между иконками
+    gap: 24px;
 
     a {
       color: white;
-      font-size: 24px; // Размер иконок
+      font-size: 24px;
       transition: color 0.3s ease;
 
       &:hover {
-        color: #aaaaaa; // Серый цвет при наведении
+        color: #aaaaaa;
       }
     }
   }
