@@ -8,6 +8,7 @@
         @media screen and (max-width: 600px) {
             margin-left: 20px;
             margin-right: 20px;
+            margin-top: 20px;
         }
     }
 
@@ -66,7 +67,7 @@
 
                 @media screen and (max-width: 1279px) {
                     max-width: 332px;
-                    max-height: 765px;
+                    height: auto;
                     position: unset;
                     left: 0;
                 }
