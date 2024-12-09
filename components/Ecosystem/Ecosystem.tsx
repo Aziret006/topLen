@@ -27,5 +27,4 @@ const Ecosystem = () => {
     </div>
   );
 };
-
 export default Ecosystem;

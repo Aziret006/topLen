@@ -1,66 +1,55 @@
 .fieldBackground {
   position: relative;
-  width: 100%;
-  height: auto;
+  min-height: 100%;
+  background-image: url("/backf.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  top: -50px;
+
+  @media screen and (max-width: 613px) {
+    top: 0;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .field {
+    max-width: 100%;
+    height: 867px;
+    position: relative;
+    z-index: -10;
+
+    @media screen and (max-width: 1400px) {
+      height: auto;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.devicesWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-
-.fieldImage {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  object-position: center;
+  height: auto;
 }
 
+.devices {
+  position: absolute;
+  bottom: 0;
+  top: -30%;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  
 
-// .fieldOverlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 20px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     overflow: hidden;
-// }
-// .devicesWrapper {
-//     position: absolute;
-//     bottom: 0;
-//     top: 0;
-//     display: flex;
-//     justify-content: end;
-//     align-items: center;
-
-//     .device1 {
-//         max-width: 473px;
-//         height: auto;
-//         position: relative;
-//         right: 0;
-//         bottom: 0;
-//         top: 332px;
-//         left: 0;
-//     }
-//     .device2 {
-//         max-width: 473px;
-//         position: relative;
-//         right: 0;
-//         bottom: 0;
-//         top: 0;
-//         left: 0;
-//         height: auto;
-//     }
-//     .device3 {
-//         max-width: 473px;
-//         position: relative;
-//         right: 0;
-//         bottom: 0;
-//         top: -322px;
-//         height: auto;
-//     }
-// }
+  @media screen and (max-width: 1400px) {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -7,7 +7,6 @@ import PagePrimus from "@/components/PagePrimus/PagePrimus";
 import TopSlider from "@/components/TopForPC/TopSlider";
 import Mode from "@/components/PageMode/Mode";
 import Technical from "@/components/Technical/Technical";
-import Grade from "@/components/Grade/Grade";
 import Organizer from "@/components/Organizer/Organizer";
 import RoleCarousel from "@/components/PageRoles/Roles";
 import Ecosystem from "@/components/Ecosystem/Ecosystem";
@@ -16,6 +15,7 @@ import PageComponent from "@/components/PageComponent/PageComponent";
 import styles from "./page.module.scss";
 import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
 import Field from "@/components/FooballFiled/Field";
+import Grade from "@/components/Grade/Grade";
 
 export default function Home() {
   return (

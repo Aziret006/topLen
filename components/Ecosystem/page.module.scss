@@ -74,7 +74,9 @@
 
     @media screen and (max-width: 768px) {
       top: 0;
-      margin-top: 40px;
+      margin-top: -0px;
+      // height: 400px;
+
     }
 
     .ecosystem_image {
@@ -83,7 +85,7 @@
 
       @media screen and (max-width: 1400px) {
         position: unset;
-        height: 100%;
+        height: auto;
       }
     }
   }
