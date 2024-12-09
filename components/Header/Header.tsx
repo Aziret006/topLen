@@ -141,26 +141,29 @@ const Header = () => {
           </div>
           <ul>
             <li>
-              <Link href="/" className={pathname === "/" ? s.active : ""}>
+              <Link href="/#about" className={pathname === "/" ? s.active : ""}>
                 О проекте
               </Link>
             </li>
             <li>
               <Link
-                href="/advantages"
+                href="/#primus"
                 className={pathname === "/advantages" ? s.active : ""}
               >
                 Преимущества
               </Link>
             </li>
             <li>
-              <Link href="/top" className={pathname === "/top" ? s.active : ""}>
+              <Link
+                href="/#TOPFORPK"
+                className={pathname === "/top" ? s.active : ""}
+              >
                 TOP для ПК
               </Link>
             </li>
             <li>
               <Link
-                href="/roadmap"
+                href="/#RODMAP"
                 className={pathname === "/roadmap" ? s.active : ""}
               >
                 ROADMAP
@@ -168,7 +171,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/modes"
+                href="#MODE"
                 className={pathname === "/modes" ? s.active : ""}
               >
                 Режимы
@@ -176,7 +179,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/ecosystem"
+                href="#ecosystem"
                 className={pathname === "/ecosystem" ? s.active : ""}
               >
                 Экосистема
@@ -192,29 +195,37 @@ const Header = () => {
             </li>
           </ul>
           <div className={s.socialWrapper}>
-            <p className={s.socialLabel}>Следите за нами</p>
-            <div className={s.socialIcons}>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-tiktok"></i>
-              </a>
-              <a
-                href="https://telegram.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-telegram"></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-instagram"></i>
-              </a>
+            <div className={s.social_aLL}>
+              <h5>Следите за нами</h5>
+              <div className={s.socials}>
+                <a href="#" aria-label="TikTok">
+                  <Image
+                    src="/tiktok.svg"
+                    alt="Football"
+                    width={37}
+                    height={37}
+                    priority
+                  />
+                </a>
+                <a href="#" aria-label="Telegram">
+                  <Image
+                    src="/telegramm.svg"
+                    alt="Football"
+                    width={37}
+                    height={37}
+                    priority
+                  />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <Image
+                    src="/instagramm.svg"
+                    alt="Football"
+                    width={37}
+                    height={37}
+                    priority
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </nav>

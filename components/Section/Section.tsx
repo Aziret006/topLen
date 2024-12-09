@@ -81,7 +81,6 @@ const Section = () => {
             width={539}
             height={830}
             className={styles.phoneImage2}
-            loading="lazy"
             priority
           />
           <Image
@@ -90,7 +89,6 @@ const Section = () => {
             alt="Футбольный фон"
             width={1462}
             height={417}
-            loading="lazy"
             priority
           />
         </div>
@@ -106,7 +104,6 @@ const Section = () => {
                 width={160}
                 height={67}
                 className={styles.topPhone}
-                loading="lazy"
                 priority
               />
               <h1> В МИР ФУТБОЛА </h1>
@@ -122,7 +119,6 @@ const Section = () => {
               width={539}
               height={830}
               className={styles.phoneImage2}
-              loading="lazy"
               priority
             />
             <Image
@@ -131,7 +127,6 @@ const Section = () => {
               alt="Футбольный фон"
               width={1462}
               height={417}
-              loading="lazy"
               priority
             />
           </div>
@@ -150,7 +145,6 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
                   priority
                 />
                 <div>
@@ -170,7 +164,6 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
                   priority
                 />
                 <div>

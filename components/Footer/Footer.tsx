@@ -7,7 +7,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logoSection}>
-          <Image src="TopLogo2.svg" alt="Football" width={160} height={67} />
+          <Image
+            src="TopLogo2.svg"
+            alt="Football"
+            width={160}
+            height={67}
+            priority
+          />
           <p>
             Если у вас возникли вопросы или вы хотите получить дополнительную
             информацию, пожалуйста, свяжитесь с нами по электронной почте:
@@ -54,6 +60,7 @@ const Footer = () => {
                   alt="Football"
                   width={37}
                   height={37}
+                  priority
                 />
               </a>
               <a href="#" aria-label="Telegram">
@@ -62,6 +69,7 @@ const Footer = () => {
                   alt="Football"
                   width={37}
                   height={37}
+                  priority
                 />
               </a>
               <a href="#" aria-label="Instagram">
@@ -70,6 +78,7 @@ const Footer = () => {
                   alt="Football"
                   width={37}
                   height={37}
+                  priority
                 />
               </a>
             </div>
