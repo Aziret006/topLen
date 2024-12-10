@@ -13,7 +13,6 @@ const Section = () => {
               <Image
                 src="/Rectangle.svg"
                 alt="Логотип футбольного приложения ТОП"
-                quality={75}
                 width={160}
                 height={67}
                 className={styles.topPhone}
@@ -36,7 +35,7 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="Иконка App Store"
+                  alt="Скачать в App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
@@ -55,7 +54,7 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Иконка Google Play"
+                  alt="Скачать в Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
@@ -75,23 +74,24 @@ const Section = () => {
           </div>
         </div>
         <div className={styles.phoneImage}>
-          <Image
-            src="/iphone14.svg"
-            alt="Превью приложения ТОП на iPhone 14"
-            quality={75}
-            width={539}
-            height={830}
-            className={styles.phoneImage2}
-            priority
-          />
-          <Image
-            className={styles.topFootball}
-            src="/topFootball.svg"
-            alt="Футбольный фон"
-            width={1462}
-            height={417}
-            priority
-          />
+          <div className={styles.phoneImageWrapper}>
+            <Image
+              src="/iphone14.svg"
+              alt="Превью приложения ТОП на iPhone 14"
+              fill
+              className={styles.phoneImage2}
+              priority
+            />
+          </div>
+          <div className={styles.topFootballWrapper}>
+            <Image
+              className={styles.topFootball}
+              src="/topFootball.svg"
+              alt="Футбольный фон"
+              fill
+              priority
+            />
+          </div>
         </div>
       </div>
       <div className={styles.container2}>
@@ -114,22 +114,28 @@ const Section = () => {
             </h1>
           </div>
           <div className={styles.phoneImage}>
-            <Image
-              src="/iphone14.svg"
-              alt="Превью приложения ТОП на iPhone 14"
-              width={539}
-              height={830}
-              className={styles.phoneImage2}
-              priority
-            />
-            <Image
-              className={styles.topFootball}
-              src="/topFootball.svg"
-              alt="Футбольный фон"
-              width={1462}
-              height={417}
-              priority
-            />
+            <div className={styles.phoneImageWrapper}>
+              <Image
+                src="/iphone14.svg"
+                // width={539}
+                // height={830}
+                alt="Превью приложения ТОП на iPhone 14"
+                fill
+                className={styles.phoneImage2}
+                priority
+              />
+            </div>
+            <div className={styles.topFootballWrapper}>
+              <Image
+                className={styles.topFootball}
+                src="/topFootball.svg"
+                alt="Футбольный фон"
+                // width={1462}
+                // height={417}
+                fill
+                priority
+              />
+            </div>
           </div>
           <div className={styles.storeButtons}>
             <h4>Доступно на </h4>
@@ -142,11 +148,11 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="Иконка App Store"
+                  alt="Скачать в App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -161,11 +167,11 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Иконка Google Play"
+                  alt="Скачать в Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority
+                  loading="lazy"
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
