@@ -16,7 +16,7 @@ const Section = () => {
                 width={160}
                 height={67}
                 className={styles.topPhone}
-                priority
+                priority={true}
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -35,11 +35,11 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="Скачать в App Store"
+                  alt="Иконка App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
+                  priority={true}
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -54,11 +54,11 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Скачать в Google Play"
+                  alt="Иконка Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
+                  priority={true}
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
@@ -74,24 +74,22 @@ const Section = () => {
           </div>
         </div>
         <div className={styles.phoneImage}>
-          <div className={styles.phoneImageWrapper}>
-            <Image
-              src="/iphone14.svg"
-              alt="Превью приложения ТОП на iPhone 14"
-              fill
-              className={styles.phoneImage2}
-              priority
-            />
-          </div>
-          <div className={styles.topFootballWrapper}>
-            <Image
-              className={styles.topFootball}
-              src="/topFootball.svg"
-              alt="Футбольный фон"
-              fill
-              priority
-            />
-          </div>
+          <Image
+            src="/iphone14.svg"
+            alt="Превью приложения ТОП на iPhone 14"
+            width={539}
+            height={830}
+            className={styles.phoneImage2}
+            priority={true}
+          />
+          <Image
+            className={styles.topFootball}
+            src="/topFootball.svg"
+            alt="Футбольный фон"
+            width={1462}
+            height={417}
+            priority={true}
+          />
         </div>
       </div>
       <div className={styles.container2}>
@@ -105,7 +103,7 @@ const Section = () => {
                 width={160}
                 height={67}
                 className={styles.topPhone}
-                priority
+                priority={true}
               />
               <h1> В МИР ФУТБОЛА </h1>
             </div>
@@ -114,28 +112,22 @@ const Section = () => {
             </h1>
           </div>
           <div className={styles.phoneImage}>
-            <div className={styles.phoneImageWrapper}>
-              <Image
-                src="/iphone14.svg"
-                // width={539}
-                // height={830}
-                alt="Превью приложения ТОП на iPhone 14"
-                fill
-                className={styles.phoneImage2}
-                priority
-              />
-            </div>
-            <div className={styles.topFootballWrapper}>
-              <Image
-                className={styles.topFootball}
-                src="/topFootball.svg"
-                alt="Футбольный фон"
-                // width={1462}
-                // height={417}
-                fill
-                priority
-              />
-            </div>
+            <Image
+              src="/iphone14.svg"
+              alt="Превью приложения ТОП на iPhone 14"
+              width={539}
+              height={830}
+              className={styles.phoneImage2}
+              priority={true}
+            />
+            <Image
+              className={styles.topFootball}
+              src="/topFootball.svg"
+              alt="Футбольный фон"
+              width={1462}
+              height={417}
+              priority={true}
+            />
           </div>
           <div className={styles.storeButtons}>
             <h4>Доступно на </h4>
@@ -148,11 +140,11 @@ const Section = () => {
               >
                 <Image
                   src="/appstore.svg"
-                  alt="Скачать в App Store"
+                  alt="Иконка App Store"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
+                  priority
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -167,11 +159,11 @@ const Section = () => {
               >
                 <Image
                   src="/googleplay.svg"
-                  alt="Скачать в Google Play"
+                  alt="Иконка Google Play"
                   className={styles.icon}
                   width={40}
                   height={40}
-                  loading="lazy"
+                  priority
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
