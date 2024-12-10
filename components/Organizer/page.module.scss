@@ -122,8 +122,12 @@
     }
 
     .icon {
-        font-size: 24px;
-        margin-bottom: 8px;
+        img {
+            @media screen and (max-width: 965px) {
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
 
     .text {

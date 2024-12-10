@@ -1,4 +1,4 @@
-.topBackground {
+.top_back {
   background: #252121;
   border-radius: 35px;
   padding: 62px 102px 61px 40px;
@@ -21,8 +21,8 @@
     }
   }
 
-  .topFlex {
-    .topFlex2 {
+  .top__flex {
+    .top_flex2 {
       display: flex;
       position: relative;
 
@@ -35,7 +35,7 @@
       }
     }
 
-    .topText {
+    .top_text {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -53,7 +53,7 @@
         }
       }
 
-      .topLine {
+      .top_line {
         width: 1px;
         height: 219px;
         background: #ffffff;
@@ -165,7 +165,7 @@
       }
     }
 
-    .topAbsolute {
+    .top_absolute {
       position: relative;
       position: absolute;
       right: 30px;
@@ -185,14 +185,14 @@
         }
       }
 
-      .topLogo {
+      .top_logo {
         @media screen and (max-width: 1258px) {
           width: 237px;
           height: 262px;
         }
       }
 
-      .topLogo2 {
+      .top_logo2 {
         position: absolute;
         bottom: -80px;
         right: -96px;

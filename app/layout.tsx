@@ -5,11 +5,13 @@ import ScrollToTop from "@/components/ScrollToTop/scrollToTop";
 import { gilroy } from "./fonsts";
 
 export const metadata: Metadata = {
-  title: "Top 1000 - Your Ultimate Landing Page",
+  title:
+    "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
   description:
     "Discover the best products and services in our curated Top 1000 list. Explore now!",
   openGraph: {
-    title: "Top 1000 - Your Ultimate Landing Page",
+    title:
+      "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
     description:
       "Discover the best products and services in our curated Top 1000 list. Explore now!",
     images: [

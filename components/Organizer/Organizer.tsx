@@ -19,7 +19,9 @@ const Organizer = () => {
       <div className={styles.Organizer_grid_fex}>
         <div className={styles.container}>
           <div className={styles.feature} style={{ backgroundColor: "white" }}>
-            <div className={styles.icon}>🌐</div>
+            <div className={styles.icon}>
+              <img src="/icon.png" alt="" />
+            </div>
             <p className={styles.text}>
               Выбор типа турнира; Круговая система, олимпийская система или лига
               чемпионов;
@@ -29,13 +31,17 @@ const Organizer = () => {
             className={styles.feature}
             style={{ backgroundColor: "lightgreen", border: "none" }}
           >
-            <div className={styles.icon}>✳️</div>
+            <div className={styles.icon}>
+              <img src="/icon2.png" alt="" />
+            </div>
             <p className={styles.text}>
               Автоматическое распределение мест и подсчет очков;
             </p>
           </div>
           <div className={styles.feature} style={{ backgroundColor: "green" }}>
-            <div className={styles.icon}>✨</div>
+            <div className={styles.icon}>
+              <img src="/icon3.png" alt="" />
+            </div>
             <p style={{ color: "white" }} className={styles.text}>
               Генерация расписания игр, в которые можно вносить правки;
             </p>
@@ -44,19 +50,25 @@ const Organizer = () => {
             className={styles.feature}
             style={{ backgroundColor: "black", color: "white" }}
           >
-            <div className={styles.icon}>❇️</div>
+            <div className={styles.icon}>
+              <img src="/icon4.png" alt="" />
+            </div>
             <p style={{ color: "white" }} className={styles.text}>
               Индивидуальная статистика игроков;
             </p>
           </div>
           <div className={styles.feature} style={{ backgroundColor: "orange" }}>
-            <div className={styles.icon}>✴️</div>
+            <div className={styles.icon}>
+              <img src="/icon5.png" alt="" />
+            </div>
             <p className={styles.text}>
               Настройки турнира под ваши требования;
             </p>
           </div>
           <div className={styles.feature} style={{ backgroundColor: "white" }}>
-            <div className={styles.icon}>⧫</div>
+            <div className={styles.icon}>
+              <img src="/icon6.png" alt="" />
+            </div>
             <p className={styles.text}>
               Электронный протокол: составы команд, голы, передачи,
               предупреждения, нарушения в матче;

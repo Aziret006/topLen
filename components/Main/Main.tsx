@@ -3,9 +3,9 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 const Main = () => {
   return (
-    <div id="#about" className={styles.topBackground}>
-      <div className={styles.topFlex}>
-        <div className={styles.topText}>
+    <div id="#about" className={styles.top_back}>
+      <div className={styles.top__flex}>
+        <div className={styles.top_text}>
           <span>
             <h2>Что такое “ТОП”?</h2>
             <p>
@@ -14,7 +14,7 @@ const Main = () => {
               разделяющими страсть к футболу.
             </p>
           </span>
-          <hr className={styles.topLine} />
+          <hr className={styles.top_line} />
           <span>
             <h2>
               Основная цель <br /> проекта Тоp
@@ -26,7 +26,7 @@ const Main = () => {
             </p>
           </span>
         </div>
-        <div className={styles.topFlex2}>
+        <div className={styles.top_flex2}>
           <div className={styles.topImage}>
             <button style={{ whiteSpace: "nowrap" }}>Про нас</button>
             <p>
@@ -35,13 +35,13 @@ const Main = () => {
               разделяет эту страсть и готов развиваться вместе с нами.
             </p>
           </div>
-          <div className={styles.topAbsolute}>
+          <div className={styles.top_absolute}>
             <Image
               src="/image.svg"
               alt="Football"
               width={354}
               height={392}
-              className={styles.topLogo}
+              className={styles.top_logo}
               priority={true}
             />
             <a
@@ -53,7 +53,7 @@ const Main = () => {
                 alt="Football"
                 width={263}
                 height={256}
-                className={styles.topLogo2}
+                className={styles.top_logo2}
                 priority={true}
               />
             </a>
