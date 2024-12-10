@@ -43,10 +43,14 @@
   position: absolute;
   bottom: 0;
   top: -30%;
-  left: 0;
+  left: 40px;
   right: 0;
   z-index: 500;
-  
+
+  @media screen and (max-width: 1169px) {
+    left: 0;
+  }
+
 
   @media screen and (max-width: 1400px) {
     width: 100%;

@@ -5,7 +5,7 @@ import Image from "next/image";
 const Section = () => {
   return (
     <>
-      <div className={styles.container}>
+      <div id="about" className={styles.container}>
         <div className={styles.leftContent}>
           <div className={styles.topText}>
             <h1>ДОБРО ПОЖАЛОВАТЬ </h1>

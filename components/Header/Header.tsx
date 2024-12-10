@@ -39,7 +39,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="#TOPFORPK"
+              href="#platform"
               className={pathname === "/top" ? s.active : ""}
             >
               TOP для ПК
@@ -47,7 +47,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="#RODMAP"
+              href="#roadmap"
               className={pathname === "/Roadmap" ? s.active : ""}
             >
               ROADMAP
@@ -55,7 +55,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="#MODE"
+              href="#mode"
               className={pathname === "/contacts" ? s.active : ""}
             >
               Режимы
@@ -110,7 +110,7 @@ const Header = () => {
       </header>
       {isOpen && (
         <nav className={s.mobileNav}>
-          <div className={s.header}>
+          <header className={s.header}>
             <Link href="/">
               <Image
                 src="/toplogo.svg"
@@ -121,6 +121,76 @@ const Header = () => {
                 priority
               />
             </Link>
+            <ul className={s.nav}>
+              <li>
+                <Link
+                  href="#about"
+                  className={pathname === "/" ? s.active : ""}
+                >
+                  О проекте
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#primus"
+                  className={pathname === "/advantages" ? s.active : ""}
+                >
+                  Преимущества
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#platform"
+                  className={pathname === "/top" ? s.active : ""}
+                >
+                  TOP для ПК
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#roadmap"
+                  className={pathname === "/Roadmap" ? s.active : ""}
+                >
+                  ROADMAP
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#mode"
+                  className={pathname === "/contacts" ? s.active : ""}
+                >
+                  Режимы
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#ecosystem"
+                  className={pathname === "/contacts" ? s.active : ""}
+                >
+                  Экосистема
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="# "
+                  className={pathname === "/contacts" ? s.active : ""}
+                >
+                  Контакты
+                </Link>
+              </li>
+              <a
+                className={s.button}
+                target="_blank"
+                href="https://apps.apple.com/kg/app/top/id6477701651"
+              >
+                <button>
+                  Загрузить
+                  <span>
+                    <RiArrowRightUpLine />
+                  </span>
+                </button>
+              </a>
+            </ul>
             <div className={s.bars}>
               {isOpen ? (
                 <FaTimes
@@ -138,15 +208,20 @@ const Header = () => {
                 />
               )}
             </div>
-          </div>
+          </header>
           <ul>
             <li>
-              <Link href="/#about" className={pathname === "/" ? s.active : ""}>
+              <Link
+                onClick={() => setIsOpen(false)}
+                href="/#about"
+                className={pathname === "/" ? s.active : ""}
+              >
                 О проекте
               </Link>
             </li>
             <li>
               <Link
+                onClick={() => setIsOpen(false)}
                 href="/#primus"
                 className={pathname === "/advantages" ? s.active : ""}
               >
@@ -155,7 +230,8 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/#TOPFORPK"
+                onClick={() => setIsOpen(false)}
+                href="/#platform"
                 className={pathname === "/top" ? s.active : ""}
               >
                 TOP для ПК
@@ -163,7 +239,8 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/#RODMAP"
+                onClick={() => setIsOpen(false)}
+                href="/#roadmap"
                 className={pathname === "/roadmap" ? s.active : ""}
               >
                 ROADMAP
@@ -171,7 +248,8 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="#MODE"
+                onClick={() => setIsOpen(false)}
+                href="#mode"
                 className={pathname === "/modes" ? s.active : ""}
               >
                 Режимы
@@ -179,6 +257,7 @@ const Header = () => {
             </li>
             <li>
               <Link
+                onClick={() => setIsOpen(false)}
                 href="#ecosystem"
                 className={pathname === "/ecosystem" ? s.active : ""}
               >
@@ -187,6 +266,7 @@ const Header = () => {
             </li>
             <li>
               <Link
+                onClick={() => setIsOpen(false)}
                 href="/contacts"
                 className={pathname === "/contacts" ? s.active : ""}
               >

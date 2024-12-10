@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import { FaEnvelope } from "react-icons/fa";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -12,7 +13,7 @@ const Footer = () => {
             alt="Football"
             width={160}
             height={67}
-            priority
+            priority={true}
           />
           <p>
             Если у вас возникли вопросы или вы хотите получить дополнительную
@@ -24,16 +25,32 @@ const Footer = () => {
           <h3>Страницы</h3>
           <div className={styles.links}>
             <ul>
-              <li>Главная</li>
-              <li>Что такое ТОР</li>
-              <li>Роли</li>
-              <li>ROADMAP</li>
+              <li>
+                <Link href="#about"> Главная</Link>
+              </li>
+              <li>
+                <Link href="#about">Что такое ТОР</Link>
+              </li>
+              <li>
+                <Link href="#roles">Роли</Link>
+              </li>
+              <li>
+                <Link href="#roadmap">ROADMAP</Link>
+              </li>
             </ul>
             <ul>
-              <li>Режим Футболист</li>
-              <li>Режим Организатор турнира</li>
-              <li>Футбольная Экосистема</li>
-              <li>Платформа ТОР для ПК</li>
+              <li>
+                <Link href="#mode">Режим Футболист</Link>
+              </li>
+              <li>
+                <Link href="#organizer">Режим Организатор турнира</Link>
+              </li>
+              <li>
+                <Link href="#ecosystem">Футбольная Экосистема</Link>
+              </li>
+              <li>
+                <Link href="#platform">Платформа ТОР для ПК</Link>
+              </li>
             </ul>
           </div>
         </div>

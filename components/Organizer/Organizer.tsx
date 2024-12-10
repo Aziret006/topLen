@@ -12,7 +12,7 @@ const Organizer = () => {
         className={styles.Organizer_img}
         priority
       />
-      <div className={styles.Organizer_text}>
+      <div id="organizer" className={styles.Organizer_text}>
         <h1>Режим Организатора турнира</h1>
         <p>Возможности организатора:</p>
       </div>

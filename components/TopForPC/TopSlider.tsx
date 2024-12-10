@@ -74,7 +74,7 @@ const TopSlider = () => {
 
   return (
     <>
-      <div className={styles.topSlider} id="TOPFORPK">
+      <div className={styles.topSlider} id="platform">
         <div>
           <h1>
             у нас так же есть платформа <br /> <span>TOP для пк</span>
@@ -136,7 +136,7 @@ const TopSlider = () => {
         </div>
       </div>
       <Image
-        id="RODMAP"
+        id="roadmap"
         width={1340}
         height={754}
         src="/imageBack.svg"

@@ -157,7 +157,7 @@ const RoleCarousel = () => {
 
   return (
     <>
-      <div className={styles.carouselContainer}>
+      <div id="roles" className={styles.carouselContainer}>
         {isDesktop && (
           <div className={styles.carouselImage}>
             <div className={styles.carousel__all}>

@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99;
+    z-index: 9999999;
 
     button {
         border: none;
@@ -14,7 +14,7 @@
         &:hover {
             transform: scale(1.1);
         }
-
+        
         img {
             @media screen and (max-width: 600px) {
                 width: 50px;
