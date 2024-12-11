@@ -1,10 +1,26 @@
 "use client";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 
-const TopSlider = () => {
+const TopSlider: React.FC = () => {
+  const roadmapRef = useRef<HTMLImageElement | null>(null);
+
+  const toggleFullscreen = () => {
+    if (roadmapRef.current) {
+      if (!document.fullscreenElement) {
+        roadmapRef.current.requestFullscreen().catch((err) => {
+          console.error("Не удалось развернуть на весь экран:", err);
+        });
+      } else {
+        document.exitFullscreen().catch((err) => {
+          console.error("Не удалось выйти из полноэкранного режима:", err);
+        });
+      }
+    }
+  };
+
   const slides = [
     {
       title: "Профиль",
@@ -62,7 +78,7 @@ const TopSlider = () => {
     if (isAutoPlaying) {
       intervalId = setInterval(() => {
         handleNext();
-      }, 2000);
+      }, 3000);
     }
 
     return () => {
@@ -135,15 +151,21 @@ const TopSlider = () => {
           </div>
         </div>
       </div>
-      <Image
-        id="roadmap"
-        width={1340}
-        height={754}
-        src="/imageBack.svg"
-        alt="Background"
-        className={styles.rectangle}
-        priority
-      />
+      <div className={styles.roadmap}>
+        <Image
+          id="roadmap"
+          width={1340}
+          height={754}
+          src="/imageBack.svg"
+          alt="Background"
+          className={styles.rectangle}
+          priority={true}
+          ref={roadmapRef}
+        />
+        <button onClick={toggleFullscreen} className={styles.fullscreen_button}>
+          Развернуть на весь экран
+        </button>
+      </div>
     </>
   );
 };

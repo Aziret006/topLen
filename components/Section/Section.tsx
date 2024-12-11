@@ -86,7 +86,7 @@ const Section = () => {
             className={styles.topFootball}
             src="/topFootball.svg"
             alt="Футбольный фон"
-            width={1462}
+            width={862}
             height={417}
             priority={true}
           />

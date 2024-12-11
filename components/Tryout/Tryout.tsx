@@ -31,7 +31,7 @@ const Tryout = () => {
           </h4>
           <div className={styles.wrapper}>
             <a
-              href="https://play.google.com" // Замените на фактическую ссылку на Google Play
+              href="https://play.google.com/store/apps/details?id=dev.odigital.topkg" // Замените на фактическую ссылку на Google Play
               className={styles.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const Tryout = () => {
               </div>
             </a>
             <a
-              href="https://apps.apple.com" // Замените на фактическую ссылку на App Store
+              href="https://apps.apple.com/kg/app/top/id6477701651" // Замените на фактическую ссылку на App Store
               className={styles.link}
               target="_blank"
               rel="noopener noreferrer"

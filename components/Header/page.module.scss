@@ -125,7 +125,7 @@
 }
 
 .mobileNav {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   top: 0;
@@ -135,7 +135,7 @@
   z-index: 9999999;
   background-color: #252121;
   color: white;
-  padding: 0 20px 52px 20px;
+  padding: 0 20px 52px 25px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;

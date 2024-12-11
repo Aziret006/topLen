@@ -117,7 +117,7 @@
       }
     }
 
-    .topImage {
+    .top_image {
       display: flex;
       align-items: start;
       gap: 24px;
@@ -185,14 +185,14 @@
         }
       }
 
-      .top_logo {
+      .top_img {
         @media screen and (max-width: 1258px) {
           width: 237px;
           height: 262px;
         }
       }
 
-      .top_logo2 {
+      .top_img2 {
         position: absolute;
         bottom: -80px;
         right: -96px;

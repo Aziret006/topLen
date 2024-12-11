@@ -27,7 +27,7 @@ const Main = () => {
           </span>
         </div>
         <div className={styles.top_flex2}>
-          <div className={styles.topImage}>
+          <div className={styles.top_image}>
             <button style={{ whiteSpace: "nowrap" }}>Про нас</button>
             <p>
               Мы верим, что футбол - это не просто игра, а средство объединения
@@ -41,7 +41,7 @@ const Main = () => {
               alt="Football"
               width={354}
               height={392}
-              className={styles.top_logo}
+              className={styles.top_img}
               priority={true}
             />
             <a
@@ -53,7 +53,7 @@ const Main = () => {
                 alt="Football"
                 width={263}
                 height={256}
-                className={styles.top_logo2}
+                className={styles.top_img2}
                 priority={true}
               />
             </a>
