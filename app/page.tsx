@@ -17,6 +17,34 @@ import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
 import Field from "@/components/FooballFiled/Field";
 import Grade from "@/components/Grade/Grade";
 
+export const metadata = {
+  title:
+    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  description:
+    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  openGraph: {
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ТОП Landing Page",
+      },
+    ],
+  },
+ 
+  keywords: [
+    "ТОП",
+    "футбол",
+    "платформа",
+    "футбольная жизнь",
+    "любители",
+    "профессионалы",
+  ],
+  icons: {
+    icon: "/logo.svg",
+  },
+}
 export default function Home() {
   return (
     <div className={styles.page}>

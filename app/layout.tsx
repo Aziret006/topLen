@@ -6,20 +6,16 @@ import { gilroy } from "./fonsts";
 
 export const metadata: Metadata = {
   title:
-    "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
+    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
   description:
-    "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
+    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
   openGraph: {
-    title:
-      "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
-    description:
-      "ТОП — это современная онлайн-платформа, которая объединяет все аспекты футбольной жизни для любителей и профессионалов в СНГ и за его пределами",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Top 1000 Landing Page",
+        alt: "ТОП Landing Page",
       },
     ],
     type: "website",
@@ -28,18 +24,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top 1000 - Your Ultimate Landing Page",
+    title: "ТОП — Ваша платформа для футбольной жизни",
     description:
-      "Discover the best products and services in our curated Top 1000 list. Explore now!",
+      "Исследуйте лучшие продукты и услуги для любителей и профессионалов футбола на платформе ТОП.",
     images: ["/og-image.jpg"],
     creator: "@top1000",
   },
   keywords: [
-    "Top 1000",
-    "products",
-    "services",
-    "curated list",
-    "landing page",
+    "ТОП",
+    "футбол",
+    "платформа",
+    "футбольная жизнь",
+    "любители",
+    "профессионалы",
   ],
   robots: {
     index: true,
@@ -51,6 +48,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: "/bigimage.svg",
   },
 };
 
