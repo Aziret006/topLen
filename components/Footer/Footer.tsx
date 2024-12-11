@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.logoSection}>
           <Image
-            src="TopLogo2.svg"
+            src="/toplogo3.svg"
             alt="Football"
             width={160}
             height={67}
