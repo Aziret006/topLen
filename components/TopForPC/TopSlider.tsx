@@ -6,21 +6,6 @@ import Image from "next/image";
 
 const TopSlider: React.FC = () => {
   const roadmapRef = useRef<HTMLImageElement | null>(null);
-
-  const toggleFullscreen = () => {
-    if (roadmapRef.current) {
-      if (!document.fullscreenElement) {
-        roadmapRef.current.requestFullscreen().catch((err) => {
-          console.error("Не удалось развернуть на весь экран:", err);
-        });
-      } else {
-        document.exitFullscreen().catch((err) => {
-          console.error("Не удалось выйти из полноэкранного режима:", err);
-        });
-      }
-    }
-  };
-
   const slides = [
     {
       title: "Профиль",
