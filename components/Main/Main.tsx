@@ -6,16 +6,16 @@ const Main = () => {
     <div id="#about" className={styles.top_back}>
       <div className={styles.top__flex}>
         <div className={styles.top_text}>
-          <span>
+          <div>
             <h2>Что такое “ТОП”?</h2>
             <p>
               В сердце нашей миссии лежит стремление вдохновлять каждого на
               игру, побуждать к творчеству и создавать мосты между людьми,
               разделяющими страсть к футболу.
             </p>
-          </span>
+          </div>
           <hr className={styles.top_line} />
-          <span>
+          <div>
             <h2>
               Основная цель <br /> проекта Тоp
             </h2>
@@ -24,7 +24,7 @@ const Main = () => {
               моменты футбола, но и вдохновить вас на творческое самовыражение,
               создание и, конечно же, наслаждение игрой
             </p>
-          </span>
+          </div>
         </div>
         <div className={styles.top_flex2}>
           <div className={styles.top_image}>

@@ -41,7 +41,6 @@ const content = [
     cover: "blockimg7.svg",
   },
 ];
-
 const content2 = [
   {
     id: 1,
@@ -258,7 +257,7 @@ const RoleCarousel = () => {
                         {content.map((_, index) => (
                           <div
                             key={index}
-                            className={`${styles.dot} ${
+                            className={`${styles.dot2} ${
                               index === currentIndex ? styles.activeDot : ""
                             }`}
                             onClick={() => handleDotClick(index)}

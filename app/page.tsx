@@ -32,7 +32,7 @@ export const metadata = {
       },
     ],
   },
- 
+
   keywords: [
     "ТОП",
     "футбол",
@@ -44,7 +44,7 @@ export const metadata = {
   icons: {
     icon: "/logo.svg",
   },
-}
+};
 export default function Home() {
   return (
     <div className={styles.page}>

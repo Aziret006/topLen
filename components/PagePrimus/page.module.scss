@@ -3,6 +3,7 @@
     width: 100%;
     justify-content: center;
     margin-left: auto;
+    margin-right: auto;
 
     @media screen and (max-width: 1315px) {
         justify-content: center;
@@ -13,13 +14,14 @@
             @media screen and (max-width: 500px) {
                 width: 95%;
                 margin-left: 0;
+                margin-right: 0;
             }
         }
     }
 
     .topImage4 {
         @media screen and (max-width: 1315px) {
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
     }
@@ -425,6 +427,10 @@
             row-gap: 51px;
             max-width: 606px;
 
+            @media screen and (max-width: 1315px) {
+                max-width: 100%;
+            }
+
             .topImage5 {
                 width: 100%;
                 height: auto;
@@ -468,6 +474,7 @@
 
                         @media screen and (max-width: 1315px) {
                             max-width: 100%;
+                            display: grid;
                         }
 
                         h3 {
