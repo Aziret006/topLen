@@ -162,9 +162,6 @@ const TopSlider: React.FC = () => {
           priority={true}
           ref={roadmapRef}
         />
-        <button onClick={toggleFullscreen} className={styles.fullscreen_button}>
-          Развернуть на весь экран
-        </button>
       </div>
     </>
   );
