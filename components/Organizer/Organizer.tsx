@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
+
 const Organizer = () => {
+  const [currentImage, setCurrentImage] = useState("/place.png");
+
+  const handleBlockClick = (imagePath: string) => {
+    setCurrentImage(imagePath);
+  };
+
   return (
     <div className={styles.Organizer_container}>
       <Image
@@ -18,7 +26,11 @@ const Organizer = () => {
       </div>
       <div className={styles.Organizer_grid_fex}>
         <div className={styles.container}>
-          <div className={styles.feature} style={{ backgroundColor: "white" }}>
+          <div
+            className={styles.feature}
+            style={{ backgroundColor: "white" }}
+            onClick={() => handleBlockClick("/place.svg")}
+          >
             <div className={styles.icon}>
               <img src="/icon.png" alt="" />
             </div>
@@ -30,6 +42,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "lightgreen", border: "none" }}
+            onClick={() => handleBlockClick("/place2.svg")}
           >
             <div className={styles.icon}>
               <img src="/icon2.png" alt="" />
@@ -38,7 +51,11 @@ const Organizer = () => {
               Автоматическое распределение мест и подсчет очков;
             </p>
           </div>
-          <div className={styles.feature} style={{ backgroundColor: "green" }}>
+          <div
+            className={styles.feature}
+            style={{ backgroundColor: "green" }}
+            onClick={() => handleBlockClick("/place3.svg")}
+          >
             <div className={styles.icon}>
               <img src="/icon3.png" alt="" />
             </div>
@@ -49,6 +66,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "black", color: "white" }}
+            onClick={() => handleBlockClick("/place5.svg")}
           >
             <div className={styles.icon}>
               <img src="/icon4.png" alt="" />
@@ -57,7 +75,11 @@ const Organizer = () => {
               Индивидуальная статистика игроков;
             </p>
           </div>
-          <div className={styles.feature} style={{ backgroundColor: "orange" }}>
+          <div
+            className={styles.feature}
+            style={{ backgroundColor: "orange" }}
+            onClick={() => handleBlockClick("/place4.svg")}
+          >
             <div className={styles.icon}>
               <img src="/icon5.png" alt="" />
             </div>
@@ -65,7 +87,11 @@ const Organizer = () => {
               Настройки турнира под ваши требования;
             </p>
           </div>
-          <div className={styles.feature} style={{ backgroundColor: "white" }}>
+          <div
+            className={styles.feature}
+            style={{ backgroundColor: "white" }}
+            onClick={() => handleBlockClick("/place5.svg")}
+          >
             <div className={styles.icon}>
               <img src="/icon6.png" alt="" />
             </div>
@@ -77,12 +103,12 @@ const Organizer = () => {
         </div>
         <div className={styles.Organizer_image}>
           <Image
-            src="/place.svg"
+            src={currentImage}
             alt="Football"
-            width={450}
+            width={595}
             height={865}
-            priority
             className={styles.image}
+            priority
           />
         </div>
       </div>

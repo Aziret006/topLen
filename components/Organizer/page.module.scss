@@ -87,7 +87,6 @@
         }
     }
 
-    // components/TournamentFeatures/TournamentFeatures.module.scss
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -111,6 +110,10 @@
         color: #000;
         text-align: left;
         border: 1px solid #16161680;
+
+        &:focus {
+            transition: all 0.3s ease-in-out;
+        }
 
         @media screen and (max-width: 1265px) {
             border: none;
@@ -181,7 +184,7 @@
                 bottom: 0;
                 top: -260px;
                 right: 0;
-                left: -33px;
+                left: -53px;
 
                 @media screen and (max-width: 1080px) {
                     max-width: 317px;
