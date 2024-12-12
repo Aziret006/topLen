@@ -10,7 +10,7 @@ const Section = () => {
             <h1>ДОБРО ПОЖАЛОВАТЬ </h1>
             <div className={styles.topLogoflex}>
               <Image
-                src="/Rectangle.svg"
+                src="/1.png"
                 alt="Логотип футбольного приложения ТОП"
                 width={160}
                 height={67}
