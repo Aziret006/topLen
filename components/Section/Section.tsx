@@ -117,8 +117,8 @@ const Section = () => {
               width={539}
               height={830}
               className={styles.phoneImage2}
-              quality={100}
-              loading="lazy"
+              priority
+              layout="responsive"
             />
             <Image
               className={styles.topFootball}

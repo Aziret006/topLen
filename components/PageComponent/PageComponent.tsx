@@ -23,6 +23,8 @@ const PageComponent: React.FC = () => {
             height={1262}
             className={styles.topImage2}
             priority
+            quality={100}
+            unoptimized={true}
           />
           <Image
             src="/topFootball.svg"
