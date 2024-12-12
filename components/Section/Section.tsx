@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import iphone14 from "@/public/iphone14.svg";
 const Section = () => {
   return (
     <>
@@ -75,13 +74,12 @@ const Section = () => {
         </div>
         <div className={styles.phoneImage}>
           <Image
-            src={iphone14}
+            src="/iphone14.svg"
             alt="Превью приложения ТОП на iPhone 14"
             width={539}
             height={830}
             className={styles.phoneImage2}
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,[ваш Data URL]"
+            priority
           />
           <Image
             className={styles.topFootball}
