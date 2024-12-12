@@ -14,6 +14,7 @@ const Section = () => {
                 alt="Логотип футбольного приложения ТОП"
                 width={160}
                 height={67}
+                quality={100}
                 className={styles.topPhone}
                 priority={true}
               />
