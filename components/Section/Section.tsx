@@ -10,11 +10,10 @@ const Section = () => {
             <h1>ДОБРО ПОЖАЛОВАТЬ </h1>
             <div className={styles.topLogoflex}>
               <Image
-                src="/1.png"
+                src="/Rectangle.svg"
                 alt="Логотип футбольного приложения ТОП"
                 width={160}
                 height={67}
-                quality={100}
                 className={styles.topPhone}
                 priority={true}
               />
@@ -118,7 +117,8 @@ const Section = () => {
               width={539}
               height={830}
               className={styles.phoneImage2}
-              priority={true}
+              quality={100}
+              loading="lazy"
             />
             <Image
               className={styles.topFootball}
