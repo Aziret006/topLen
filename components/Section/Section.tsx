@@ -39,7 +39,7 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority={true}
+                  priority
                 />
                 <div>
                   <span className={styles.smallText}>Download on the</span>
@@ -58,7 +58,7 @@ const Section = () => {
                   className={styles.icon}
                   width={40}
                   height={40}
-                  priority={true}
+                  priority
                 />
                 <div>
                   <span className={styles.smallText2}>Get it on</span>
