@@ -5,8 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop/scrollToTop";
 import { gilroy } from "./fonsts";
 
 export const metadata: Metadata = {
-  title:
-    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  title: "topsport Resources and Information",
   description:
     "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
   openGraph: {
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
     ],
     type: "website",
     locale: "en_US",
-    url: "https://www.top1000.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/bigimage.svg",
+    icon: "/Logo.svg",
   },
 };
 

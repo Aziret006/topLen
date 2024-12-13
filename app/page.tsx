@@ -24,14 +24,14 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/Logo.svg",
         width: 1200,
         height: 630,
         alt: "ТОП Landing Page",
       },
     ],
   },
-
+  
   keywords: [
     "ТОП",
     "футбол",
@@ -41,7 +41,7 @@ export const metadata = {
     "профессионалы",
   ],
   icons: {
-    icon: "/logo.svg",
+    icon: "/Logo.svg",
   },
 };
 export default function Home() {
