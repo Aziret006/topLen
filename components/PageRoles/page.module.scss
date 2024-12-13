@@ -628,11 +628,8 @@
   backdrop-filter: blur(10px);
   border: 2px solid #ffffff80;
   box-shadow: 0px 0px 10px 5px #ffffff40 inset;
-
-  &:nth-child(2) {
-    clip-path: polygon(100% 100%, 0% 100%, 0% 1%, 55% 1%, 100% 43%);
-  }
 }
+
 
 .activeImage {
   opacity: 1;
