@@ -114,10 +114,10 @@ const Section = () => {
             <Image
               src="/iphone14.svg"
               alt="Превью приложения ТОП на iPhone 14"
-              fill
-              sizes="(max-width: 539px) 100vw, (max-width: 830px) 80vw, 50vw"
-              placeholder="blur"
-              blurDataURL="/iphone14.svg"
+              width={539}
+              height={830}
+              className={styles.phoneImage2}
+              priority
             />
             <Image
               className={styles.topFootball}
