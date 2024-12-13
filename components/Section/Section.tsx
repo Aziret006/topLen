@@ -112,7 +112,7 @@ const Section = () => {
           </div>
           <div className={styles.phoneImage}>
             <Image
-              src="/iphone14.svg"
+              src="/Iphone14.svg"
               alt="Превью приложения ТОП на iPhone 14"
               width={539}
               height={830}
