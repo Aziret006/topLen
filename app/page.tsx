@@ -18,8 +18,7 @@ import Field from "@/components/FooballFiled/Field";
 import Grade from "@/components/Grade/Grade";
 
 export const metadata = {
-  title:
-    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  title: "topsport Resources and Information.",
   description:
     "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
   openGraph: {
