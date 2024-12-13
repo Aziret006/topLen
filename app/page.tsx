@@ -31,7 +31,6 @@ export const metadata = {
       },
     ],
   },
-
   keywords: [
     "ТОП",
     "футбол",
