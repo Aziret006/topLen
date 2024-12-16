@@ -17,7 +17,7 @@ const PageComponent: React.FC = () => {
         </p>
         <figure className={styles.topImageAll}>
           <Image
-            src="/image2.svg"
+            src="/image100.png"
             alt="Football"
             width={1150}
             height={1262}
