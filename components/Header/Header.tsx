@@ -208,15 +208,6 @@ const Header = () => {
             <div className={s.social_aLL}>
               <h5>Следите за нами</h5>
               <div className={s.socials}>
-                <a href="#" aria-label="TikTok">
-                  <Image
-                    src="/tiktok.svg"
-                    alt="Football"
-                    width={37}
-                    height={37}
-                    priority
-                  />
-                </a>
                 <a
                   href="https://t.me/OracleDigital"
                   aria-label="Telegram"
