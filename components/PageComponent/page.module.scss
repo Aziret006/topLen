@@ -147,6 +147,7 @@
         align-items: end;
 
         .topImage2 {
+            object-fit: contain;
             min-width: 517px;
             width: 100%;
             position: absolute;
