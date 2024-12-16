@@ -74,7 +74,7 @@ const Section = () => {
         </div>
         <div className={styles.phoneImage}>
           <Image
-            src="/iphone14.svg"
+            src="/2.svg"
             alt="Превью приложения ТОП на iPhone 14"
             width={539}
             height={830}
@@ -112,7 +112,7 @@ const Section = () => {
           </div>
           <div className={styles.phoneImage}>
             <Image
-              src="/iphone14.svg"
+              src="/2.svg"
               alt="Превью приложения ТОП на iPhone 14"
               width={539}
               height={830}
