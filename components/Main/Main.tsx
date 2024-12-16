@@ -37,7 +37,7 @@ const Main = () => {
           </div>
           <div className={styles.top_absolute}>
             <Image
-              src="/image.svg"
+              src="/5.png"
               alt="Football"
               width={354}
               height={392}
@@ -49,7 +49,7 @@ const Main = () => {
               href="https://www.youtube.com/watch?v=iJDtziSiaWM"
             >
               <Image
-                src="/video.svg"
+                src="/6.png"
                 alt="Football"
                 width={263}
                 height={256}
