@@ -8,7 +8,7 @@ const Grade = () => {
       <div className={styles.grade_content}>
         <div className={styles.grade_text}>
           <h1>
-            <span style={{ flexWrap: "nowrap" }}>Экспертная оценка</span>
+            <span className={styles.span} style={{ flexWrap: "nowrap" }}>Экспертная оценка</span>
             <br /> игроков и<br /> <span>создание</span>
             <br /> профессиональных <br /> матчей
           </h1>

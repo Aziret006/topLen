@@ -217,7 +217,12 @@ const Header = () => {
                     priority
                   />
                 </a>
-                <a href="#" aria-label="Telegram">
+                <a
+                  href="https://t.me/OracleDigital"
+                  aria-label="Telegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src="/telegramm.svg"
                     alt="Football"
@@ -226,7 +231,12 @@ const Header = () => {
                     priority
                   />
                 </a>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/top_borntoplay/"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src="/instagramm.svg"
                     alt="Football"
