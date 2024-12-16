@@ -121,7 +121,7 @@ const PagePrimus = () => {
               использования данного <br /> сервиса?
             </h3>
             <Image
-              src="/image4.svg"
+              src="/8.jpg"
               alt="Football"
               width={606}
               height={823}
@@ -131,7 +131,7 @@ const PagePrimus = () => {
             <div className={styles.Page_Primus_Cards}>
               <div className={styles.Page_Primus_Card}>
                 <Image
-                  src="/image6.svg"
+                  src="/9.jpg"
                   alt="Football"
                   className={styles.topImage5}
                   width={295}
@@ -148,7 +148,7 @@ const PagePrimus = () => {
               </div>
               <div className={styles.Page_Primus_Card}>
                 <Image
-                  src="/image8.svg"
+                  src="/10.jpg"
                   alt="Football"
                   width={295}
                   height={224}
@@ -171,7 +171,7 @@ const PagePrimus = () => {
             <div className={styles.Page_Primus_Cards}>
               <div className={styles.Page_Primus_Card2}>
                 <Image
-                  src="/image6.svg"
+                  src="/11.jpg"
                   alt="Football"
                   className={styles.topImage5}
                   width={295}
@@ -191,7 +191,7 @@ const PagePrimus = () => {
               </div>
               <div className={styles.Page_Primus_Card2}>
                 <Image
-                  src="/image6.svg"
+                  src="/12.jpg"
                   alt="Football"
                   className={styles.topImage5}
                   width={295}
@@ -211,7 +211,7 @@ const PagePrimus = () => {
               href="https://www.youtube.com/watch?v=iJDtziSiaWM"
             >
               <Image
-                src="/image7.svg"
+                src="/13.jpg"
                 alt="Football"
                 className={styles.topImage6}
                 width={606}
