@@ -5,18 +5,28 @@ import Section from "@/components/Section/Section";
 import Main from "@/components/Main/Main";
 import PagePrimus from "@/components/PagePrimus/PagePrimus";
 import TopSlider from "@/components/TopForPC/TopSlider";
-import Mode from "@/components/PageMode/Mode";
-import Technical from "@/components/Technical/Technical";
-import Organizer from "@/components/Organizer/Organizer";
-import RoleCarousel from "@/components/PageRoles/Roles";
-import Ecosystem from "@/components/Ecosystem/Ecosystem";
-import Tryout from "@/components/Tryout/Tryout";
-import PageComponent from "@/components/PageComponent/PageComponent";
+// import Mode from "@/components/PageMode/Mode";
+// import Technical from "@/components/Technical/Technical";
+// import Organizer from "@/components/Organizer/Organizer";
+// import RoleCarousel from "@/components/PageRoles/Roles";
+// import Ecosystem from "@/components/Ecosystem/Ecosystem";
+// import Tryout from "@/components/Tryout/Tryout";
+// import PageComponent from "@/components/PageComponent/PageComponent";
 import styles from "./page.module.scss";
-import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
-import Field from "@/components/FooballFiled/Field";
-import Grade from "@/components/Grade/Grade";
+// import Trainermode from "@/components/TrainerMode.tsx/Trainermode";
+// import Field from "@/components/FooballFiled/Field";
+import dynamic from "next/dynamic";
 
+// const Grade = dynamic(() => import("@/components/Grade/Grade"), {
+//   loading: () => <p>Loading...</p>,
+// });
+
+const PageComponent = dynamic(
+  () => import("@/components/PageComponent/PageComponent"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 export const metadata = {
   title: "top born to play",
   description:
@@ -55,7 +65,7 @@ export default function Home() {
         <Suspense fallback={<div>Loading Top Slider...</div>}>
           <TopSlider />
         </Suspense>
-        <RoleCarousel />
+        {/* <RoleCarousel />
         <Mode />
         <Technical />
         <Grade />
@@ -63,7 +73,7 @@ export default function Home() {
         <Organizer />
         <Ecosystem />
         <Field />
-        <Tryout />
+        <Tryout /> */}
       </main>
       <Footer />
     </div>
