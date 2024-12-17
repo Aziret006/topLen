@@ -121,7 +121,7 @@ const PagePrimus = () => {
               использования данного <br /> сервиса?
             </h3>
             <Image
-              src="/8.jpg"
+              src="/8.png"
               alt="Football"
               width={606}
               height={823}
