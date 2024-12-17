@@ -6,9 +6,8 @@ import { gilroy } from "./fonsts";
 import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
 
 export const metadata: Metadata = {
-  title: "topsport Resources and Information",
-  description:
-    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  title: "top born to play",
+  description: "top born to play",
   openGraph: {
     images: [
       {
