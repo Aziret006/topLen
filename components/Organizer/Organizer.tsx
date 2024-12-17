@@ -28,7 +28,6 @@ const Organizer = () => {
         <div className={styles.container}>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "white" }}
             onClick={() => handleBlockClick("/smart.png")}
           >
             <div className={styles.icon}>
@@ -41,7 +40,6 @@ const Organizer = () => {
           </div>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "lightgreen", border: "none" }}
             onClick={() => handleBlockClick("/smart2.png")}
           >
             <div className={styles.icon}>
@@ -53,31 +51,26 @@ const Organizer = () => {
           </div>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "green" }}
             onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>
               <img src="/icon3.png" alt="" />
             </div>
-            <p style={{ color: "white" }} className={styles.text}>
+            <p className={styles.text}>
               Генерация расписания игр, в которые можно вносить правки;
             </p>
           </div>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "black", color: "white" }}
             onClick={() => handleBlockClick("/smart4.png")}
           >
             <div className={styles.icon}>
               <img src="/icon4.png" alt="" />
             </div>
-            <p style={{ color: "white" }} className={styles.text}>
-              Индивидуальная статистика игроков;
-            </p>
+            <p className={styles.text}>Индивидуальная статистика игроков;</p>
           </div>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "orange" }}
             onClick={() => handleBlockClick("/smart5.png")}
           >
             <div className={styles.icon}>
@@ -89,7 +82,6 @@ const Organizer = () => {
           </div>
           <div
             className={styles.feature}
-            style={{ backgroundColor: "white" }}
             onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>

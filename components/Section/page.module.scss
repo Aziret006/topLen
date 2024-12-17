@@ -43,6 +43,7 @@
 
             .topPhone {
                 object-fit: contain;
+
                 @media screen and (max-width: 500px) {
                     width: 90px;
                     height: 39px;
@@ -190,10 +191,13 @@
         position: relative;
 
         .phoneImage2 {
-            max-width: 100%;
+            object-fit: contain;
+            width: 100%;
             height: auto;
             position: relative;
             z-index: 500;
+            max-width: 539px;
+            height: 800px;
 
             @media screen and (max-width: 1191px) {
                 max-width: 359px;
