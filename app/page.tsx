@@ -24,8 +24,7 @@ import PageComponent from "@/components/PageComponent/PageComponent";
 
 export const metadata = {
   title: "top born to play",
-  description:
-    "ТОП — современная онлайн-платформа для любителей и профессионалов футбола в СНГ и за его пределами",
+  description: "top born to play",
   openGraph: {
     images: [
       {
