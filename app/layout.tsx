@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop/scrollToTop";
 import { gilroy } from "./fonsts";
-import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
 
 export const metadata: Metadata = {
   title: "top born to play",
@@ -63,7 +62,6 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading...</div>}>
           {children}
           <ScrollToTop />
-          <YandexMetrika />
         </Suspense>
       </body>
     </html>
