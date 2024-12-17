@@ -29,7 +29,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "white" }}
-            onClick={() => handleBlockClick("/place.svg")}
+            onClick={() => handleBlockClick("/smart.png")}
           >
             <div className={styles.icon}>
               <img src="/icon.png" alt="" />
@@ -42,7 +42,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "lightgreen", border: "none" }}
-            onClick={() => handleBlockClick("/place2.svg")}
+            onClick={() => handleBlockClick("/smart2.png")}
           >
             <div className={styles.icon}>
               <img src="/icon2.png" alt="" />
@@ -54,7 +54,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "green" }}
-            onClick={() => handleBlockClick("/place3.svg")}
+            onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>
               <img src="/icon3.png" alt="" />
@@ -66,7 +66,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "black", color: "white" }}
-            onClick={() => handleBlockClick("/place5.svg")}
+            onClick={() => handleBlockClick("/smart4.png")}
           >
             <div className={styles.icon}>
               <img src="/icon4.png" alt="" />
@@ -78,7 +78,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "orange" }}
-            onClick={() => handleBlockClick("/place4.svg")}
+            onClick={() => handleBlockClick("/smart5.png")}
           >
             <div className={styles.icon}>
               <img src="/icon5.png" alt="" />
@@ -90,7 +90,7 @@ const Organizer = () => {
           <div
             className={styles.feature}
             style={{ backgroundColor: "white" }}
-            onClick={() => handleBlockClick("/place5.svg")}
+            onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>
               <img src="/icon6.png" alt="" />
