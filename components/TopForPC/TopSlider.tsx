@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
+// import { Roadmap } from "./Roadmap/Roadmap";
 
 const TopSlider: React.FC = () => {
-  const roadmapRef = useRef<HTMLImageElement | null>(null);
   const slides = [
     {
       title: "Профиль",
@@ -136,7 +136,7 @@ const TopSlider: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles.roadmap}>
+      {/* <div className={styles.roadmap}>
         <Image
           id="roadmap"
           width={1340}
@@ -147,7 +147,8 @@ const TopSlider: React.FC = () => {
           priority={true}
           ref={roadmapRef}
         />
-      </div>
+      </div> */}
+      {/* <Roadmap /> */}
     </>
   );
 };

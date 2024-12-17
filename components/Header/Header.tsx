@@ -1,213 +1,102 @@
 "use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import s from "./page.module.scss";
-import { RiArrowRightUpLine } from "react-icons/ri";
 import Image from "next/image";
-import { FaBars } from "react-icons/fa6";
-import { FaTimes } from "react-icons/fa";
-const Header = () => {
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { FaBars, FaTimes } from "react-icons/fa";
+import styles from "./page.module.scss";
+
+const Header: React.FC = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  const navItems = [
+    { href: "#about", label: "О проекте" },
+    { href: "#team", label: "Наша команда" },
+    { href: "#advantages", label: "Преимущества" },
+    { href: "#roadmap", label: "ROADMAP" },
+    { href: "#mode", label: "Режимы" },
+    { href: "#ecosystem", label: "Экосистема" },
+    { href: "#contacts", label: "Контакты" },
+  ];
+
   return (
     <>
-      <header className={s.header}>
+      <header className={styles.header}>
         <Link href="/">
           <Image
             src="/toplogo.svg"
             alt="logo"
             width={130}
             height={48}
-            className={s.logo}
+            className={styles.logo}
             priority
           />
         </Link>
-        <ul className={s.nav}>
-          <li>
-            <Link href="#about" className={pathname === "/" ? s.active : ""}>
-              О проекте
-            </Link>
-          </li>
-          <li>
+        <nav className={styles.nav}>
+          {navItems.map((item) => (
             <Link
-              href="#primus"
-              className={pathname === "/advantages" ? s.active : ""}
+              key={item.href}
+              href={item.href}
+              className={pathname === item.href ? styles.active : ""}
             >
-              Преимущества
+              {item.label}
             </Link>
-          </li>
-          <li>
-            <Link
-              href="#platform"
-              className={pathname === "/top" ? s.active : ""}
-            >
-              TOP для ПК
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#roadmap"
-              className={pathname === "/Roadmap" ? s.active : ""}
-            >
-              ROADMAP
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#mode"
-              className={pathname === "/contacts" ? s.active : ""}
-            >
-              Режимы
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#ecosystem"
-              className={pathname === "/contacts" ? s.active : ""}
-            >
-              Экосистема
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="# "
-              className={pathname === "/contacts" ? s.active : ""}
-            >
-              Контакты
-            </Link>
-          </li>
-          <a
-            className={s.button}
-            target="_blank"
-            href="https://apps.apple.com/kg/app/top/id6477701651"
-          >
-            <button>
-              Загрузить
-              <span>
-                <RiArrowRightUpLine />
-              </span>
-            </button>
-          </a>
-        </ul>
-        <div className={s.bars}>
-          {isOpen ? (
-            <FaTimes
-              onClick={() => setIsOpen(false)}
-              size={24}
-              className={s.icon}
-              color="#fff"
-            />
-          ) : (
-            <FaBars
-              onClick={() => setIsOpen(true)}
-              size={24}
-              className={s.icon}
-              color="#fff"
-            />
-          )}
-        </div>
+          ))}
+        </nav>
+        <Link
+          className={styles.button}
+          target="_blank"
+          href="https://apps.apple.com/kg/app/top/id6477701651"
+        >
+          <span className={styles.buttonInner}>
+            Помочь проекту
+            <span className={styles.buttonIcon}>
+              <RiArrowRightUpLine />
+            </span>
+          </span>
+        </Link>
+        <button className={styles.bars} onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </header>
+
       {isOpen && (
-        <nav className={s.mobileNav}>
-          <header className={s.header}>
+        <nav className={styles.mobileNav}>
+          <div className={styles.mobileHeader}>
             <Link href="/">
               <Image
                 src="/toplogo.svg"
                 alt="logo"
                 width={130}
                 height={48}
-                className={s.logo}
+                className={styles.logo}
                 priority
               />
             </Link>
-            <div className={s.bars}>
-              {isOpen ? (
-                <FaTimes
-                  onClick={() => setIsOpen(false)}
-                  size={24}
-                  className={s.icon}
-                  color="#fff"
-                />
-              ) : (
-                <FaBars
-                  onClick={() => setIsOpen(true)}
-                  size={24}
-                  className={s.icon}
-                  color="#fff"
-                />
-              )}
-            </div>
-          </header>
+            <button onClick={() => setIsOpen(false)}>
+              <FaTimes size={24} />
+            </button>
+          </div>
           <ul>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="/#about"
-                className={pathname === "/" ? s.active : ""}
-              >
-                О проекте
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="/#primus"
-                className={pathname === "/advantages" ? s.active : ""}
-              >
-                Преимущества
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="/#platform"
-                className={pathname === "/top" ? s.active : ""}
-              >
-                TOP для ПК
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="/#roadmap"
-                className={pathname === "/roadmap" ? s.active : ""}
-              >
-                ROADMAP
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="#mode"
-                className={pathname === "/modes" ? s.active : ""}
-              >
-                Режимы
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="#ecosystem"
-                className={pathname === "/ecosystem" ? s.active : ""}
-              >
-                Экосистема
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={() => setIsOpen(false)}
-                href="/contacts"
-                className={pathname === "/contacts" ? s.active : ""}
-              >
-                Контакты
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={pathname === item.href ? styles.active : ""}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div className={s.socialWrapper}>
-            <div className={s.social_aLL}>
+          <div className={styles.socialWrapper}>
+            <div className={styles.social_aLL}>
               <h5>Следите за нами</h5>
-              <div className={s.socials}>
+              <div className={styles.socials}>
                 <a
                   href="https://t.me/OracleDigital"
                   aria-label="Telegram"
@@ -216,7 +105,7 @@ const Header = () => {
                 >
                   <Image
                     src="/telegramm.svg"
-                    alt="Football"
+                    alt="Telegram"
                     width={37}
                     height={37}
                     priority
@@ -230,7 +119,7 @@ const Header = () => {
                 >
                   <Image
                     src="/instagramm.svg"
-                    alt="Football"
+                    alt="Instagram"
                     width={37}
                     height={37}
                     priority

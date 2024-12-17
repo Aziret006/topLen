@@ -58,12 +58,13 @@
 
             .image {
                 position: absolute;
+                object-fit: contain;
                 bottom: 0;
                 top: -470px;
                 right: -60px;
                 left: 83px;
                 max-width: 332px;
-                max-height: 900px;
+                max-height: 918px;
 
                 @media screen and (max-width: 1279px) {
                     max-width: 332px;

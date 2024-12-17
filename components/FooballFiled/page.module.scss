@@ -22,11 +22,14 @@
     height: 867px;
     position: relative;
     z-index: -10;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     @media screen and (max-width: 1400px) {
       height: auto;
       margin-left: 20px;
       margin-right: 20px;
+
     }
   }
 }
