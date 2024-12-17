@@ -8,7 +8,7 @@ const Field = () => {
       <img src="/backf.png" alt="" className={styles.field} />
       <div className={styles.devicesWrapper}>
         <Image
-          src="/fon.svg"
+          src="/formobile.png"
           alt="devices"
           width={1321}
           height={1410}

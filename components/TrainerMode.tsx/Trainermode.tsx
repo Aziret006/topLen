@@ -72,7 +72,7 @@ const Trainermode = () => {
           <Image
             width={332}
             height={900}
-            src="/profiles.svg"
+            src="/xabi.png"
             alt="Football"
             className={styles.image}
             priority

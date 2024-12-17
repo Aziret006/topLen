@@ -15,7 +15,7 @@ const Organizer = () => {
       <Image
         width={1273}
         height={1101}
-        src="/myclub.svg"
+        src="/club.png"
         alt="Football"
         className={styles.Organizer_img}
         priority
