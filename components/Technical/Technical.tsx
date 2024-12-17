@@ -14,7 +14,7 @@ const Technical = () => {
         </div>
         <div className={styles.technical_image_and_text}>
           <Image
-            src="/mobileappstore.svg"
+            src="/mobile.png"
             alt="Football"
             width={639}
             height={900}
@@ -28,6 +28,7 @@ const Technical = () => {
           width={1462}
           height={417}
           className={styles.technical_image_desktop}
+          priority
         />
         <div className={styles.technical_image_text}>
           <span></span>

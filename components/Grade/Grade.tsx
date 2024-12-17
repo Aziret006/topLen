@@ -8,19 +8,21 @@ const Grade = () => {
       <div className={styles.grade_content}>
         <div className={styles.grade_text}>
           <h1>
-            <span className={styles.span} style={{ flexWrap: "nowrap" }}>Экспертная оценка</span>
+            <span className={styles.span} style={{ flexWrap: "nowrap" }}>
+              Экспертная оценка
+            </span>
             <br /> игроков и<br /> <span>создание</span>
             <br /> профессиональных <br /> матчей
           </h1>
         </div>
         <div className={styles.grade_image_container}>
-          <img src="/Black.svg" alt="Football" className={styles.grade_image} />
+          <img src="/grade.png" alt="Football" className={styles.grade_image} />
         </div>
       </div>
       <div className={styles.Page_Primus_flex}>
         <div className={styles.Page_Primus_Cards}>
           <Card
-            imageSrc="/arbitr.svg"
+            imageSrc="/20.jpg"
             title="Арбитр"
             description="Обеспечьте честную игру с помощью опытных арбитров из нашей базы."
           />

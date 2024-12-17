@@ -12,28 +12,28 @@ const TopSlider: React.FC = () => {
       text: `Главная страница нашего приложения создана для удобного управления футбольной деятельностью. Это универсальный инструмент CRM, который помогает любителям и профессионалам эффективно бронировать футбольные поля, организовывать игры, управлять командами и следить за предстоящими турнирами.`,
       text2:
         "Сразу после входа пользователь видит:Доступные футбольные поля: вся информация о ближайших площадках, включая цену, рейтинг и расстояние.Объявления: раздел для поиска игроков, набора команд или участия в академиях.Календарь мероприятий: список предстоящих турниров и событий с возможностью регистрации.Персонализированные функции: быстрый доступ к вашему клубу, сообщениям, настройкам профиля и другим инструментам.",
-      image: "/profile.svg",
+      image: "/mac2.png",
     },
     {
       title: "Главная",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.`,
       text2:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
-      image: "/home.svg",
+      image: "/mac1.png",
     },
     {
       title: "Сообщения",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.`,
       text2:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
-      image: "/message.svg",
+      image: "/mac3.png",
     },
     {
       title: "События",
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.`,
       text2:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
-      image: "/calendary.svg",
+      image: "/mac4.png",
     },
   ];
 
@@ -141,7 +141,7 @@ const TopSlider: React.FC = () => {
           id="roadmap"
           width={1340}
           height={754}
-          src="/imageBack.svg"
+          src="/roadmap.png"
           alt="Background"
           className={styles.rectangle}
           priority={true}

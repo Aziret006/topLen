@@ -7,75 +7,75 @@ import { useWindowSize } from "./useWindowSize";
 const content = [
   {
     id: 1,
-    img: "iphone.svg",
+    img: "15.png",
     cover: "blockimg.svg",
   },
   {
     id: 2,
-    img: "iphone2.svg",
+    img: "16.png",
     cover: "blockimg3.svg",
   },
   {
     id: 3,
-    img: "iphone3.svg",
+    img: "16.png",
     cover: "blockimg5.svg",
   },
   {
     id: 4,
-    img: "iphone4.svg",
+    img: "17.png",
     cover: "blockimg6.svg",
   },
   {
     id: 5,
-    img: "iphone5.svg",
+    img: "18.png",
     cover: "blockimg2.svg",
   },
   {
     id: 6,
-    img: "iphone6.svg",
+    img: "19.png",
     cover: "blockimg4.svg",
   },
   {
     id: 7,
-    img: "iphone5.svg",
+    img: "17.png",
     cover: "blockimg7.svg",
   },
 ];
 const content2 = [
   {
     id: 1,
-    img: "iphone.svg",
+    img: "15.png",
     cover: "ipad.svg",
   },
   {
     id: 2,
-    img: "iphone2.svg",
+    img: "16.png",
     cover: "ipad2.svg",
   },
   {
     id: 3,
-    img: "iphone3.svg",
+    img: "16.png",
     cover: "ipad3.svg",
   },
   {
     id: 4,
-    img: "iphone4.svg",
+    img: "17.png",
     cover: "ipad4.svg",
   },
 
   {
     id: 6,
-    img: "iphone6.svg",
+    img: "18.png",
     cover: "ipad8.svg",
   },
   {
     id: 7,
-    img: "iphone5.svg",
+    img: "19.png",
     cover: "ipad7.svg",
   },
   {
     id: 5,
-    img: "iphone5.svg",
+    img: "17.png",
     cover: "ipad5.svg",
   },
 ];
@@ -143,16 +143,16 @@ const RoleCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
 
   const size = useWindowSize();
 
-  const isMobile = size.width <= 768; // Мобильные устройства (включая маленькие планшеты)
-  const isTablet = size.width > 768 && size.width <= 1095; // Планшеты
-  const isDesktop = size.width > 1095; // Десктоп
+  const isMobile = size.width <= 768;
+  const isTablet = size.width > 768 && size.width <= 1095;
+  const isDesktop = size.width > 1095;
 
   return (
     <>

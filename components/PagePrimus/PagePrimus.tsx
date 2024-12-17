@@ -28,7 +28,7 @@ const PagePrimus = () => {
                 <div className={styles.Page_Primus_Card_Text}>
                   <h3>Cоздание игры</h3>
                   <p>
-                    Удобный  и понятный интерфейс для создания игр и приглашения
+                    Удобный и понятный интерфейс для создания игр и приглашения
                     игроков.
                   </p>
                 </div>
@@ -211,7 +211,7 @@ const PagePrimus = () => {
               href="https://www.youtube.com/watch?v=iJDtziSiaWM"
             >
               <Image
-                src="/13.jpg"
+                src="/14.jpg"
                 alt="Football"
                 className={styles.topImage6}
                 width={606}

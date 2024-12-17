@@ -61,11 +61,7 @@ const Mode = () => {
             </div>
           ))}
         </div>
-        <img
-          src="/imagefootball.svg"
-          alt="Football"
-          className={styles.bornplay}
-        />
+        <img src="/borntoplay.png" alt="Football" className={styles.bornplay} />
       </div>
     </div>
   );
