@@ -95,7 +95,7 @@
                 position: absolute;
                 bottom: 30px;
                 width: 100%;
-                object-fit: contain ;
+                object-fit: contain;
 
                 @media screen and (max-width: 1343px) {
                     bottom: 50px;
@@ -265,4 +265,40 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
+}
+
+.roadmap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rectangle {
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+    transform: scale(1.2);
+    /* Увеличение изображения */
+}
+
+.zoomButton {
+    display: none;
+
+    @media screen and (max-width: 600px) {
+        display: block;
+        margin-top: 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+}
+
+.zoomButton:hover {
+    background-color: #0056b3;
 }

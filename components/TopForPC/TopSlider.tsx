@@ -73,6 +73,12 @@ const TopSlider: React.FC = () => {
     };
   }, [isAutoPlaying, handleNext]);
 
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const toggleZoom = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   return (
     <>
       <div className={styles.topSlider} id="platform">
@@ -136,19 +142,20 @@ const TopSlider: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <div className={styles.roadmap}>
+      <div className={styles.roadmap}>
         <Image
           id="roadmap"
           width={1340}
           height={754}
           src="/roadmap.png"
           alt="Background"
-          className={styles.rectangle}
+          className={`${styles.rectangle} ${isZoomed ? styles.zoomed : ""}`}
           priority={true}
-          ref={roadmapRef}
         />
-      </div> */}
-      {/* <Roadmap /> */}
+        <p onClick={toggleZoom} className={styles.zoomButton}>
+          {isZoomed ? "Уменьшить" : "Увеличить"}
+        </p>
+      </div>
     </>
   );
 };
