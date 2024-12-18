@@ -58,12 +58,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className={gilroy.variable}>
-      <PreventZoom />
-      <Suspense fallback={<div>Loading...</div>}>
-        {children}
-        <ScrollToTop />
-      </Suspense>
-    </body>
+    <html lang="en">
+      <body className={gilroy.variable}>
+        <PreventZoom />
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+          <ScrollToTop />
+        </Suspense>
+      </body>
+    </html>
   );
 }
