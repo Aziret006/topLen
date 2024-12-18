@@ -49,27 +49,35 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Header />
-      <main>
-        <Section />
-        <Main />
-        <PageComponent />
-        <PagePrimus />
-        <Suspense fallback={<div>Loading Top Slider...</div>}>
-          <TopSlider />
-        </Suspense>
-        <RoleCarousel />
-        <Mode />
-        <Technical />
-        <Grade />
-        <Trainermode />
-        <Organizer />
-        <Ecosystem />
-        <Field />
-        <Tryout />
-      </main>
-      <Footer />
-    </div>
+    <html lang="en">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </head>
+      <div className={styles.page}>
+        <Header />
+        <main>
+          <Section />
+          <Main />
+          <PageComponent />
+          <PagePrimus />
+          <Suspense fallback={<div>Loading Top Slider...</div>}>
+            <TopSlider />
+          </Suspense>
+          <RoleCarousel />
+          <Mode />
+          <Technical />
+          <Grade />
+          <Trainermode />
+          <Organizer />
+          <Ecosystem />
+          <Field />
+          <Tryout />
+        </main>
+        <Footer />
+      </div>
+    </html>
   );
 }
