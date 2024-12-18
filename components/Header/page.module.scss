@@ -8,12 +8,15 @@
   margin: 0 25px;
   position: fixed;
   top: 15px;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  max-width: 1390px;
-  width: 100%;
+  right: 75px;
+  left: 75px;
   margin: 0 auto;
+  z-index: 1000;
+
+  @media screen and (max-width: 1389px) {
+    left: 25px;
+    right: 25px;
+  }
 
   @media screen and (max-width: 1003px) {
     padding: 13px 20px;
@@ -22,6 +25,9 @@
   @media screen and (max-width: 806px) {
     margin: 0;
     border-radius: 0;
+    left: 0;
+    right: 0;
+    top: 0;
   }
 }
 

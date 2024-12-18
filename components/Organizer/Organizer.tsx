@@ -31,7 +31,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon.png" alt="" />
+              <img src="/icon1.svg" alt="" />
             </div>
             <p className={styles.text}>
               Выбор типа турнира; Круговая система, олимпийская система или лига
@@ -43,7 +43,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart2.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon2.png" alt="" />
+              <img src="/icon2.svg" alt="" />
             </div>
             <p className={styles.text}>
               Автоматическое распределение мест и подсчет очков;
@@ -54,7 +54,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon3.png" alt="" />
+              <img src="/icon3.svg" alt="" />
             </div>
             <p className={styles.text}>
               Генерация расписания игр, в которые можно вносить правки;
@@ -65,7 +65,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart4.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon4.png" alt="" />
+              <img src="/icon4.svg" alt="" />
             </div>
             <p className={styles.text}>Индивидуальная статистика игроков;</p>
           </div>
@@ -74,7 +74,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart5.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon5.png" alt="" />
+              <img src="/icon5.svg" alt="" />
             </div>
             <p className={styles.text}>
               Настройки турнира под ваши требования;
@@ -85,7 +85,7 @@ const Organizer = () => {
             onClick={() => handleBlockClick("/smart3.png")}
           >
             <div className={styles.icon}>
-              <img src="/icon6.png" alt="" />
+              <img src="/icon6.svg" alt="" />
             </div>
             <p className={styles.text}>
               Электронный протокол: составы команд, голы, передачи,

@@ -15,6 +15,11 @@
         margin-top: 81px;
         padding-left: 4rem;
 
+        @media screen and (max-width: 806px) {
+            margin-top: 0;
+
+        }
+
         @media screen and (max-width: 1100px) {
             margin-top: 42px;
             padding-left: 3rem;
@@ -435,6 +440,7 @@
         height: auto;
         position: relative;
         z-index: 500;
+        object-fit: contain;
 
         @media screen and (max-width: 1191px) {
             max-width: 359px;

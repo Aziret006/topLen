@@ -17,7 +17,7 @@ import Field from "@/components/FooballFiled/Field";
 // import dynamic from "next/dynamic";
 import Grade from "@/components/Grade/Grade";
 import PageComponent from "@/components/PageComponent/PageComponent";
-
+import Head from "next/head";
 // const Grade = dynamic(() => import("@/components/Grade/Grade"), {
 //   loading: () => <p>Loading...</p>,
 // });
@@ -49,27 +49,35 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Header />
-      <main>
-        <Section />
-        <Main />
-        <PageComponent />
-        <PagePrimus />
-        <Suspense fallback={<div>Loading Top Slider...</div>}>
-          <TopSlider />
-        </Suspense>
-        <RoleCarousel />
-        <Mode />
-        <Technical />
-        <Grade />
-        <Trainermode />
-        <Organizer />
-        <Ecosystem />
-        <Field />
-        <Tryout />
-      </main>
-      <Footer />
-    </div>
+    <html lang="en">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+      </Head>
+      <div className={styles.page}>
+        <Header />
+        <main>
+          <Section />
+          <Main />
+          <PageComponent />
+          <PagePrimus />
+          <Suspense fallback={<div>Loading Top Slider...</div>}>
+            <TopSlider />
+          </Suspense>
+          <RoleCarousel />
+          <Mode />
+          <Technical />
+          <Grade />
+          <Trainermode />
+          <Organizer />
+          <Ecosystem />
+          <Field />
+          <Tryout />
+        </main>
+        <Footer />
+      </div>
+    </html>
   );
 }
