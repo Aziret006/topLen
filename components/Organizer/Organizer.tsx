@@ -93,6 +93,82 @@ const Organizer = () => {
             </p>
           </div>
         </div>
+        <div className={styles.container2}>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "white" }}
+            onClick={() => handleBlockClick("/place.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon.png" alt="" />
+            </div>
+            <p className={styles.text2}>
+              Выбор типа турнира; Круговая система, олимпийская система или лига
+              чемпионов;
+            </p>
+          </div>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "lightgreen", border: "none" }}
+            onClick={() => handleBlockClick("/place2.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon2.png" alt="" />
+            </div>
+            <p className={styles.text2}>
+              Автоматическое распределение мест и подсчет очков;
+            </p>
+          </div>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "green" }}
+            onClick={() => handleBlockClick("/place3.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon3.png" alt="" />
+            </div>
+            <p style={{ color: "white" }} className={styles.text2}>
+              Генерация расписания игр, в которые можно вносить правки;
+            </p>
+          </div>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "black", color: "white" }}
+            onClick={() => handleBlockClick("/place5.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon4.png" alt="" />
+            </div>
+            <p style={{ color: "white" }} className={styles.text2}>
+              Индивидуальная статистика игроков;
+            </p>
+          </div>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "orange" }}
+            onClick={() => handleBlockClick("/place4.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon5.png" alt="" />
+            </div>
+            <p className={styles.text2}>
+              Настройки турнира под ваши требования;
+            </p>
+          </div>
+          <div
+            className={styles.feature2}
+            style={{ backgroundColor: "white" }}
+            onClick={() => handleBlockClick("/place5.svg")}
+          >
+            <div className={styles.icon2}>
+              <img src="/icon6.png" alt="" />
+            </div>
+            <p className={styles.text2}>
+              Электронный протокол: составы команд, голы, передачи,
+              предупреждения, нарушения в матче;
+            </p>
+          </div>
+        </div>
         <div className={styles.Organizer_image}>
           <Image
             src={currentImage}

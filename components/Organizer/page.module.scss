@@ -96,6 +96,10 @@
 
         @media screen and (max-width: 605px) {
             grid-template-columns: 1fr 1fr;
+
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
         }
     }
 
@@ -113,26 +117,91 @@
         border: 1px solid var(--dark-oppacity, #16161680);
         transition: all 0.3s ease-in-out;
 
-        &:hover {
-            background: #161616;
-            /* Новый фон при наведении */
-            color: #FF852C;
+        &:nth-child(1) {
+            &:hover {
+                background: #161616;
+                color: #161616;
+            }
 
-            /* Новый цвет текста */
-            &:nth-child(2) {
+            &:hover .icon img {
+                filter: invert(1);
+            }
+
+            &:hover .text {
+                color: #FF852C;
+            }
+        }
+
+
+        &:nth-child(2) {
+            &:hover {
                 background: #DAFC79;
+                color: #161616;
+            }
+
+            &:hover .icon img {
+                // filter: invert(1);
+            }
+
+            &:hover .text {
                 color: #161616;
             }
         }
 
-        &:hover .icon img {
-            filter: invert(1);
+        &:nth-child(3) {
+            &:hover {
+                background: #009910;
+                color: #161616;
+            }
 
+            &:hover .icon img {
+                filter: invert(1);
+            }
+
+            &:hover .text {
+                color: #fff;
+            }
         }
 
-        &:hover .text {
-            color: #FF852C;
-            
+        &:nth-child(4) {
+            &:hover {
+                background: #D9D9D9;
+                border: 1px solid #16161680
+            }
+
+            &:hover .icon img {}
+
+            &:hover .text {
+                color: #161616;
+            }
+        }
+
+        &:nth-child(5) {
+            &:hover {
+                background: #FF852C;
+                border: 1px solid #16161680
+            }
+
+            &:hover .icon img {}
+
+            &:hover .text {
+                color: #161616;
+            }
+        }
+
+        &:nth-child(6) {
+            &:hover {
+                background: #252121;
+                border: 1px solid #16161680
+            }
+
+            &:hover .icon img {
+                filter: invert(1);
+            }
+
+            &:hover .text {
+                color: #fff;
+            }
         }
 
         @media screen and (max-width: 1265px) {
@@ -167,6 +236,77 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
+        }
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 870px;
+        gap: 15px;
+        margin-top: 31px;
+        display: none;
+
+        @media screen and (max-width: 605px) {
+            grid-template-columns: 1fr 1fr;
+
+            @media screen and (max-width: 600px) {
+                display: grid;
+            }
+        }
+    }
+
+    .feature2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 279px;
+        height: 242px;
+        padding: 24px;
+        border-radius: 8px;
+        color: #000;
+        text-align: left;
+        border: 1px solid #16161680;
+
+        &:focus {
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media screen and (max-width: 1265px) {
+            border: none;
+            border-radius: 20px;
+            width: 100%;
+            max-height: 143px;
+            padding: 10px;
+        }
+    }
+
+    .icon2 {
+        img {
+            @media screen and (max-width: 965px) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .text2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23.86px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #161616;
+
+        @media screen and (max-width: 1265px) {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 15.3px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
         }
     }
 

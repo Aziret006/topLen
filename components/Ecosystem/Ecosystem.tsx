@@ -17,7 +17,7 @@ const Ecosystem = () => {
       <div className={styles.ecosystem_container_image}>
         <Image
           className={styles.ecosystem_image}
-          src="/ecosystem.svg"
+          src="/skaut.png"
           alt="Football"
           width={1240}
           height={950}
