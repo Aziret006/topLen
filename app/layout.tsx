@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop/scrollToTop";
 import { gilroy } from "./fonsts";
+import PreventZoom from "@/components/PreventZoom/PreventZoom";
 
 export const metadata: Metadata = {
   title: "top born to play",
@@ -57,19 +58,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        />
-      </head>
-      <body className={gilroy.variable}>
-        <Suspense fallback={<div>Loading...</div>}>
-          {children}
-          <ScrollToTop />
-        </Suspense>
-      </body>
-    </html>
+    <body className={gilroy.variable}>
+      <PreventZoom />
+      <Suspense fallback={<div>Loading...</div>}>
+        {children}
+        <ScrollToTop />
+      </Suspense>
+    </body>
   );
 }
