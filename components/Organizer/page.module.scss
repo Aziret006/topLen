@@ -111,9 +111,28 @@
         color: #000;
         text-align: left;
         border: 1px solid var(--dark-oppacity, #16161680);
+        transition: all 0.3s ease-in-out;
 
-        &:focus {
-            transition: all 0.3s ease-in-out;
+        &:hover {
+            background: #161616;
+            /* Новый фон при наведении */
+            color: #FF852C;
+
+            /* Новый цвет текста */
+            &:nth-child(2) {
+                background: #DAFC79;
+                color: #161616;
+            }
+        }
+
+        &:hover .icon img {
+            filter: invert(1);
+
+        }
+
+        &:hover .text {
+            color: #FF852C;
+            
         }
 
         @media screen and (max-width: 1265px) {
@@ -125,13 +144,9 @@
         }
     }
 
-    .icon {
-        img {
-            @media screen and (max-width: 965px) {
-                width: 30px;
-                height: 30px;
-            }
-        }
+    .icon img {
+        transition: all 0.3s ease-in-out;
+        /* Плавный переход */
     }
 
     .text {
@@ -142,6 +157,8 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         color: #161616;
+        transition: all 0.3s ease-in-out;
+        /* Плавный переход */
 
         @media screen and (max-width: 1265px) {
             font-size: 13px;
@@ -150,7 +167,6 @@
             text-align: left;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
-
         }
     }
 
