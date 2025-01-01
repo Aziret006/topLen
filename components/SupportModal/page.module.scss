@@ -15,8 +15,11 @@
     background: white;
     border-radius: 12px;
     padding: 24px;
-    width: 1034px;
+    width: 90%;
+    max-width: 1034px;
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .closeButton {
@@ -57,7 +60,6 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 40px;
-
 }
 
 .text {
@@ -89,5 +91,68 @@
 
     &:hover {
         background-color: #16a34a;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 16px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .illustration {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+
+    .info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .input,
+    .button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 12px;
+    }
+
+    .closeButton {
+        top: 8px;
+        right: 8px;
+        font-size: 40px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .info p {
+        font-size: 13px;
+    }
+
+    .input,
+    .button {
+        padding: 10px;
     }
 }
