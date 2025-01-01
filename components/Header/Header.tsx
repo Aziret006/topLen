@@ -7,10 +7,12 @@ import Image from "next/image";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./page.module.scss";
+import SupportModal from "../SupportModal/SupportModal";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navItems = [
     { href: "#about", label: "О проекте" },
@@ -46,18 +48,21 @@ const Header: React.FC = () => {
             </Link>
           ))}
         </nav>
-        <Link
-          className={styles.button}
-          target="_blank"
-          href="https://apps.apple.com/kg/app/top/id6477701651"
+        <span
+          onClick={() => setIsModalOpen(true)}
+          className={styles.buttonInner}
         >
-          <span className={styles.buttonInner}>
-            Помочь проекту
-            <span className={styles.buttonIcon}>
-              <RiArrowRightUpLine />
-            </span>
+          Помочь проекту
+          <span className={styles.buttonIcon}>
+            <RiArrowRightUpLine />
           </span>
-        </Link>
+        </span>
+        {isModalOpen && (
+          <SupportModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
+        )}
         <button className={styles.bars} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>

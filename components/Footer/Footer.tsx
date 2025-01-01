@@ -1,104 +1,87 @@
 import React from "react";
 import styles from "./page.module.scss";
 import Image from "next/image";
-import { FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
+        {/* Logo Section */}
         <div className={styles.logoSection}>
           <Image
             src="/toplogo3.svg"
-            alt="Football"
+            alt="ТОП"
             width={160}
             height={67}
             priority={true}
           />
-          <p>
-            Если у вас возникли вопросы или вы хотите получить дополнительную
-            информацию, пожалуйста, свяжитесь с нами по электронной почте:
-            [почта@вашсайт.ру] или телефону: [номер телефона].
-          </p>
+          <div>
+            <p>Разработано в компании:</p>
+            <Image
+              src="/oracle.svg"
+              alt="Digital Company"
+              width={144}
+              height={41}
+              className={styles.oracleLogo}
+              priority={true}
+            />
+          </div>
         </div>
-        <div className={styles.linksSection}>
+
+        {/* Navigation Section */}
+        <div className={styles.pagesSection}>
           <h3>Страницы</h3>
-          <div className={styles.links}>
-            <ul>
-              <li>
-                <Link href="#about"> Главная</Link>
-              </li>
-              <li>
-                <Link href="#about">Что такое ТОР</Link>
-              </li>
-              <li>
-                <Link href="#roles">Роли</Link>
-              </li>
-              <li>
-                <Link href="#roadmap">ROADMAP</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href="#mode">Режим Футболист</Link>
-              </li>
-              <li>
-                <Link href="#organizer">Режим Организатор турнира</Link>
-              </li>
-              <li>
-                <Link href="#ecosystem">Футбольная Экосистема</Link>
-              </li>
-              <li>
-                <Link href="#platform">Платформа ТОР для ПК</Link>
-              </li>
-            </ul>
+          <div className={styles.linksGrid}>
+            <div className={styles.linkColumn}>
+              <Link href="/">Главная</Link>
+              <Link href="/about">Что такое &quot;ТОР&quot;</Link>
+              <Link href="/roles">Роли</Link>
+              <Link href="/roadmap">ROADMAP</Link>
+            </div>
+            <div className={styles.linkColumn}>
+              <Link href="/mode">Режим &quot;Футболист&quot;</Link>
+              <Link href="/organizer">
+                Режим &quot;Организатор турнира&quot;
+              </Link>
+              <Link href="/ecosystem">Футбольная Экосистема</Link>
+              <Link href="/platform">Платформа &quot;ТОР&quot; для ПК</Link>
+            </div>
           </div>
         </div>
-        <div className={styles.newsletterSection}>
-          <h3>Подпишитесь на наши новости</h3>
-          <div className={styles.subscriptionForm}>
-            <div className={styles.inputContainer}>
-              <FaEnvelope className={styles.icon} />
-              <input
-                type="email"
-                placeholder="Ваша электронная почта"
-                aria-label="Введите вашу электронную почту"
-              />
-              <button aria-label="Отправить">→</button>
+
+        {/* Contact Section */}
+        <div className={styles.contactSection}>
+          <h3>Контакты</h3>
+          <div className={styles.contactInfo}>
+            <div className={styles.contactItem}>
+              <p>Номер телефона</p>
+              <h4>+996 (708) 67 89 07</h4>
             </div>
-            <hr className={styles.underline} />
+            <div className={styles.contactItem}>
+              <p>E-Mail</p>
+              <h4>example@gmail.com</h4>
+            </div>
           </div>
-          <div className={styles.social_aLL}>
+          <div className={styles.social}>
             <h5>Следите за нами</h5>
-            <div className={styles.socials}>
-              <a
-                href="https://t.me/OracleDigital"
-                aria-label="Telegram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className={styles.socialIcons}>
+              <Link href="https://t.me/OracleDigital">
                 <Image
                   src="/telegramm.svg"
-                  alt="Football"
-                  width={37}
-                  height={37}
-                  priority
+                  alt="Telegram"
+                  width={24}
+                  height={24}
                 />
-              </a>
-              <a
-                href="https://www.instagram.com/top_borntoplay/"
-                aria-label="Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link href="https://www.instagram.com/top_borntoplay/">
                 <Image
                   src="/instagramm.svg"
-                  alt="Football"
-                  width={37}
-                  height={37}
-                  priority
+                  alt="Instagram"
+                  width={24}
+                  height={24}
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
