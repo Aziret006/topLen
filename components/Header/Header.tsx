@@ -48,43 +48,29 @@ const Header: React.FC = () => {
             </Link>
           ))}
         </nav>
-        <span
-          onClick={() => setIsModalOpen(true)}
-          className={styles.buttonInner}
-        >
-          Помочь проекту
-          <span className={styles.buttonIcon}>
-            <RiArrowRightUpLine />
+        <div>
+          <span
+            onClick={() => setIsModalOpen(true)}
+            className={styles.buttonInner}
+          >
+            Помочь проекту
+            <span className={styles.buttonIcon}>
+              <RiArrowRightUpLine />
+            </span>
           </span>
-        </span>
-        {isModalOpen && (
-          <SupportModal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-          />
-        )}
-        <button className={styles.bars} onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
+          <button className={styles.bars} onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </header>
-
+      {isModalOpen && (
+        <SupportModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
       {isOpen && (
         <nav className={styles.mobileNav}>
-          <div className={styles.mobileHeader}>
-            <Link href="/">
-              <Image
-                src="/toplogo.svg"
-                alt="logo"
-                width={130}
-                height={48}
-                className={styles.logo}
-                priority
-              />
-            </Link>
-            <button onClick={() => setIsOpen(false)}>
-              <FaTimes size={24} />
-            </button>
-          </div>
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>

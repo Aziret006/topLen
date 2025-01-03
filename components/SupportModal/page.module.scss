@@ -13,10 +13,13 @@
 
 .modal {
     background: white;
-    border-radius: 12px;
+    border-radius: 35px;
     padding: 24px;
+    padding-bottom: 90px;
+    padding-top: 90px;
+    padding-right: 114px;
+    max-width: 940px;
     width: 90%;
-    max-width: 1034px;
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
@@ -44,11 +47,16 @@
 }
 
 .illustration {
-    flex: 0 0 240px;
+    .image {
+        width: 405px;
+        height: 418px;
+    }
 }
 
 .info {
     flex: 1;
+    max-width: 450px;
+    // width: 80%;
 }
 
 .title {
@@ -63,45 +71,61 @@
 }
 
 .text {
-    font-size: 14px;
-    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #16161680;
     margin-bottom: 8px;
 }
 
 .input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #0A9829;
     border-radius: 6px;
     margin-top: 16px;
     margin-bottom: 16px;
     font-size: 14px;
+    outline: none;
 }
 
 .button {
     width: 100%;
     padding: 12px;
-    background-color: #22c55e;
+    background: #0A9829;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23.86px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #16a34a;
+        background-color: #0a371a;
     }
 }
 
 @media (max-width: 768px) {
     .modal {
         padding: 16px;
+        border-radius: 20px;
     }
 
     .content {
         flex-direction: column;
         gap: 16px;
+    }
+
+    .image {
+        display: none;
     }
 
     .illustration {
@@ -130,6 +154,7 @@
 
 @media (max-width: 480px) {
     .modal {
+        border-radius: 12px;
         padding: 12px;
     }
 

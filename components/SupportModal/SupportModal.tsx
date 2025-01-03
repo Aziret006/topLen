@@ -34,11 +34,12 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
               width={405}
               height={418}
               layout="responsive"
+              className={styles.image}
             />
           </div>
           <div className={styles.info}>
             <h2 className={styles.title}>Поддержка проекту</h2>
-            <p>
+            <p className={styles.text}>
               Спасибо, что заходите на наш сайт! <br />
               <br /> Ваша поддержка помогает нам становиться лучше. <br />
               <br /> Если вам нравится наш контент, вы можете поддержать нас

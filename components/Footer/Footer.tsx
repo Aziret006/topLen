@@ -17,12 +17,11 @@ const Footer = () => {
             priority={true}
           />
           <div>
-            <p>Разработано в компании:</p>
             <Image
-              src="/oracle.svg"
+              src="/digital.svg"
               alt="Digital Company"
-              width={144}
-              height={41}
+              width={230}
+              height={70}
               className={styles.oracleLogo}
               priority={true}
             />
@@ -35,17 +34,17 @@ const Footer = () => {
           <div className={styles.linksGrid}>
             <div className={styles.linkColumn}>
               <Link href="/">Главная</Link>
-              <Link href="/about">Что такое &quot;ТОР&quot;</Link>
-              <Link href="/roles">Роли</Link>
-              <Link href="/roadmap">ROADMAP</Link>
+              <Link href="#about">Что такое &quot;ТОР&quot;</Link>
+              <Link href="#roles">Роли</Link>
+              <Link href="#roadmap">ROADMAP</Link>
             </div>
             <div className={styles.linkColumn}>
-              <Link href="/mode">Режим &quot;Футболист&quot;</Link>
-              <Link href="/organizer">
+              <Link href="#mode">Режим &quot;Футболист&quot;</Link>
+              <Link href="#organizer">
                 Режим &quot;Организатор турнира&quot;
               </Link>
-              <Link href="/ecosystem">Футбольная Экосистема</Link>
-              <Link href="/platform">Платформа &quot;ТОР&quot; для ПК</Link>
+              <Link href="#ecosystem">Футбольная Экосистема</Link>
+              <Link href="#platform">Платформа &quot;ТОР&quot; для ПК</Link>
             </div>
           </div>
         </div>
