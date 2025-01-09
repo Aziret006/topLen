@@ -1,0 +1,211 @@
+.page {
+    max-width: var(--maxWidth);
+    padding-top: var(--padding);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 809px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main {
+        padding-top: 80px;
+    }
+}
+
+.container {
+    max-width: 1295px;
+    margin: 0;
+    padding: 4rem 1rem;
+    margin-top: 50px;
+    margin-left: 40px;
+
+    @media screen and (max-width: 913px) {
+        margin-left: 0;
+        margin-top: 30px;
+        padding: 4rem 1rem 0rem;
+    }
+}
+
+.container {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: transparent transparent;
+    /* Цвет полосы и фона */
+}
+
+.container::-webkit-scrollbar {
+    width: 5px;
+    /* Ширина вертикального скроллбара */
+    height: 5px;
+    /* Высота горизонтального скроллбара */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Цвет ползунка */
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Цвет трека */
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 71.58px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 913px) {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 58.8px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 50px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.description {
+    max-width: 510px;
+    margin-bottom: 3rem;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.94px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 70%;
+
+    @media screen and (max-width: 913px) {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        opacity: 70%;
+        line-height: 21px;
+
+        @media screen and (max-width: 600px) {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            opacity: 70%;
+            margin-bottom: 50px;
+        }
+    }
+
+}
+
+.membersGrid {
+    display: flex;
+    gap: 31px;
+    overflow-x: scroll;
+    height: 470px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.memberCard {
+    max-width: 286px;
+    max-height: 408px;
+    height: 100%;
+    background: #DAFC79;
+    border-radius: 14px;
+    transform: rotate(-3.62deg);
+
+    &:hover {
+        .memberImage {
+            // transform: scale(1.05);
+        }
+    }
+
+    &:nth-child(2) {
+        background: #252121;
+        transform: rotate(3.37deg);
+    }
+
+    &:nth-child(3) {
+        background: #252121;
+        max-width: 286px;
+
+    }
+
+    &:nth-child(4) {
+        background: #F6812C;
+        transform: rotate(3.57deg);
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+}
+
+.memberImage {
+    width: 286px;
+    height: 330px;
+    transition: transform 0.3s;
+    border-radius: 14px;
+}
+
+.memberInfo {
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 9px;
+
+    .name {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23.86px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #161616;
+
+    }
+
+    .role {
+        opacity: 70%;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 15.51px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #161616;
+
+    }
+
+    .tweerthName {
+        color: #FF852C;
+    }
+
+    .thirdName {
+        color: #FAF8F3;
+    }
+
+}

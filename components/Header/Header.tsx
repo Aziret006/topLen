@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { href: "#about", label: "О проекте" },
-    { href: "#team", label: "Наша команда" },
+    { href: "/team-section", label: "Наша команда" }, // убедитесь что путь совпадает с названием папки
     { href: "#advantages", label: "Преимущества" },
     { href: "#roadmap", label: "ROADMAP" },
     { href: "#mode", label: "Режимы" },
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header className={styles.header}>
-        <Link href="/">
+        <Link href={"/"}>
           <Image
             src="/toplogo.svg"
             alt="logo"

@@ -24,7 +24,7 @@ import PageComponent from "@/components/PageComponent/PageComponent";
 
 export const metadata = {
   title: "top born to play",
-  description: "top born to play",
+  description: "top",
   openGraph: {
     images: [
       {

@@ -14,15 +14,27 @@
 .modal {
     background: white;
     border-radius: 35px;
-    padding: 24px;
+    // padding: 24px;
     padding-bottom: 90px;
     padding-top: 90px;
-    padding-right: 114px;
+    padding-right: 100px;
     max-width: 940px;
     width: 90%;
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
+
+    @media screen and (max-width: 1056px) {
+        padding: 50px 30px;
+
+        @media screen and (max-width: 812px) {
+            padding: 50px 20px;
+            border-radius: 25px;
+            @media screen and (max-width: 678px) {
+            padding-bottom: 20px;                
+            }
+        }
+    }
 }
 
 .closeButton {
@@ -44,23 +56,35 @@
     display: flex;
     gap: 32px;
     align-items: center;
+    @media screen and (max-width: 678px) {
+       gap: 0px;
+    }
 }
 
 .illustration {
     .image {
-        width: 405px;
+        max-width: 405px;
         height: 418px;
+
+        @media screen and (max-width: 1056px) {
+            height: 300px;
+            width: 300px;
+
+            @media screen and (max-width: 812px) {
+                height: 200px;
+                width: 200px;
+                @media screen and (max-width: 678px) {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
-.info {
-    flex: 1;
-    max-width: 450px;
-    // width: 80%;
-}
+.info {}
 
 .title {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 500;
     line-height: 56.5px;
     letter-spacing: -0.02em;
@@ -68,6 +92,29 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 1056px) {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 43.2px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 812px) {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 10px;
+
+        }
+    }
 }
 
 .text {
@@ -79,6 +126,27 @@
     text-decoration-skip-ink: none;
     color: #16161680;
     margin-bottom: 8px;
+
+    @media screen and (max-width: 1056px) {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin-bottom: 4px;
+
+        @media screen and (max-width: 812px) {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 2px;
+
+        }
+    }
 }
 
 .input {
@@ -90,6 +158,22 @@
     margin-bottom: 16px;
     font-size: 14px;
     outline: none;
+
+    @media screen and (max-width: 1056px) {
+        padding: 10px;
+        font-size: 12px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        font-size: 13px;
+
+        @media screen and (max-width: 812px) {
+            font-size: 11px;
+            padding: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+    }
 }
 
 .button {
@@ -111,73 +195,84 @@
     &:hover {
         background-color: #0a371a;
     }
-}
 
-@media (max-width: 768px) {
-    .modal {
-        padding: 16px;
-        border-radius: 20px;
-    }
-
-    .content {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .image {
-        display: none;
-    }
-
-    .illustration {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 240px;
-        margin: 0 auto;
-    }
-
-    .title {
-        font-size: 32px;
-        line-height: 40px;
-        margin-bottom: 24px;
-    }
-
-    .info p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .input,
-    .button {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .modal {
-        border-radius: 12px;
-        padding: 12px;
-    }
-
-    .closeButton {
-        top: 8px;
-        right: 8px;
-        font-size: 40px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .title {
-        font-size: 28px;
-        line-height: 36px;
-        margin-bottom: 16px;
-    }
-
-    .info p {
-        font-size: 13px;
-    }
-
-    .input,
-    .button {
+    @media screen and (max-width: 1056px) {
+        font-size: 18px;
         padding: 10px;
+
+        @media screen and (max-width: 812px) {
+            font-size: 16px;
+            padding: 8px;
+
+        }
     }
 }
+
+// @media (max-width: 768px) {
+//     .modal {
+//         padding: 16px;
+//         border-radius: 20px;
+//     }
+
+//     .content {
+//         flex-direction: column;
+//         gap: 16px;
+//     }
+
+//     .image {
+//         display: none;
+//     }
+
+//     .illustration {
+//         flex: 0 0 auto;
+//         width: 100%;
+//         max-width: 240px;
+//         margin: 0 auto;
+//     }
+
+//     .title {
+//         font-size: 32px;
+//         line-height: 40px;
+//         margin-bottom: 24px;
+//     }
+
+//     .info p {
+//         font-size: 14px;
+//         line-height: 1.5;
+//     }
+
+//     .input,
+//     .button {
+//         font-size: 16px;
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     .modal {
+//         border-radius: 12px;
+//         padding: 12px;
+//     }
+
+//     .closeButton {
+//         top: 8px;
+//         right: 8px;
+//         font-size: 40px;
+//         width: 32px;
+//         height: 32px;
+//     }
+
+//     .title {
+//         font-size: 28px;
+//         line-height: 36px;
+//         margin-bottom: 16px;
+//     }
+
+//     .info p {
+//         font-size: 13px;
+//     }
+
+//     .input,
+//     .button {
+//         padding: 10px;
+//     }
+// }

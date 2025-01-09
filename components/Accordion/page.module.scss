@@ -1,0 +1,87 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    // border: none;
+}
+
+.trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42.56px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    border-top: 1px solid #16161633;
+    color: #1A1D29;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 913px) {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 26.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding: 20px 0 5px 0;
+
+        @media screen and (max-width: 600px) {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            padding: 15px 0 2px 0;
+        }
+
+    }
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    @media screen and (max-width: 913px) {
+        width: 32px;
+        height: 32px;
+        @media screen and (max-width: 600px) {
+            width: 28px;
+            height: 28px;
+        }
+    }
+}
+
+.iconOpen {
+    transform: rotate(90deg);
+}
+
+.content {
+    animation: slideDown 300ms ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

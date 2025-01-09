@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./page.module.scss";
-import Image from "next/image";
 
 interface SupportModalProps {
   isOpen: boolean;
@@ -28,17 +27,12 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
         </button>
         <div className={styles.content}>
           <div className={styles.illustration}>
-            <Image
-              src="/Mask.png"
-              alt="support"
-              width={405}
-              height={418}
-              layout="responsive"
-              className={styles.image}
-            />
+            <img src="/Mask2.png" alt="support" className={styles.image} />
           </div>
           <div className={styles.info}>
-            <h2 className={styles.title}>Поддержка проекту</h2>
+            <h2 style={{ flexWrap: "nowrap" }} className={styles.title}>
+              Поддержка проекту
+            </h2>
             <p className={styles.text}>
               Спасибо, что заходите на наш сайт! <br />
               <br /> Ваша поддержка помогает нам становиться лучше. <br />
