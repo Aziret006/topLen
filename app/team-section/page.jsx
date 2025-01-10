@@ -4,13 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { Accordion } from "@/components/Accordion/Accordion";
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-}
-
-const founders: TeamMember[] = [
+const founders = [
   {
     name: "АСКАР БЕГАЛИЕВ",
     role: "CEO & Co-Founder - «TOP - Born TO Play»",
@@ -33,7 +27,7 @@ const founders: TeamMember[] = [
   },
 ];
 
-const TeamMemberGrid: React.FC<{ members: TeamMember[] }> = ({ members }) => (
+export const TeamMemberGrid = ({ members }) => (
   <div className={styles.membersGrid}>
     {members.map((member, index) => (
       <div key={index} className={styles.memberCard}>
@@ -83,7 +77,6 @@ const sections = [
     title: "ОСНОВАТЕЛИ",
     content: <TeamMemberGrid members={founders} />,
   },
-
   {
     id: "designers",
     title: "ДИЗАЙНЕРЫ",
@@ -106,7 +99,7 @@ const sections = [
   },
 ];
 
-export const TeamSectionPage: React.FC = () => {
+const TeamSectionPage = () => {
   return (
     <div className={styles.page}>
       <Header />
@@ -123,4 +116,5 @@ export const TeamSectionPage: React.FC = () => {
     </div>
   );
 };
+
 export default TeamSectionPage;
