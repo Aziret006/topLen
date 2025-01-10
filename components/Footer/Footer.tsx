@@ -33,18 +33,32 @@ const Footer = () => {
           <h3>Страницы</h3>
           <div className={styles.linksGrid}>
             <div className={styles.linkColumn}>
-              <Link href="/">Главная</Link>
-              <Link href="#about">Что такое &quot;ТОР&quot;</Link>
-              <Link href="#roles">Роли</Link>
-              <Link href="#roadmap">ROADMAP</Link>
+              <Link className={styles.homeLink} href="/">
+                Главная
+              </Link>
+              <Link className={styles.homeLink} href="#about">
+                Что такое &quot;ТОР&quot;
+              </Link>
+              <Link className={styles.homeLink} href="#roles">
+                Роли
+              </Link>
+              <Link className={styles.homeLink} href="#roadmap">
+                ROADMAP
+              </Link>
             </div>
             <div className={styles.linkColumn}>
-              <Link href="#mode">Режим &quot;Футболист&quot;</Link>
-              <Link href="#organizer">
+              <Link className={styles.homeLink} href="#mode">
+                Режим &quot;Футболист&quot;
+              </Link>
+              <Link className={styles.homeLink} href="#organizer">
                 Режим &quot;Организатор турнира&quot;
               </Link>
-              <Link href="#ecosystem">Футбольная Экосистема</Link>
-              <Link href="#platform">Платформа &quot;ТОР&quot; для ПК</Link>
+              <Link className={styles.homeLink} href="#ecosystem">
+                Футбольная Экосистема
+              </Link>
+              <Link className={styles.homeLink} href="#platform">
+                Платформа &quot;ТОР&quot; для ПК
+              </Link>
             </div>
           </div>
         </div>
