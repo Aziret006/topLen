@@ -27,7 +27,7 @@ const founders = [
   },
 ];
 
-export const TeamMemberGrid = ({ members }) => (
+const TeamMemberGrid = ({ members }) => (
   <div className={styles.membersGrid}>
     {members.map((member, index) => (
       <div key={index} className={styles.memberCard}>
@@ -70,6 +70,7 @@ export const TeamMemberGrid = ({ members }) => (
     ))}
   </div>
 );
+
 const sections = [
   {
     id: "founders",
