@@ -70,7 +70,6 @@ export const TeamMemberGrid = ({ members }) => (
     ))}
   </div>
 );
-
 const sections = [
   {
     id: "founders",
@@ -99,7 +98,7 @@ const sections = [
   },
 ];
 
-const TeamSectionPage = () => {
+export default function TeamSectionPage() {
   return (
     <div className={styles.page}>
       <Header />
@@ -115,6 +114,4 @@ const TeamSectionPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default TeamSectionPage;
+}
