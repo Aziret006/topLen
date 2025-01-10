@@ -27,8 +27,6 @@ const Footer = () => {
             />
           </div>
         </div>
-
-        {/* Navigation Section */}
         <div className={styles.pagesSection}>
           <h3>Страницы</h3>
           <div className={styles.linksGrid}>
