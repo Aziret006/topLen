@@ -76,12 +76,6 @@ const TopSlider: React.FC = () => {
     };
   }, [isAutoPlaying, handleNext]);
 
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  const toggleZoom = () => {
-    setIsZoomed(!isZoomed);
-  };
-
   useEffect(() => {
     NativeFancybox.bind('[data-fancybox="gallery"]', {
       autoFocus: false,
