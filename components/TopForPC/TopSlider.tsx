@@ -166,6 +166,17 @@ const TopSlider: React.FC = () => {
     };
   }, []);
 
+  const handleImageFullscreen = (event: React.MouseEvent<HTMLImageElement>) => {
+    if (isMobile) {
+      const element = event.target as HTMLImageElement;
+      if (element.requestFullscreen) {
+        element.requestFullscreen().catch((err) => {
+          console.error(`Error attempting to enable fullscreen: ${err.message}`);
+        });
+      }
+    }
+  };
+
   return (
     <>
       <div className={styles.topSlider} id="platform">
@@ -254,6 +265,8 @@ const TopSlider: React.FC = () => {
                   alt="Background"
                   className={styles.rectangle}
                   priority={true}
+                  onClick={handleImageFullscreen}
+                  style={{ cursor: 'pointer' }}
                 />
               )}
             </ImageListItem>
