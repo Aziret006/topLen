@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="contacts" className={styles.footer}>
       <div className={styles.container}>
         {/* Logo Section */}
         <div className={styles.logoSection}>
@@ -17,16 +17,20 @@ const Footer = () => {
             priority={true}
           />
           <div>
-            <Image
-              src="/digital.svg"
-              alt="Digital Company"
-              width={230}
-              height={70}
-              className={styles.oracleLogo}
-              priority={true}
-            />
+            <p>Разработано в компании:</p>
+            <a target="blank" href="https://odigital.app/contacts">
+              <Image
+                src="/oracledigital.svg"
+                alt="Digital Company"
+                width={144}
+                height={41}
+                className={styles.oracleLogo}
+                priority={true}
+              />
+            </a>
           </div>
         </div>
+
         <div className={styles.pagesSection}>
           <h3>Страницы</h3>
           <div className={styles.linksGrid}>
@@ -60,7 +64,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         {/* Contact Section */}
         <div className={styles.contactSection}>
           <h3>Контакты</h3>

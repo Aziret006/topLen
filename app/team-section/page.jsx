@@ -110,7 +110,7 @@ export default function TeamSectionPage() {
           футбольной жизни для любителей и профессионалов в СНГ и за его
           пределами
         </p>
-        <Accordion items={sections} />
+        <Accordion items={sections} defaultOpenIndex={0} />
       </div>
       <Footer />
     </div>

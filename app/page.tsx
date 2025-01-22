@@ -23,7 +23,7 @@ import PageComponent from "@/components/PageComponent/PageComponent";
 // });
 
 export const metadata = {
-  title: "top born to play",
+  title: "Top",
   description: "top",
   openGraph: {
     images: [

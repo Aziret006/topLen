@@ -192,30 +192,45 @@
         position: absolute;
         bottom: -80px;
         right: -96px;
-
-        @media screen and (max-width: 1258px) {
-          width: 186px;
-          height: 181px;
-          bottom: -65px;
-          right: -75px;
-
-          @media screen and (max-width: 796px) {
-            right: 0;
-            top: 150px;
-            left: 125px;
-            height: 134px;
-            width: 249px;
-            object-fit: cover;
-            border-radius: 20px;
-
-            @media screen and (max-width: 500px) {
-              width: 189px;
-              height: 180px;
-              object-fit: cover;
-            }
-          }
-        }
+        border-radius: 24px;
       }
     }
   }
 }
+
+// .video_container {
+//   position: relative;
+//   cursor: pointer;
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 80px;
+//     height: 80px;
+//     background: white;
+//     border-radius: 50%;
+//     z-index: 2;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: 40px;
+//   }
+
+//   &::before {
+//     content: 'Смотреть видео';
+//     position: absolute;
+//     bottom: 20px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     color: white;
+//     font-size: 16px;
+//     z-index: 2;
+//     white-space: nowrap;
+//   }
+// }

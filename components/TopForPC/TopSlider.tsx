@@ -4,6 +4,7 @@ import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 // import { Roadmap } from "./Roadmap/Roadmap";
+import { Box, ImageList, ImageListItem } from "@mui/material";
 
 const TopSlider: React.FC = () => {
   const slides = [
@@ -143,15 +144,23 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Image
-          id="roadmap"
-          width={1340}
-          height={754}
-          src="/roadmap.png"
-          alt="Background"
-          className={`${styles.rectangle} ${isZoomed ? styles.zoomed : ""}`}
-          priority={true}
-        />
+        <Box>
+          <ImageList variant="masonry" cols={1} gap={8}>
+            <ImageListItem key="roadmap">
+              <Image
+                id="roadmap"
+                width={1340}
+                height={754}
+                src="/roadmap.png"
+                alt="Background"
+                className={`${styles.rectangle} ${
+                  isZoomed ? styles.zoomed : ""
+                }`}
+                priority={true}
+              />
+            </ImageListItem>
+          </ImageList>
+        </Box>
         <p onClick={toggleZoom} className={styles.zoomButton}>
           {isZoomed ? "Уменьшить" : "Увеличить"}
         </p>

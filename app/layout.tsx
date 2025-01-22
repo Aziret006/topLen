@@ -6,7 +6,7 @@ import { gilroy } from "./fonsts";
 import PreventZoom from "@/components/PreventZoom/PreventZoom";
 
 export const metadata: Metadata = {
-  title: "top born to play",
+  title: "Top",
   description: "top born to play",
   openGraph: {
     images: [

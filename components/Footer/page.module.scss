@@ -64,7 +64,19 @@
         max-width: 260px;
 
         div {
-            height: 69px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+
+            p {
+                font-size: 19px;
+                font-weight: 400;
+                line-height: 22.04px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+
+            }
         }
 
         .companyInfo {

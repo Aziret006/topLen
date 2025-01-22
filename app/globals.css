@@ -27,3 +27,19 @@ button {
   padding: 0;
   margin: 0;
 }
+
+.ytp-title-text {
+  display: none !important;
+}
+.ytp-overflow-icon {
+  display: none !important;
+}
+.ytp-large-play-button ytp-button ytp-large-play-button-red-bg {
+  background: #fff !important;
+}
+.ytp-impression-link {
+  display: none !important;
+}
+.ytp-title-link yt-uix-sessionlink {
+  display: none !important;
+}

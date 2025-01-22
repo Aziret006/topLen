@@ -7,7 +7,7 @@ const Main = () => {
       <div className={styles.top__flex}>
         <div className={styles.top_text}>
           <div>
-            <h2>Что такое “ТОП”?</h2>
+            <h2>Что такое "ТОП"?</h2>
             <p>
               В сердце нашей миссии лежит стремление вдохновлять каждого на
               игру, побуждать к творчеству и создавать мосты между людьми,
@@ -47,15 +47,20 @@ const Main = () => {
             <a
               target="_blank"
               href="https://www.youtube.com/watch?v=iJDtziSiaWM"
+              className={styles.video_container}
+              rel="noopener noreferrer"
             >
-              <Image
-                src="/6.png"
-                alt="Football"
-                width={263}
-                height={256}
+              <iframe
+                width="263"
+                height="256"
+                src="https://www.youtube.com/embed/UBN4o6njLcA?si=FDJu3ReF_TJVjrLU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className={styles.top_img2}
-                priority={true}
-              />
+              ></iframe>
             </a>
           </div>
         </div>
