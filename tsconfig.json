@@ -20,8 +20,9 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "components/PageRoles/useWindowSize.jsx", "components/PageRoles/Roles.jsx", "components/Section/useWindowSize.jsx", "app/team-section/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.jsx", "components/PageRoles/useWindowSize.jsx", "components/PageRoles/Roles.jsx", "components/Section/useWindowSize.jsx", "app/team-section/page.jsx", "types/**/*.ts", "types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }

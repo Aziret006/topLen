@@ -8,6 +8,23 @@ import { Box, ImageList, ImageListItem } from "@mui/material";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
+interface FancyboxOptions {
+  autoFocus: boolean;
+  dragToClose: boolean;
+  Toolbar: {
+    display: {
+      left: string[];
+      middle: string[];
+      right: string[];
+    };
+  };
+  Image: {
+    zoom: boolean;
+    click: boolean;
+    wheel: string;
+  };
+}
+
 const TopSlider: React.FC = () => {
   const slides = [
     {
@@ -77,26 +94,32 @@ const TopSlider: React.FC = () => {
   }, [isAutoPlaying, handleNext]);
 
   useEffect(() => {
-    NativeFancybox.bind('[data-fancybox="gallery"]', {
-      autoFocus: false,
-      dragToClose: false,
-      Toolbar: {
-        display: {
-          left: [],
-          middle: [],
-          right: ['close']
+    try {
+      const options: FancyboxOptions = {
+        autoFocus: false,
+        dragToClose: false,
+        Toolbar: {
+          display: {
+            left: [],
+            middle: [],
+            right: ['close']
+          }
+        },
+        Image: {
+          zoom: true,
+          click: true,
+          wheel: 'zoom'
         }
-      },
-      Image: {
-        zoom: true,
-        click: true,
-        wheel: 'zoom'
-      }
-    });
+      };
 
-    return () => {
-      NativeFancybox.destroy();
-    };
+      NativeFancybox.bind('[data-fancybox="gallery"]', options);
+
+      return () => {
+        NativeFancybox.destroy();
+      };
+    } catch (error) {
+      console.error('Error initializing Fancybox:', error);
+    }
   }, []);
 
   return (
