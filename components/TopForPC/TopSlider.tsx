@@ -156,27 +156,23 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Box>
-          <ImageList variant="masonry" cols={1} gap={8}>
+        <Box sx={{ width: '100%' }}>
+          <ImageList variant="masonry" cols={1} gap={0}>
             <ImageListItem key="roadmap">
               <Image
                 data-fancybox="gallery"
                 id="roadmap"
-                width={1340}
-                height={754}
                 src="/roadmap.png"
                 alt="Background"
-                className={`${styles.rectangle} ${
-                  isZoomed ? styles.zoomed : ""
-                }`}
+                className={styles.rectangle}
+                width={1340}
+                height={754}
                 priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
               />
             </ImageListItem>
           </ImageList>
         </Box>
-        <p onClick={toggleZoom} className={styles.zoomButton}>
-          {isZoomed ? "Уменьшить" : "Увеличить"}
-        </p>
       </div>
     </>
   );

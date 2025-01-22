@@ -259,28 +259,43 @@
 }
 
 .roadmap {
-    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
 
-    @media screen and (max-width: 1279px) {
-        margin-top: 50px;
-        margin-bottom: 50px;
+    .rectangle {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+        }
     }
 }
 
-.roadmap {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Адаптив для больших экранов */
+@media (min-width: 1440px) {
+    .roadmap {
+        padding: 0 40px;
+    }
 }
 
-.rectangle {
-    transition: transform 0.3s ease;
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+    .roadmap {
+        padding: 0 15px;
+    }
 }
 
-.zoomed {
-    transform: scale(1.2);
-    /* Увеличение изображения */
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .roadmap {
+        padding: 0 10px;
+    }
 }
 
 .zoomButton {
