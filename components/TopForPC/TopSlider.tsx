@@ -150,19 +150,18 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Box sx={{ width: '100%' }}>
-          <ImageList variant="masonry" cols={1} gap={0}>
+        <Box>
+          <ImageList variant="masonry" cols={1} gap={8}>
             <ImageListItem key="roadmap">
               <Image
                 data-fancybox="gallery"
                 id="roadmap"
+                width={1340}
+                height={754}
                 src="/roadmap.png"
                 alt="Background"
                 className={styles.rectangle}
-                width={1340}
-                height={754}
                 priority={true}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
               />
             </ImageListItem>
           </ImageList>
