@@ -98,11 +98,11 @@ const TopSlider: React.FC = () => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    
-    return () => window.removeEventListener('resize', checkIsMobile);
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
   useEffect(() => {
@@ -139,13 +139,14 @@ const TopSlider: React.FC = () => {
   useEffect(() => {
     // Сохраняем текущий viewport meta tag
     const existingViewport = document.querySelector('meta[name="viewport"]');
-    const originalContent = existingViewport?.getAttribute('content');
+    const originalContent = existingViewport?.getAttribute("content");
 
     // Создаем новый viewport meta tag, разрешающий zoom
-    const viewportMeta = document.createElement('meta');
-    viewportMeta.name = 'viewport';
-    viewportMeta.content = 'width=device-width, initial-scale=1.0, user-scalable=yes';
-    
+    const viewportMeta = document.createElement("meta");
+    viewportMeta.name = "viewport";
+    viewportMeta.content =
+      "width=device-width, initial-scale=1.0, user-scalable=yes";
+
     // Заменяем существующий viewport
     if (existingViewport) {
       existingViewport.replaceWith(viewportMeta);
@@ -156,8 +157,8 @@ const TopSlider: React.FC = () => {
     // Очистка при размонтировании компонента
     return () => {
       if (originalContent) {
-        const resetViewport = document.createElement('meta');
-        resetViewport.name = 'viewport';
+        const resetViewport = document.createElement("meta");
+        resetViewport.name = "viewport";
         resetViewport.content = originalContent;
         viewportMeta.replaceWith(resetViewport);
       } else {
@@ -171,7 +172,9 @@ const TopSlider: React.FC = () => {
       const element = event.target as HTMLImageElement;
       if (element.requestFullscreen) {
         element.requestFullscreen().catch((err) => {
-          console.error(`Error attempting to enable fullscreen: ${err.message}`);
+          console.error(
+            `Error attempting to enable fullscreen: ${err.message}`
+          );
         });
       }
     }
@@ -266,7 +269,7 @@ const TopSlider: React.FC = () => {
                   className={styles.rectangle}
                   priority={true}
                   onClick={handleImageFullscreen}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 />
               )}
             </ImageListItem>
