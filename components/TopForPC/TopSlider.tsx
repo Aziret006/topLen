@@ -59,6 +59,7 @@ const TopSlider: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
@@ -94,32 +95,75 @@ const TopSlider: React.FC = () => {
   }, [isAutoPlaying, handleNext]);
 
   useEffect(() => {
-    try {
-      const options: FancyboxOptions = {
-        autoFocus: false,
-        dragToClose: false,
-        Toolbar: {
-          display: {
-            left: [],
-            middle: [],
-            right: ['close']
-          }
-        },
-        Image: {
-          zoom: true,
-          click: true,
-          wheel: 'zoom'
-        }
-      };
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
-      NativeFancybox.bind('[data-fancybox="gallery"]', options);
+  useEffect(() => {
+    if (!isMobile) {
+      try {
+        const options: FancyboxOptions = {
+          autoFocus: false,
+          dragToClose: false,
+          Toolbar: {
+            display: {
+              left: [],
+              middle: [],
+              right: ["close"],
+            },
+          },
+          Image: {
+            zoom: true,
+            click: true,
+            wheel: "zoom",
+          },
+        };
 
-      return () => {
-        NativeFancybox.destroy();
-      };
-    } catch (error) {
-      console.error('Error initializing Fancybox:', error);
+        NativeFancybox.bind('[data-fancybox="gallery"]', options);
+
+        return () => {
+          NativeFancybox.destroy();
+        };
+      } catch (error) {
+        console.error("Error initializing Fancybox:", error);
+      }
     }
+  }, [isMobile]);
+
+  useEffect(() => {
+    // Сохраняем текущий viewport meta tag
+    const existingViewport = document.querySelector('meta[name="viewport"]');
+    const originalContent = existingViewport?.getAttribute('content');
+
+    // Создаем новый viewport meta tag, разрешающий zoom
+    const viewportMeta = document.createElement('meta');
+    viewportMeta.name = 'viewport';
+    viewportMeta.content = 'width=device-width, initial-scale=1.0, user-scalable=yes';
+    
+    // Заменяем существующий viewport
+    if (existingViewport) {
+      existingViewport.replaceWith(viewportMeta);
+    } else {
+      document.head.appendChild(viewportMeta);
+    }
+
+    // Очистка при размонтировании компонента
+    return () => {
+      if (originalContent) {
+        const resetViewport = document.createElement('meta');
+        resetViewport.name = 'viewport';
+        resetViewport.content = originalContent;
+        viewportMeta.replaceWith(resetViewport);
+      } else {
+        viewportMeta.remove();
+      }
+    };
   }, []);
 
   return (
@@ -189,7 +233,19 @@ const TopSlider: React.FC = () => {
         <Box>
           <ImageList variant="masonry" cols={1} gap={8}>
             <ImageListItem key="roadmap">
-              <a data-fancybox="gallery" href="/roadmap.png">
+              {!isMobile ? (
+                <a data-fancybox="gallery" href="/roadmap.png">
+                  <Image
+                    id="roadmap"
+                    width={1340}
+                    height={754}
+                    src="/roadmap.png"
+                    alt="Background"
+                    className={styles.rectangle}
+                    priority={true}
+                  />
+                </a>
+              ) : (
                 <Image
                   id="roadmap"
                   width={1340}
@@ -199,7 +255,7 @@ const TopSlider: React.FC = () => {
                   className={styles.rectangle}
                   priority={true}
                 />
-              </a>
+              )}
             </ImageListItem>
           </ImageList>
         </Box>
