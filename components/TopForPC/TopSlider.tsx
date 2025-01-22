@@ -79,6 +79,19 @@ const TopSlider: React.FC = () => {
   useEffect(() => {
     NativeFancybox.bind('[data-fancybox="gallery"]', {
       autoFocus: false,
+      dragToClose: false,
+      Toolbar: {
+        display: {
+          left: [],
+          middle: [],
+          right: ['close']
+        }
+      },
+      Image: {
+        zoom: true,
+        click: true,
+        wheel: 'zoom'
+      }
     });
 
     return () => {
@@ -153,16 +166,17 @@ const TopSlider: React.FC = () => {
         <Box>
           <ImageList variant="masonry" cols={1} gap={8}>
             <ImageListItem key="roadmap">
-              <Image
-                data-fancybox="gallery"
-                id="roadmap"
-                width={1340}
-                height={754}
-                src="/roadmap.png"
-                alt="Background"
-                className={styles.rectangle}
-                priority={true}
-              />
+              <a data-fancybox="gallery" href="/roadmap.png">
+                <Image
+                  id="roadmap"
+                  width={1340}
+                  height={754}
+                  src="/roadmap.png"
+                  alt="Background"
+                  className={styles.rectangle}
+                  priority={true}
+                />
+              </a>
             </ImageListItem>
           </ImageList>
         </Box>
