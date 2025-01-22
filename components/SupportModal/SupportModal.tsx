@@ -13,10 +13,20 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle the support submission here
-    console.log("Support amount:", supportAmount);
-    // You can add your logic to process the support
+    const amount = supportAmount.replace(/[^\d]/g, '');
+    console.log("Support amount:", amount);
     onClose();
+  };
+
+  const formatAmount = (value: string) => {
+    // Удаляем все нецифровые символы
+    const numbers = value.replace(/[^\d]/g, '');
+    return numbers ? `${numbers} сом` : '';
+  };
+
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rawValue = e.target.value.replace(/[^\d]/g, '');
+    setSupportAmount(formatAmount(rawValue));
   };
 
   return (
@@ -41,11 +51,11 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
             </p>
             <form onSubmit={handleSubmit}>
               <input
-                type="number"
+                type="text"
                 className={styles.input}
                 placeholder="Сумма вашей поддержки"
                 value={supportAmount}
-                onChange={(e) => setSupportAmount(e.target.value)}
+                onChange={handleAmountChange}
               />
               <button type="submit" className={styles.button}>
                 Поддержать

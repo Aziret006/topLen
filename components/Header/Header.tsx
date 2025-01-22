@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import type React from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -11,23 +12,103 @@ import SupportModal from "../SupportModal/SupportModal";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (pathname.includes("#")) {
+      const targetId = pathname.split("#")[1];
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+
+  const [currentHash, setCurrentHash] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    handleHashChange();
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const isActive = (href: string) => {
+    if (href.startsWith("#")) {
+      return href === currentHash;
+    }
+    return pathname === href;
+  };
+
   const navItems = [
-    { href: "#about", label: "О проекте" },
-    { href: "/team-section", label: "Наша команда" }, // убедитесь что путь совпадает с названием папки
-    { href: "#advantages", label: "Преимущества" },
-    { href: "#roadmap", label: "ROADMAP" },
-    { href: "#mode", label: "Режимы" },
-    { href: "#ecosystem", label: "Экосистема" },
-    { href: "#contacts", label: "Контакты" },
+    { href: "/#about", label: "О проекте" },
+    { href: "/team-section", label: "Наша команда" },
+    { href: "/#advantages", label: "Преимущества" },
+    { href: "/#roadmap", label: "ROADMAP" },
+    { href: "/#mode", label: "Режимы" },
+    { href: "/#ecosystem", label: "Экосистема" },
+    { href: "/#contacts", label: "Контакты" },
   ];
+
+  const handleSmoothScroll = (targetId: string) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const headerOffset = 100;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    href: string
+  ) => {
+    e.preventDefault();
+    if (href.startsWith("/#")) {
+      const targetId = href.substring(2);
+      if (pathname === "/") {
+        handleSmoothScroll(targetId);
+        setCurrentHash(`#${targetId}`);
+      } else {
+        router.push(`/${href}`);
+      }
+    } else {
+      router.push(href);
+    }
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    if (pathname === "/" && currentHash) {
+      setTimeout(() => {
+        const targetId = currentHash.slice(1);
+        handleSmoothScroll(targetId);
+      }, 0);
+    } else if (!currentHash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, currentHash]);
 
   return (
     <>
       <header className={styles.header}>
-        <Link href={"/"}>
+        <Link href="/">
           <Image
             src="/toplogo.svg"
             alt="logo"
@@ -39,13 +120,14 @@ const Header: React.FC = () => {
         </Link>
         <nav className={styles.nav}>
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
-              className={pathname === item.href ? styles.active : ""}
+              className={isActive(item.href) ? styles.active : ""}
+              onClick={(e) => handleNavigation(e, item.href)}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
         <div>
@@ -74,13 +156,13 @@ const Header: React.FC = () => {
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
+                <a
                   href={item.href}
-                  className={pathname === item.href ? styles.active : ""}
-                  onClick={() => setIsOpen(false)}
+                  className={isActive(item.href) ? styles.active : ""}
+                  onClick={(e) => handleNavigation(e, item.href)}
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
