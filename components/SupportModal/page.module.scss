@@ -208,6 +208,29 @@
     }
 }
 
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.inputError {
+  border-color: #ff4d4f;
+  
+  &:focus {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+  }
+}
+
+.errorMessage {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -20px;
+}
+
 // @media (max-width: 768px) {
 //     .modal {
 //         padding: 16px;

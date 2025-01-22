@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./page.module.scss";
 
 interface SupportModalProps {
@@ -8,25 +8,63 @@ interface SupportModalProps {
 
 const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
   const [supportAmount, setSupportAmount] = useState("");
+  const [error, setError] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const amount = supportAmount.replace(/[^\d]/g, '');
+    const amount = parseInt(supportAmount.replace(/[^\d]/g, ""));
+
+    if (!amount || amount < 1) {
+      setError("Пожалуйста, введите сумму больше 0");
+      return;
+    }
+
+    if (amount > 1000000) {
+      setError("Максимальная сумма поддержки 1,000,000 сом");
+      return;
+    }
+
     console.log("Support amount:", amount);
+    setError("");
     onClose();
   };
 
-  const formatAmount = (value: string) => {
-    // Удаляем все нецифровые символы
-    const numbers = value.replace(/[^\d]/g, '');
-    return numbers ? `${numbers} сом` : '';
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target;
+    let value = input.value.replace(/[^\d]/g, ""); // Оставляем только цифры
+
+    // Ограничиваем ввод до 6 цифр
+    if (value.length > 7) {
+      value = value.slice(0, 7);
+    }
+
+    // Если есть значение, добавляем "сом"
+    const formattedValue = value ? `${value} сом` : "";
+    setSupportAmount(formattedValue);
+    setError(""); // Сбрасываем ошибку при изменении
+
+    // Устанавливаем курсор перед "сом"
+    setTimeout(() => {
+      const position = value.length;
+      input.setSelectionRange(position, position);
+    }, 0);
   };
 
-  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawValue = e.target.value.replace(/[^\d]/g, '');
-    setSupportAmount(formatAmount(rawValue));
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Разрешаем: цифры, backspace, delete, стрелки
+    const allowedKeys = [
+      "Backspace",
+      "Delete",
+      "ArrowLeft",
+      "ArrowRight",
+      "Tab",
+    ];
+    if (!allowedKeys.includes(e.key) && !/^\d$/.test(e.key)) {
+      e.preventDefault();
+    }
   };
 
   return (
@@ -50,13 +88,20 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
               любым удобным способом
             </p>
             <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                className={styles.input}
-                placeholder="Сумма вашей поддержки"
-                value={supportAmount}
-                onChange={handleAmountChange}
-              />
+              <div className={styles.inputWrapper}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  className={`${styles.input} ${
+                    error ? styles.inputError : ""
+                  }`}
+                  placeholder="Сумма вашей поддержки"
+                  value={supportAmount}
+                  onChange={handleAmountChange}
+                  onKeyDown={handleKeyDown}
+                />
+                {error && <div className={styles.errorMessage}>{error}</div>}
+              </div>
               <button type="submit" className={styles.button}>
                 Поддержать
               </button>

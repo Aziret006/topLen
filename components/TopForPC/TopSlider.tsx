@@ -5,6 +5,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 // import { Roadmap } from "./Roadmap/Roadmap";
 import { Box, ImageList, ImageListItem } from "@mui/material";
+import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const TopSlider: React.FC = () => {
   const slides = [
@@ -80,6 +82,16 @@ const TopSlider: React.FC = () => {
     setIsZoomed(!isZoomed);
   };
 
+  useEffect(() => {
+    NativeFancybox.bind('[data-fancybox="gallery"]', {
+      autoFocus: false,
+    });
+
+    return () => {
+      NativeFancybox.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div className={styles.topSlider} id="platform">
@@ -148,6 +160,7 @@ const TopSlider: React.FC = () => {
           <ImageList variant="masonry" cols={1} gap={8}>
             <ImageListItem key="roadmap">
               <Image
+                data-fancybox="gallery"
                 id="roadmap"
                 width={1340}
                 height={754}
