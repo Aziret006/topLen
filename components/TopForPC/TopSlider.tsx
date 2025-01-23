@@ -4,8 +4,7 @@ import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 // import { Roadmap } from "./Roadmap/Roadmap";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const TopSlider: React.FC = () => {
   const slides = [
@@ -41,7 +40,6 @@ const TopSlider: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
@@ -140,27 +138,49 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Image
-          src="/roadmap.png"
-          alt="Background"
-          className={styles.rectangle}
-          width={1340}
-          height={754}
-          priority={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
-          onClick={() => setIsOpen(true)}
-        />
-        
-        <Lightbox
-          open={isOpen}
-          close={() => setIsOpen(false)}
-          slides={[
-            {
-              src: "/roadmap.png",
-              alt: "Background",
-            }
-          ]}
-        />
+        {/* Для мобильных устройств */}
+        <div className={styles.mobileOnly}>
+          <TransformWrapper
+            initialScale={1}
+            minScale={0.5}
+            maxScale={4}
+            centerOnInit={true}
+          >
+            {({ zoomIn, zoomOut, resetTransform }) => (
+              <>
+                <div className={styles.zoomControls}>
+                  <button onClick={() => zoomIn()}>+</button>
+                  <button onClick={() => zoomOut()}>-</button>
+                  <button onClick={() => resetTransform()}>Reset</button>
+                </div>
+                <TransformComponent>
+                  <Image
+                    src="/roadmap.png"
+                    alt="Background"
+                    className={styles.rectangle}
+                    width={1340}
+                    height={754}
+                    priority={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
+                  />
+                </TransformComponent>
+              </>
+            )}
+          </TransformWrapper>
+        </div>
+
+        {/* Для десктопа */}
+        <div className={styles.desktopOnly}>
+          <Image
+            src="/roadmap.png"
+            alt="Background"
+            className={styles.rectangle}
+            width={1340}
+            height={754}
+            priority={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
+          />
+        </div>
       </div>
     </>
   );
