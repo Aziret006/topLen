@@ -5,8 +5,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 // import { Roadmap } from "./Roadmap/Roadmap";
 import { Box, ImageList, ImageListItem } from "@mui/material";
-import { Fancybox as NativeFancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 const TopSlider: React.FC = () => {
   const slides = [
@@ -76,16 +76,6 @@ const TopSlider: React.FC = () => {
     };
   }, [isAutoPlaying, handleNext]);
 
-  useEffect(() => {
-    NativeFancybox.bind('[data-fancybox="gallery"]', {
-      autoFocus: false,
-    });
-
-    return () => {
-      NativeFancybox.destroy();
-    };
-  }, []);
-
   return (
     <>
       <div className={styles.topSlider} id="platform">
@@ -150,23 +140,17 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Box sx={{ width: "100%" }}>
-          <ImageList variant="masonry" cols={1} gap={0}>
-            <ImageListItem key="roadmap">
-              <Image
-                data-fancybox="gallery"
-                id="roadmap"
-                src="/roadmap.png"
-                alt="Background"
-                className={styles.rectangle}
-                width={1340}
-                height={754}
-                priority={true}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
-              />
-            </ImageListItem>
-          </ImageList>
-        </Box>
+        <Zoom>
+          <Image
+            src="/roadmap.png"
+            alt="Background"
+            className={styles.rectangle}
+            width={1340}
+            height={754}
+            priority={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
+          />
+        </Zoom>
       </div>
     </>
   );
