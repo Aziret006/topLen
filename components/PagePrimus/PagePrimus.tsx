@@ -102,7 +102,7 @@ const PagePrimus = () => {
               href="https://www.youtube.com/watch?v=iJDtziSiaWM"
             >
               <Image
-                src="/13.jpg"
+                src="/fairplay.jpg"
                 alt="Football"
                 className={styles.topImage6}
                 width={606}

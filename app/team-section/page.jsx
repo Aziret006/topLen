@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { Accordion } from "@/components/Accordion/Accordion";
+import { BsFillPatchCheckFill } from "react-icons/bs";
 
 const founders = [
   {
@@ -51,6 +52,7 @@ const TeamMemberGrid = ({ members }) => (
             }`}
           >
             {member.name}
+            <BsFillPatchCheckFill className={styles.icons} />
           </h3>
           <p
             className={`${styles.role} ${
