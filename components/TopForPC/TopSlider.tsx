@@ -4,8 +4,8 @@ import styles from "./page.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 // import { Roadmap } from "./Roadmap/Roadmap";
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const TopSlider: React.FC = () => {
   const slides = [
@@ -41,6 +41,7 @@ const TopSlider: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
@@ -139,17 +140,27 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Zoom>
-          <Image
-            src="/roadmap.png"
-            alt="Background"
-            className={styles.rectangle}
-            width={1340}
-            height={754}
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
-          />
-        </Zoom>
+        <Image
+          src="/roadmap.png"
+          alt="Background"
+          className={styles.rectangle}
+          width={1340}
+          height={754}
+          priority={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
+          onClick={() => setIsOpen(true)}
+        />
+        
+        <Lightbox
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          slides={[
+            {
+              src: "/roadmap.png",
+              alt: "Background",
+            }
+          ]}
+        />
       </div>
     </>
   );
