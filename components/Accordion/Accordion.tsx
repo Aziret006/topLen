@@ -8,7 +8,11 @@ interface AccordionItemProps {
   defaultOpen?: boolean;
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, defaultOpen = false }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({
+  title,
+  children,
+  defaultOpen = false,
+}) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
     <div className={styles.item}>
@@ -41,8 +45,8 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
   return (
     <div className={styles.accordion}>
       {items.map((item, index) => (
-        <AccordionItem 
-          key={item.id} 
+        <AccordionItem
+          key={item.id}
           title={item.title}
           defaultOpen={index === 0}
         >

@@ -8,23 +8,6 @@ import { Box, ImageList, ImageListItem } from "@mui/material";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-interface FancyboxOptions {
-  autoFocus: boolean;
-  dragToClose: boolean;
-  Toolbar: {
-    display: {
-      left: string[];
-      middle: string[];
-      right: string[];
-    };
-  };
-  Image: {
-    zoom: boolean;
-    click: boolean;
-    wheel: string;
-  };
-}
-
 const TopSlider: React.FC = () => {
   const slides = [
     {
@@ -59,7 +42,6 @@ const TopSlider: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) =>
@@ -95,90 +77,14 @@ const TopSlider: React.FC = () => {
   }, [isAutoPlaying, handleNext]);
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    NativeFancybox.bind('[data-fancybox="gallery"]', {
+      autoFocus: false,
+    });
 
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile) {
-      try {
-        const options: FancyboxOptions = {
-          autoFocus: false,
-          dragToClose: false,
-          Toolbar: {
-            display: {
-              left: [],
-              middle: [],
-              right: ["close"],
-            },
-          },
-          Image: {
-            zoom: true,
-            click: true,
-            wheel: "zoom",
-          },
-        };
-
-        NativeFancybox.bind('[data-fancybox="gallery"]', options);
-
-        return () => {
-          NativeFancybox.destroy();
-        };
-      } catch (error) {
-        console.error("Error initializing Fancybox:", error);
-      }
-    }
-  }, [isMobile]);
-
-  useEffect(() => {
-    // Сохраняем текущий viewport meta tag
-    const existingViewport = document.querySelector('meta[name="viewport"]');
-    const originalContent = existingViewport?.getAttribute("content");
-
-    // Создаем новый viewport meta tag, разрешающий zoom
-    const viewportMeta = document.createElement("meta");
-    viewportMeta.name = "viewport";
-    viewportMeta.content =
-      "width=device-width, initial-scale=1.0, user-scalable=yes";
-
-    // Заменяем существующий viewport
-    if (existingViewport) {
-      existingViewport.replaceWith(viewportMeta);
-    } else {
-      document.head.appendChild(viewportMeta);
-    }
-
-    // Очистка при размонтировании компонента
     return () => {
-      if (originalContent) {
-        const resetViewport = document.createElement("meta");
-        resetViewport.name = "viewport";
-        resetViewport.content = originalContent;
-        viewportMeta.replaceWith(resetViewport);
-      } else {
-        viewportMeta.remove();
-      }
+      NativeFancybox.destroy();
     };
   }, []);
-
-  const handleImageFullscreen = (event: React.MouseEvent<HTMLImageElement>) => {
-    if (isMobile) {
-      const element = event.target as HTMLImageElement;
-      if (element.requestFullscreen) {
-        element.requestFullscreen().catch((err) => {
-          console.error(
-            `Error attempting to enable fullscreen: ${err.message}`
-          );
-        });
-      }
-    }
-  };
 
   return (
     <>
@@ -244,34 +150,20 @@ const TopSlider: React.FC = () => {
         </div>
       </div>
       <div className={styles.roadmap}>
-        <Box>
-          <ImageList variant="masonry" cols={1} gap={8}>
+        <Box sx={{ width: "100%" }}>
+          <ImageList variant="masonry" cols={1} gap={0}>
             <ImageListItem key="roadmap">
-              {!isMobile ? (
-                <a data-fancybox="gallery" href="/roadmap.png">
-                  <Image
-                    id="roadmap"
-                    width={1340}
-                    height={754}
-                    src="/roadmap.png"
-                    alt="Background"
-                    className={styles.rectangle}
-                    priority={true}
-                  />
-                </a>
-              ) : (
-                <Image
-                  id="roadmap"
-                  width={1340}
-                  height={754}
-                  src="/roadmap.png"
-                  alt="Background"
-                  className={styles.rectangle}
-                  priority={true}
-                  onClick={handleImageFullscreen}
-                  style={{ cursor: "pointer" }}
-                />
-              )}
+              <Image
+                data-fancybox="gallery"
+                id="roadmap"
+                src="/roadmap.png"
+                alt="Background"
+                className={styles.rectangle}
+                width={1340}
+                height={754}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1340px"
+              />
             </ImageListItem>
           </ImageList>
         </Box>
