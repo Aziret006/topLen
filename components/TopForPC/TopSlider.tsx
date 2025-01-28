@@ -137,7 +137,7 @@ const TopSlider: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className={styles.roadmap}>
+      <div id="roadmap" className={styles.roadmap}>
         {/* Для мобильных устройств */}
         <div className={styles.mobileOnly}>
           <TransformWrapper

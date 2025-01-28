@@ -13,17 +13,17 @@ const founders = [
   },
   {
     name: "АШИМ КУЛЧАРОВ",
-    role: "CEO & Co-Founder - «TOP - Born TO Play»",
+    role: "CFO & Co-Founder - «TOP - Born TO Play»",
     image: "/founder6.jpg?height=400&width=300",
   },
   {
-    name: "ЭРМЕК ДЖУМАЛИЕВ",
-    role: "CEO & Co-Founder - «TOP - Born TO Play»",
+    name: "ДООЛОТ БАКТЫГУЛОВ",
+    role: "COO & Co-Founder - «TOP - Born TO Play»",
     image: "/founder7.jpg?height=400&width=300",
   },
   {
     name: "ЭРМЕК ДЖУМАЛИЕВ",
-    role: "CEO & Co-Founder - «TOP - Born TO Play»",
+    role: "CMO & Co-Founder - «TOP - Born TO Play»",
     image: "/founder8.jpg?height=400&width=300",
   },
 ];
