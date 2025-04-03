@@ -70,11 +70,13 @@ const Footer = () => {
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <p>Номер телефона</p>
-              <h4>+996 (708) 67 89 07</h4>
+              <a target="blank" href="tel:+996709683738">
+                +996 709 68 37 38
+              </a>
             </div>
             <div className={styles.contactItem}>
               <p>E-Mail</p>
-              <h4>example@gmail.com</h4>
+              <a target="blank" href="mailto:info@topsport.asia">info@topsport.asia</a>
             </div>
           </div>
           <div className={styles.social}>
